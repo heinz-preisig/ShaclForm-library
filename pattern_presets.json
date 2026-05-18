@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "description": "SHACL Pattern Presets for Common Validation Patterns",
+  "last_updated": "2026-05-18",
+  "presets": {
+    "international": {
+      "name": "International Standards",
+      "description": "Global patterns that work across countries",
+      "patterns": [
+        {
+          "id": "email",
+          "name": "Email Address",
+          "description": "Standard email format validation",
+          "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          "example": "user@example.com"
+        },
+        {
+          "id": "phone_e164",
+          "name": "Phone (E.164 International)",
+          "description": "International phone number format (+ followed by 1-15 digits)",
+          "pattern": "^\\+[1-9]\\d{1,14}$",
+          "example": "+12345678901"
+        },
+        {
+          "id": "url",
+          "name": "URL/Website",
+          "description": "HTTP/HTTPS URL format",
+          "pattern": "^https?://.+\\..+",
+          "example": "https://example.com"
+        },
+        {
+          "id": "postal_generic",
+          "name": "Postal Code (Generic)",
+          "description": "Flexible postal code accepting most international formats",
+          "pattern": "^[A-Z0-9\\s-]{3,10}$",
+          "example": "12345, NW1 6XE, 10115"
+        },
+        {
+          "id": "iso_date",
+          "name": "Date (ISO 8601)",
+          "description": "Standard date format YYYY-MM-DD",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "example": "2026-05-18"
+        },
+        {
+          "id": "uuid",
+          "name": "UUID",
+          "description": "Universally Unique Identifier",
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+          "example": "550e8400-e29b-41d4-a716-446655440000"
+        },
+        {
+          "id": "ipv4",
+          "name": "IP Address (IPv4)",
+          "description": "IPv4 address format",
+          "pattern": "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
+          "example": "192.168.1.1"
+        }
+      ]
+    },
+    "custom": {
+      "name": "User Custom Patterns",
+      "description": "Patterns created by users",
+      "patterns": []
+    }
+  },
+  "extensibility": {
+    "note": "Add country-specific or domain-specific patterns here as needed",
+    "planned_extensions": [
+      "country_specific_postal",
+      "industry_specific",
+      "organization_patterns"
+    ]
+  }
+}
