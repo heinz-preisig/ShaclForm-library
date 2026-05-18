@@ -1,5 +1,5 @@
 #!/bin/bash
 
-git pull dropbox master > pull.log
+git pull origin master > pull.log
 
 
