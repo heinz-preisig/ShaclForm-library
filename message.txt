@@ -1,1 +1,2 @@
-adding pull & pus
+adding pull & push
+
