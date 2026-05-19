@@ -30,5 +30,6 @@ docker run -it \
     -v "$SCRIPT_DIR:/app/data" \
     -e APP=schema \
     -e PORT="$PORT" \
+    -e SHARED_LIBRARIES_ROOT=/app/data \
     --user "$(id -u):$(id -g)" \
     "$IMAGE"
