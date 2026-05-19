@@ -1,0 +1,32 @@
+{
+  "brick_id": "79ad8c87-d037-4752-afa5-3694bf5130f1",
+  "name": "Freeform Address",
+  "description": "Simple text-based address entry",
+  "namespace": "ex",
+  "target_class": "ex:FreeformAddress",
+  "object_type": "NodeShape",
+  "template_type": "free_text",
+  "leaf_properties": [
+    {
+      "path": "schema:text",
+      "label": "Full Address",
+      "datatype": "xsd:string",
+      "description": "Enter complete address as free text",
+      "single_line": false,
+      "min_count": 1,
+      "max_count": 1
+    }
+  ],
+  "xone_alternatives": [],
+  "tags": [
+    "address",
+    "simple",
+    "freeform"
+  ],
+  "created_at": "2026-05-19T15:33:04.934179",
+  "updated_at": "2026-05-19T15:33:04.934180",
+  "metadata": {
+    "sample": true,
+    "region": "any"
+  }
+}
