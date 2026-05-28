@@ -1,7 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-
-<http://example.org/11b65052-988d-49c4-927e-1c770ce2de08> a sh:NodeShape ;
-    rdfs:label "Person with Address" ;
-    rdfs:comment "Person that can have US, EU, or freeform address" .
-
