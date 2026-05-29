@@ -1,0 +1,20 @@
+{
+  "brick_id": "688fa83b-08d0-4be9-89c9-bc31c343ebb7",
+  "name": "house",
+  "description": "",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-05-29T10:21:57.655048",
+  "updated_at": "2026-05-29T10:22:13.434418",
+  "metadata": {},
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}
