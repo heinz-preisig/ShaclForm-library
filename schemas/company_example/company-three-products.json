@@ -9,7 +9,8 @@
     "product1-shape",
     "product2-shape",
     "product3-shape",
-    "eb49bf40-422e-4c9e-9b28-0e2bc44f8eb4"
+    "11b65052-988d-49c4-927e-1c770ce2de08",
+    "b57488a9-8a56-496a-b390-1aa8140814f8"
   ],
   "flow_config": null,
   "inheritance_chain": [],
@@ -143,5 +144,5 @@
   },
   "schema_refs": [],
   "created_at": "2026-05-12T12:30:00.000000",
-  "updated_at": "2026-05-12T13:26:05.991536"
+  "updated_at": "2026-05-28T15:15:17.833841"
 }

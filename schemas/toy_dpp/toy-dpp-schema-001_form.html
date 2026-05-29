@@ -1,4 +1,30 @@
-@prefix sh: <http://www.w3.org/ns/shacl#> .
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toy Digital Product Passport — Form</title>
+  <script src="https://cdn.jsdelivr.net/npm/@ulb-darmstadt/shacl-form/dist/bundle.js" type="module"></script>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; }
+    h1 { font-size: 1.4rem; color: #333; border-bottom: 2px solid #007bff; padding-bottom: 8px; }
+    .actions { margin-top: 20px; display: flex; gap: 10px; }
+    button { padding: 9px 18px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    .btn-submit { background: #007bff; color: white; }
+    .btn-reset  { background: #6c757d; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Toy Digital Product Passport</h1>
+  <p>EU Toy Safety Regulation – Annex VI DPP schema (bricks: toy_dpp library)</p>
+  <shacl-form id="shacl-form" data-collapse="open"></shacl-form>
+  <div class="actions">
+    <button class="btn-submit" onclick="submitForm()">Review &amp; Submit</button>
+    <button class="btn-reset" onclick="document.getElementById('shacl-form').reset()">Reset</button>
+  </div>
+  <pre id="output" style="display:none; background:#f4f4f4; padding:16px; border-radius:4px; font-size:12px; margin-top:20px; white-space:pre-wrap;"></pre>
+  <script type="module">
+    const form = document.getElementById('shacl-form');
+    form.setAttribute('data-shapes', `@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -372,3 +398,15 @@ schema:NotifiedBody a sh:NodeShape ;
 # regulation: EU Toy Safety Regulation
 # brick_library: toy_dpp
 # annex: VI
+`);
+    window.submitForm = async () => {
+      const valid = await form.validate(false);
+      if (!valid) return;
+      const out = document.getElementById('output');
+      out.textContent = form.serialize();
+      out.style.display = 'block';
+      out.scrollIntoView({behavior: 'smooth'});
+    };
+  </script>
+</body>
+</html>

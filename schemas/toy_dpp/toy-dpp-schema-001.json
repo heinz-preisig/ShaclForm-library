@@ -6,10 +6,12 @@
   "component_brick_ids": [
     "a1b2c3d4-0003-4000-8000-000000000003",
     "a1b2c3d4-0001-4000-8000-000000000001",
-    "a1b2c3d4-0001-4000-8000-000000000001",
     "a1b2c3d4-0002-4000-8000-000000000002",
     "a1b2c3d4-0002-4000-8000-000000000002"
   ],
+  "flow_config": null,
+  "inheritance_chain": [],
+  "relationships": {},
   "edges": [
     {
       "child_brick_id": "a1b2c3d4-0001-4000-8000-000000000001",
@@ -45,14 +47,6 @@
       "sequence": 2
     }
   ],
-  "namespace": "dpp",
-  "namespace_iri": "https://ec.europa.eu/dpp/toy#",
-  "extra_namespaces": {
-    "schema": "https://schema.org/"
-  },
-  "flow_config": null,
-  "inheritance_chain": [],
-  "relationships": {},
   "metadata": {
     "regulation": "EU Toy Safety Regulation",
     "brick_library": "toy_dpp",
@@ -62,5 +56,5 @@
   "groups": {},
   "schema_refs": [],
   "created_at": "2026-05-07T19:18:11.087010",
-  "updated_at": "2026-05-07T19:19:55.710756"
+  "updated_at": "2026-05-28T14:59:36.078512"
 }
