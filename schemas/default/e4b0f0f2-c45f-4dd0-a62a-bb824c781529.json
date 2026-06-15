@@ -4,11 +4,12 @@
   "description": "",
   "root_brick_id": "",
   "component_brick_ids": [
-    "6233d5e0-2ffb-4d7d-b68e-25475e727335"
+    "6aa89485-c782-4332-890c-9c89ffe3e119"
   ],
   "flow_config": null,
   "inheritance_chain": [],
   "relationships": {},
+  "edges": [],
   "metadata": {},
   "component_ui_metadata": {},
   "groups": {},
@@ -21,5 +22,5 @@
     }
   ],
   "created_at": "2026-05-06T17:05:10.283327",
-  "updated_at": "2026-05-06T17:18:53.180599"
+  "updated_at": "2026-06-15T17:22:56.662335"
 }
