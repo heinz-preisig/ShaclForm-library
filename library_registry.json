@@ -12,6 +12,11 @@
           "name": "address_samples",
           "description": "Sample library demonstrating sh:node composition for alternative addresses",
           "created_at": "2026-05-19T15:33:04.933777"
+        },
+        {
+          "name": "battery_dpp",
+          "description": "EU Battery Regulation 2023/1542 — EV Battery Digital Product Passport demo library (presentation example)",
+          "created_at": "2026-06-18T12:00:00.000000"
         }
       ]
     },
@@ -20,6 +25,11 @@
         {
           "name": "default",
           "description": "Default schema library"
+        },
+        {
+          "name": "battery_dpp",
+          "description": "EV Battery DPP schemas (EU Battery Regulation demo)",
+          "created_at": "2026-06-18T12:00:00.000000"
         }
       ]
     }

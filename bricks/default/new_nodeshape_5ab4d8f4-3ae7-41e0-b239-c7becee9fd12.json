@@ -1,6 +1,6 @@
 {
-  "brick_id": "2d2ee279-0f56-4031-9786-c544da2120a9",
-  "name": "gugus",
+  "brick_id": "5ab4d8f4-3ae7-41e0-b239-c7becee9fd12",
+  "name": "New NodeShape",
   "description": "",
   "template_type": "custom",
   "namespace": "ex",
@@ -8,24 +8,11 @@
   "display_label": "",
   "leaf_properties": [
     {
-      "path": "http://xmlns.com/foaf/0.1/firstName",
-      "label": "name",
-      "datatype": "xsd:string",
-      "node_kind": null,
-      "in_values": [],
-      "has_value": null,
-      "min_count": 0,
-      "max_count": null,
-      "description": "",
-      "min_inclusive": null,
-      "max_inclusive": null,
-      "single_line": null
-    },
-    {
-      "path": "https://schema.org/value",
+      "path": "qudt:value",
       "label": "value",
       "datatype": "xsd:decimal",
       "node_kind": null,
+      "sh_class": "qudt:Mass",
       "in_values": [],
       "has_value": null,
       "min_count": 1,
@@ -33,13 +20,14 @@
       "description": "",
       "min_inclusive": null,
       "max_inclusive": null,
-      "single_line": null
+      "single_line": null,
+      "default_unit": "http://qudt.org/vocab/unit/KiloGM"
     }
   ],
   "xone_alternatives": [],
   "tags": [],
-  "created_at": "2026-05-29T11:24:13.955935",
-  "updated_at": "2026-06-15T17:20:04.205291",
+  "created_at": "2026-06-16T14:31:38.672980",
+  "updated_at": "2026-06-16T14:34:25.005722",
   "metadata": {},
   "object_type": "NodeShape",
   "properties": {},

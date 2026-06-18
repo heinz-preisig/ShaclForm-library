@@ -1,6 +1,6 @@
 {
-  "brick_id": "6aa89485-c782-4332-890c-9c89ffe3e119",
-  "name": "gugus",
+  "brick_id": "15e8a2c5-5db7-4b3e-8dd9-d4ed479b1ccd",
+  "name": "Mass",
   "description": "",
   "template_type": "custom",
   "namespace": "ex",
@@ -8,10 +8,11 @@
   "display_label": "",
   "leaf_properties": [
     {
-      "path": "http://xmlns.com/foaf/0.1/accountName",
-      "label": "account",
-      "datatype": "xsd:string",
+      "path": "qudt:value",
+      "label": "value",
+      "datatype": "xsd:decimal",
       "node_kind": null,
+      "sh_class": null,
       "in_values": [],
       "has_value": null,
       "min_count": 1,
@@ -19,27 +20,30 @@
       "description": "",
       "min_inclusive": null,
       "max_inclusive": null,
-      "single_line": null
+      "single_line": null,
+      "default_unit": null
     },
     {
-      "path": "http://example.org/shapes#mass",
-      "label": "mass",
-      "datatype": "xsd:decimal",
+      "path": "qudt:hasUnit",
+      "label": "unit",
+      "datatype": null,
       "node_kind": null,
+      "sh_class": "http://qudt.org/vocab/quantitykind/Mass",
       "in_values": [],
       "has_value": null,
-      "min_count": 0,
-      "max_count": null,
+      "min_count": 1,
+      "max_count": 1,
       "description": "",
       "min_inclusive": null,
       "max_inclusive": null,
-      "single_line": null
+      "single_line": null,
+      "default_unit": "http://qudt.org/vocab/unit/KiloGM"
     }
   ],
   "xone_alternatives": [],
   "tags": [],
-  "created_at": "2026-06-11T13:57:03.565776",
-  "updated_at": "2026-06-11T14:04:53.967046",
+  "created_at": "2026-06-16T15:45:50.109445",
+  "updated_at": "2026-06-16T15:54:31.606258",
   "metadata": {},
   "object_type": "NodeShape",
   "properties": {},

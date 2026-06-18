@@ -1,0 +1,55 @@
+{
+  "brick_id": "b1000005-ba77-4000-8000-000000000005",
+  "name": "Temperature",
+  "description": "Temperature measurement with QUDT unit. Triggers unit_dropdown for temperature units (°C, °F, K) via enrichment engine.",
+  "template_type": "decimal_with_unit",
+  "namespace": "bat",
+  "target_class": "https://schema.org/QuantitativeValue",
+  "display_label": "Temperature",
+  "leaf_properties": [
+    {
+      "path": "http://qudt.org/schema/qudt/value",
+      "label": "Value",
+      "datatype": "xsd:decimal",
+      "node_kind": null,
+      "sh_class": null,
+      "in_values": [],
+      "has_value": null,
+      "min_count": 1,
+      "max_count": 1,
+      "description": "Numeric temperature value.",
+      "min_inclusive": null,
+      "max_inclusive": null,
+      "single_line": true,
+      "default_unit": null
+    },
+    {
+      "path": "http://qudt.org/schema/qudt/hasUnit",
+      "label": "Unit",
+      "datatype": null,
+      "node_kind": null,
+      "sh_class": "http://qudt.org/vocab/quantitykind/Temperature",
+      "in_values": [],
+      "has_value": null,
+      "min_count": 1,
+      "max_count": 1,
+      "description": "Temperature unit — enrichment engine queries QUDT for applicable units (°C, °F, K).",
+      "min_inclusive": null,
+      "max_inclusive": null,
+      "single_line": null,
+      "default_unit": "http://qudt.org/vocab/unit/DEG_C"
+    }
+  ],
+  "xone_alternatives": [],
+  "tags": ["temperature", "thermal", "qudt", "unit", "battery", "dpp"],
+  "created_at": "2026-06-18T12:00:00.000000",
+  "updated_at": "2026-06-18T12:00:00.000000",
+  "metadata": {
+    "qudt_quantity_kind": "http://qudt.org/vocab/quantitykind/Temperature"
+  },
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}
