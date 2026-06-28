@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/84e6cc19-b7ca-45dd-9845-c80ac0cb04d6> a sh:NodeShape ;
+    rdfs:label "Composition" ;
+    rdfs:comment "the chemical composition" .
+

@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/5fa9ec35-26e5-45ad-8704-c04122e9b00f> a sh:NodeShape ;
+    rdfs:label "Material" .
+

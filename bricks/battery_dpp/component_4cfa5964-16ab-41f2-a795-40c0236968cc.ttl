@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/4cfa5964-16ab-41f2-a795-40c0236968cc> a sh:NodeShape ;
+    rdfs:label "Component" ;
+    rdfs:comment "Battery components " .
+

@@ -1,7 +1,7 @@
 {
   "schema_id": "ev-battery-dpp-001",
   "name": "EV Battery Digital Product Passport",
-  "description": "EU Battery Regulation 2023/1542 — Digital Product Passport for electric vehicle batteries. Covers identification, physical properties (mass, capacity, operating temperature) and environmental data (carbon footprint, recyclability).",
+  "description": "EU Battery Regulation 2023/1542 \u2014 Digital Product Passport for electric vehicle batteries. Covers identification, physical properties (mass, capacity, operating temperature) and environmental data (carbon footprint, recyclability).",
   "root_brick_id": "b1000008-ba77-4000-8000-000000000008",
   "component_brick_ids": [
     "b1000008-ba77-4000-8000-000000000008",
@@ -11,7 +11,8 @@
     "b1000004-ba77-4000-8000-000000000004",
     "b1000005-ba77-4000-8000-000000000005",
     "b1000006-ba77-4000-8000-000000000006",
-    "b1000007-ba77-4000-8000-000000000007"
+    "b1000007-ba77-4000-8000-000000000007",
+    "5fa9ec35-26e5-45ad-8704-c04122e9b00f"
   ],
   "flow_config": null,
   "inheritance_chain": [],
@@ -47,7 +48,7 @@
       "min_count": 1,
       "max_count": 1,
       "collapsible": true,
-      "description": "Total mass of the battery. Unit dropdown auto-populated from QUDT (kg, g, lb …).",
+      "description": "Total mass of the battery. Unit dropdown auto-populated from QUDT (kg, g, lb \u2026).",
       "sequence": 2
     },
     {
@@ -58,7 +59,7 @@
       "min_count": 1,
       "max_count": 1,
       "collapsible": true,
-      "description": "Rated electrical capacity. Unit dropdown auto-populated from QUDT (Ah, mAh, C …).",
+      "description": "Rated electrical capacity. Unit dropdown auto-populated from QUDT (Ah, mAh, C \u2026).",
       "sequence": 3
     },
     {
@@ -91,7 +92,7 @@
       "min_count": 1,
       "max_count": 1,
       "collapsible": true,
-      "description": "Lifecycle carbon footprint (CO₂eq/kWh). EU Battery Reg. Art. 7.",
+      "description": "Lifecycle carbon footprint (CO\u2082eq/kWh). EU Battery Reg. Art. 7.",
       "sequence": 6
     },
     {
@@ -116,18 +117,34 @@
   "groups": {
     "identification": {
       "label": "Battery Identification",
-      "brick_ids": ["b1000008-ba77-4000-8000-000000000008", "b1000001-ba77-4000-8000-000000000001", "b1000002-ba77-4000-8000-000000000002"]
+      "brick_ids": [
+        "b1000008-ba77-4000-8000-000000000008",
+        "b1000001-ba77-4000-8000-000000000001",
+        "b1000002-ba77-4000-8000-000000000002"
+      ]
     },
     "physical": {
       "label": "Physical Properties",
-      "brick_ids": ["b1000003-ba77-4000-8000-000000000003", "b1000004-ba77-4000-8000-000000000004", "b1000005-ba77-4000-8000-000000000005"]
+      "brick_ids": [
+        "b1000003-ba77-4000-8000-000000000003",
+        "b1000004-ba77-4000-8000-000000000004",
+        "b1000005-ba77-4000-8000-000000000005"
+      ]
     },
     "environmental": {
       "label": "Environmental",
-      "brick_ids": ["b1000006-ba77-4000-8000-000000000006", "b1000007-ba77-4000-8000-000000000007"]
+      "brick_ids": [
+        "b1000006-ba77-4000-8000-000000000006",
+        "b1000007-ba77-4000-8000-000000000007"
+      ]
+    },
+    "Material": {
+      "label": "Material",
+      "description": "",
+      "sequence": 0
     }
   },
   "schema_refs": [],
   "created_at": "2026-06-18T12:00:00.000000",
-  "updated_at": "2026-06-18T12:00:00.000000"
+  "updated_at": "2026-06-28T13:32:23.792974"
 }

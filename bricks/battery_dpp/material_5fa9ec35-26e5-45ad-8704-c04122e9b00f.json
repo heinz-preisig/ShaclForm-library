@@ -1,0 +1,37 @@
+{
+  "brick_id": "5fa9ec35-26e5-45ad-8704-c04122e9b00f",
+  "name": "Material",
+  "description": "",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "http://w3id.org/dppo/ontology/dpp-core/Material",
+  "display_label": "",
+  "leaf_properties": [
+    {
+      "path": "http://www.w3.org/ns/org#identifier",
+      "label": "ID",
+      "datatype": "xsd:string",
+      "node_kind": null,
+      "sh_class": "https://schema.org/identifier",
+      "in_values": [],
+      "has_value": null,
+      "min_count": 1,
+      "max_count": 1,
+      "description": "",
+      "min_inclusive": null,
+      "max_inclusive": null,
+      "single_line": null,
+      "default_unit": null
+    }
+  ],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-06-28T13:18:22.625375",
+  "updated_at": "2026-06-28T13:21:34.439628",
+  "metadata": {},
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}

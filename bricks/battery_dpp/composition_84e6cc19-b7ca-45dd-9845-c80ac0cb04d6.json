@@ -1,0 +1,20 @@
+{
+  "brick_id": "84e6cc19-b7ca-45dd-9845-c80ac0cb04d6",
+  "name": "Composition",
+  "description": "the chemical composition",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "https://schema.org/chemicalComposition",
+  "display_label": "",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-06-28T13:21:41.608930",
+  "updated_at": "2026-06-28T13:22:59.154964",
+  "metadata": {},
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}
