@@ -1,0 +1,260 @@
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bat:   <https://shaclforms.example.org/battery#> .
+@prefix pubchem: <https://pubchem.ncbi.nlm.nih.gov/compound/> .
+@prefix echa:  <https://echa.europa.eu/substance/> .
+
+# ── Ontology declaration ───────────────────────────────────────────────────────
+
+bat:BatterySubstancesOntology a owl:Ontology ;
+    rdfs:label "Battery Substances Vocabulary"@en ;
+    dcterms:description "SKOS vocabulary of chemical substances relevant to lithium-ion and other battery chemistries. Concept IRIs resolve to PubChem. Supports EU Battery Regulation 2023/1542 Art. 13 material disclosure and REACH hazardous substance reporting."@en ;
+    dcterms:source <https://pubchem.ncbi.nlm.nih.gov/> ;
+    dcterms:source <https://echa.europa.eu/> ;
+    owl:versionInfo "1.0.0" .
+
+# ── Concept Scheme ─────────────────────────────────────────────────────────────
+
+bat:BatterySubstances a skos:ConceptScheme ;
+    skos:prefLabel "Battery Substances"@en ;
+    rdfs:label "Battery Substances"@en ;
+    dcterms:description "Key chemical substances found in battery cells, electrolytes, electrodes and packaging."@en ;
+    skos:hasTopConcept bat:ActiveMaterials ;
+    skos:hasTopConcept bat:Electrolytes ;
+    skos:hasTopConcept bat:StructuralMaterials ;
+    skos:hasTopConcept bat:HazardousSubstances .
+
+# ── Top-level collections ──────────────────────────────────────────────────────
+
+bat:ActiveMaterials a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Active Materials"@en ;
+    skos:definition "Electrode active materials that participate in electrochemical reactions."@en ;
+    skos:narrower pubchem:3028194 ;   # Lithium cobalt oxide (LCO)
+    skos:narrower pubchem:16213731 ;  # Lithium nickel manganese cobalt oxide (NMC)
+    skos:narrower pubchem:14806934 ;  # Lithium iron phosphate (LFP)
+    skos:narrower pubchem:2723960 ;   # Lithium nickel cobalt aluminium oxide (NCA)
+    skos:narrower pubchem:5462224 ;   # Graphite (anode)
+    skos:narrower pubchem:6326970 .   # Silicon (anode additive)
+
+bat:Electrolytes a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Electrolytes & Salts"@en ;
+    skos:definition "Ionic conductors enabling ion transport between electrodes."@en ;
+    skos:narrower pubchem:2723976 ;   # Lithium hexafluorophosphate (LiPF6)
+    skos:narrower pubchem:517042 ;    # Ethylene carbonate (EC)
+    skos:narrower pubchem:12984 ;     # Dimethyl carbonate (DMC)
+    skos:narrower pubchem:11522 ;     # Diethyl carbonate (DEC)
+    skos:narrower pubchem:61700 .     # Fluoroethylene carbonate (FEC)
+
+bat:StructuralMaterials a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Structural & Conductive Materials"@en ;
+    skos:definition "Materials providing mechanical structure or electrical conductivity."@en ;
+    skos:narrower pubchem:5462310 ;   # Copper (current collector, anode)
+    skos:narrower pubchem:23978 ;     # Aluminium (current collector, cathode)
+    skos:narrower pubchem:2723961 ;   # Carbon black (conductive additive)
+    skos:narrower pubchem:24822 ;     # Polyvinylidene fluoride, PVDF (binder)
+    skos:narrower pubchem:9054 .      # Polyethylene (separator)
+
+bat:HazardousSubstances a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Hazardous Substances (REACH)"@en ;
+    skos:definition "Substances classified as hazardous under REACH Regulation (EC) No 1907/2006."@en ;
+    skos:narrower pubchem:104730 ;    # Cobalt
+    skos:narrower pubchem:935 ;       # Nickel
+    skos:narrower pubchem:5460341 ;   # Lithium
+    skos:narrower pubchem:23930 ;     # Manganese
+    skos:narrower pubchem:5359268 .   # Lead (legacy batteries)
+
+# ── Individual substance concepts ─────────────────────────────────────────────
+# Concept IRI = PubChem compound page (resolves in browser to full record)
+
+# ---- Active cathode materials ------------------------------------------------
+
+pubchem:3028194 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Lithium Cobalt Oxide (LCO)"@en ;
+    skos:altLabel "LiCoO2"@en ;
+    skos:altLabel "LCO"@en ;
+    skos:definition "Layered cathode active material. High energy density; used in consumer electronics. Cobalt content raises supply-chain concerns."@en ;
+    skos:notation "CAS:12190-79-3" ;
+    skos:broader bat:ActiveMaterials ;
+    rdfs:seeAlso <https://echa.europa.eu/substance-information/-/substanceinfo/100.032.234> .
+
+pubchem:16213731 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Lithium Nickel Manganese Cobalt Oxide (NMC)"@en ;
+    skos:altLabel "NMC"@en ;
+    skos:altLabel "NCM"@en ;
+    skos:definition "Family of layered cathode materials (NMC111, NMC622, NMC811). Dominant EV chemistry; balances energy density, power and cycle life."@en ;
+    skos:notation "CAS:182442-95-1" ;
+    skos:broader bat:ActiveMaterials .
+
+pubchem:14806934 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Lithium Iron Phosphate (LFP)"@en ;
+    skos:altLabel "LiFePO4"@en ;
+    skos:altLabel "LFP"@en ;
+    skos:definition "Olivine-structure cathode. Excellent thermal stability and cycle life; lower energy density than NMC. Cobalt-free."@en ;
+    skos:notation "CAS:15365-14-7" ;
+    skos:broader bat:ActiveMaterials .
+
+pubchem:2723960 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Lithium Nickel Cobalt Aluminium Oxide (NCA)"@en ;
+    skos:altLabel "NCA"@en ;
+    skos:altLabel "LiNiCoAlO2"@en ;
+    skos:definition "High-energy layered cathode used in cylindrical cells (e.g. 18650 format). High specific energy."@en ;
+    skos:notation "CAS:123869-49-8" ;
+    skos:broader bat:ActiveMaterials .
+
+pubchem:5462224 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Graphite"@en ;
+    skos:altLabel "C (graphite)"@en ;
+    skos:definition "Standard anode active material in lithium-ion cells. Intercalates lithium ions during charging."@en ;
+    skos:notation "CAS:7782-42-5" ;
+    skos:broader bat:ActiveMaterials .
+
+pubchem:6326970 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Silicon"@en ;
+    skos:altLabel "Si"@en ;
+    skos:definition "Anode additive or active material. ~10× higher theoretical capacity than graphite; expansion on cycling is a challenge."@en ;
+    skos:notation "CAS:7440-21-3" ;
+    skos:broader bat:ActiveMaterials .
+
+# ---- Electrolytes & salts ---------------------------------------------------
+
+pubchem:2723976 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Lithium Hexafluorophosphate (LiPF6)"@en ;
+    skos:altLabel "LiPF6"@en ;
+    skos:definition "Dominant lithium salt in liquid electrolytes. Moisture-sensitive; decomposes to HF above ~60 °C."@en ;
+    skos:notation "CAS:21324-40-3" ;
+    skos:broader bat:Electrolytes .
+
+pubchem:517042 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Ethylene Carbonate (EC)"@en ;
+    skos:altLabel "EC"@en ;
+    skos:definition "Cyclic carbonate solvent. Forms stable SEI on graphite anodes; solid at room temperature, used in mixtures."@en ;
+    skos:notation "CAS:96-49-1" ;
+    skos:broader bat:Electrolytes .
+
+pubchem:12984 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Dimethyl Carbonate (DMC)"@en ;
+    skos:altLabel "DMC"@en ;
+    skos:definition "Linear carbonate co-solvent. Low viscosity; used with EC to improve ionic conductivity."@en ;
+    skos:notation "CAS:616-38-6" ;
+    skos:broader bat:Electrolytes .
+
+pubchem:11522 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Diethyl Carbonate (DEC)"@en ;
+    skos:altLabel "DEC"@en ;
+    skos:definition "Linear carbonate co-solvent. Used with EC/DMC mixtures for improved low-temperature performance."@en ;
+    skos:notation "CAS:105-58-8" ;
+    skos:broader bat:Electrolytes .
+
+pubchem:61700 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Fluoroethylene Carbonate (FEC)"@en ;
+    skos:altLabel "FEC"@en ;
+    skos:definition "Electrolyte additive. Improves SEI on silicon anodes and extends cycle life."@en ;
+    skos:notation "CAS:114435-02-8" ;
+    skos:broader bat:Electrolytes .
+
+# ---- Structural & conductive materials --------------------------------------
+
+pubchem:5462310 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Copper"@en ;
+    skos:altLabel "Cu"@en ;
+    skos:definition "Anode current collector foil. High electrical conductivity; stable at anode potentials."@en ;
+    skos:notation "CAS:7440-50-8" ;
+    skos:broader bat:StructuralMaterials .
+
+pubchem:23978 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Aluminium"@en ;
+    skos:altLabel "Al"@en ;
+    skos:definition "Cathode current collector foil and cell casing material. Lightweight; stable at cathode potentials."@en ;
+    skos:notation "CAS:7429-90-5" ;
+    skos:broader bat:StructuralMaterials .
+
+pubchem:2723961 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Carbon Black"@en ;
+    skos:altLabel "Super P"@en ;
+    skos:definition "Conductive additive in electrode slurries. Improves electronic conductivity of active material coatings."@en ;
+    skos:notation "CAS:1333-86-4" ;
+    skos:broader bat:StructuralMaterials .
+
+pubchem:24822 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Polyvinylidene Fluoride (PVDF)"@en ;
+    skos:altLabel "PVDF"@en ;
+    skos:definition "Fluoropolymer binder for electrode coatings. Requires NMP solvent; replaced by water-based binders in some processes."@en ;
+    skos:notation "CAS:24937-79-9" ;
+    skos:broader bat:StructuralMaterials .
+
+pubchem:9054 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Polyethylene (PE)"@en ;
+    skos:altLabel "PE"@en ;
+    skos:definition "Microporous separator material. Prevents internal short circuit while allowing ion transport."@en ;
+    skos:notation "CAS:9002-88-4" ;
+    skos:broader bat:StructuralMaterials .
+
+# ---- Hazardous substances (REACH) -------------------------------------------
+
+pubchem:104730 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Cobalt"@en ;
+    skos:altLabel "Co"@en ;
+    skos:definition "Critical raw material. REACH SVHC candidate; reproductive toxicity concerns. Found in NMC and NCA cathodes."@en ;
+    skos:notation "CAS:7440-48-4" ;
+    skos:broader bat:HazardousSubstances ;
+    rdfs:seeAlso <https://echa.europa.eu/substance-information/-/substanceinfo/100.028.325> .
+
+pubchem:935 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Nickel"@en ;
+    skos:altLabel "Ni"@en ;
+    skos:definition "Critical raw material. REACH SVHC; carcinogenic and sensitising. Dominant in high-energy NMC811 and NCA cathodes."@en ;
+    skos:notation "CAS:7440-02-0" ;
+    skos:broader bat:HazardousSubstances ;
+    rdfs:seeAlso <https://echa.europa.eu/substance-information/-/substanceinfo/100.028.283> .
+
+pubchem:5460341 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Lithium"@en ;
+    skos:altLabel "Li"@en ;
+    skos:definition "Critical raw material. Flammable metal; reacts violently with water. Core element in all lithium-ion battery chemistries."@en ;
+    skos:notation "CAS:7439-93-2" ;
+    skos:broader bat:HazardousSubstances ;
+    rdfs:seeAlso <https://echa.europa.eu/substance-information/-/substanceinfo/100.028.266> .
+
+pubchem:23930 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Manganese"@en ;
+    skos:altLabel "Mn"@en ;
+    skos:definition "Transition metal in NMC and LMFP cathodes. Lower toxicity profile than cobalt or nickel."@en ;
+    skos:notation "CAS:7439-96-5" ;
+    skos:broader bat:HazardousSubstances .
+
+pubchem:5359268 a skos:Concept ;
+    skos:inScheme bat:BatterySubstances ;
+    skos:prefLabel "Lead"@en ;
+    skos:altLabel "Pb"@en ;
+    skos:definition "Used in lead-acid batteries. REACH SVHC; reproductive toxicant. Not used in Li-ion but present in legacy and stationary storage batteries."@en ;
+    skos:notation "CAS:7439-92-1" ;
+    skos:broader bat:HazardousSubstances ;
+    rdfs:seeAlso <https://echa.europa.eu/substance-information/-/substanceinfo/100.028.264> .
