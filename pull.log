@@ -1,1 +1,57 @@
-Already up to date.
+Updating 93fb978..c2eda37
+Fast-forward
+ README.md                                          | 106 ++++
+ ...ation_b1000001-ba77-4000-8000-000000000001.json |   4 +-
+ ...thode_2de3dc1e-3a42-49b7-b402-ea2522400cf0.json |  72 +++
+ ...athode_2de3dc1e-3a42-49b7-b402-ea2522400cf0.ttl |   6 +
+ ...onent_4cfa5964-16ab-41f2-a795-40c0236968cc.json |  71 +++
+ ...ponent_4cfa5964-16ab-41f2-a795-40c0236968cc.ttl |   7 +
+ ...ition_84e6cc19-b7ca-45dd-9845-c80ac0cb04d6.json | 104 ++++
+ ...sition_84e6cc19-b7ca-45dd-9845-c80ac0cb04d6.ttl |   7 +
+ ...sions_b1000009-ba77-4000-8000-000000000009.json |  88 ++++
+ ...ental_b1000011-ba77-4000-8000-000000000011.json |  41 ++
+ ...turer_b1000002-ba77-4000-8000-000000000002.json |   4 +-
+ ...erial_5fa9ec35-26e5-45ad-8704-c04122e9b00f.json |  37 ++
+ ...terial_5fa9ec35-26e5-45ad-8704-c04122e9b00f.ttl |   6 +
+ ...rties_b1000010-ba77-4000-8000-000000000010.json |  40 ++
+ ...e_max_b1000012-ba77-4000-8000-000000000012.json |  63 +++
+ ...re_max_b1000012-ba77-4000-8000-000000000012.ttl |   7 +
+ ..._min_b1000005-ba77-4000-8000-000000000005.json} |  21 +-
+ ...re_min_b1000005-ba77-4000-8000-000000000005.ttl |   7 +
+ docker-setup/install-docker-mac.sh                 |  44 ++
+ docker-setup/install-docker-on-unix.sh             |  42 ++
+ docker-setup/install-docker-on-windows.ps1         |  31 ++
+ ontologies/cache/battery_substances.ttl            | 260 +++++++++
+ run-both-from-hub.sh                               | 112 ----
+ run-brick-from-hub.ps1                             |  74 +++
+ run-brick-from-hub.sh                              |  72 ++-
+ run-schema-from-hub.ps1                            |  74 +++
+ run-schema-from-hub.sh                             |  72 ++-
+ schemas/battery_dpp/ev-battery-dpp-001.json        | 183 +++++--
+ schemas/battery_dpp/ev-battery-dpp-001.ttl         | 575 +++++++++++++++++---
+ schemas/battery_dpp/ev-battery-dpp-001_form.html   | 579 ++++++++++++++++++---
+ stop-both-from-hub.sh                              |  43 --
+ 31 files changed, 2482 insertions(+), 370 deletions(-)
+ create mode 100644 bricks/battery_dpp/cathode_2de3dc1e-3a42-49b7-b402-ea2522400cf0.json
+ create mode 100644 bricks/battery_dpp/cathode_2de3dc1e-3a42-49b7-b402-ea2522400cf0.ttl
+ create mode 100644 bricks/battery_dpp/component_4cfa5964-16ab-41f2-a795-40c0236968cc.json
+ create mode 100644 bricks/battery_dpp/component_4cfa5964-16ab-41f2-a795-40c0236968cc.ttl
+ create mode 100644 bricks/battery_dpp/composition_84e6cc19-b7ca-45dd-9845-c80ac0cb04d6.json
+ create mode 100644 bricks/battery_dpp/composition_84e6cc19-b7ca-45dd-9845-c80ac0cb04d6.ttl
+ create mode 100644 bricks/battery_dpp/dimensions_b1000009-ba77-4000-8000-000000000009.json
+ create mode 100644 bricks/battery_dpp/environmental_b1000011-ba77-4000-8000-000000000011.json
+ create mode 100644 bricks/battery_dpp/material_5fa9ec35-26e5-45ad-8704-c04122e9b00f.json
+ create mode 100644 bricks/battery_dpp/material_5fa9ec35-26e5-45ad-8704-c04122e9b00f.ttl
+ create mode 100644 bricks/battery_dpp/physicalproperties_b1000010-ba77-4000-8000-000000000010.json
+ create mode 100644 bricks/battery_dpp/temperature_max_b1000012-ba77-4000-8000-000000000012.json
+ create mode 100644 bricks/battery_dpp/temperature_max_b1000012-ba77-4000-8000-000000000012.ttl
+ rename bricks/battery_dpp/{temperature_b1000005-ba77-4000-8000-000000000005.json => temperature_min_b1000005-ba77-4000-8000-000000000005.json} (72%)
+ create mode 100644 bricks/battery_dpp/temperature_min_b1000005-ba77-4000-8000-000000000005.ttl
+ create mode 100755 docker-setup/install-docker-mac.sh
+ create mode 100755 docker-setup/install-docker-on-unix.sh
+ create mode 100644 docker-setup/install-docker-on-windows.ps1
+ create mode 100644 ontologies/cache/battery_substances.ttl
+ delete mode 100755 run-both-from-hub.sh
+ create mode 100644 run-brick-from-hub.ps1
+ create mode 100644 run-schema-from-hub.ps1
+ delete mode 100755 stop-both-from-hub.sh
