@@ -1,11 +1,11 @@
 {
   "brick_id": "b1000005-ba77-4000-8000-000000000005",
-  "name": "Temperature",
-  "description": "Temperature measurement with QUDT unit. Triggers unit_dropdown for temperature units (°C, °F, K) via enrichment engine.",
+  "name": "Temperature_Min",
+  "description": "Minimum operating temperature measurement with QUDT unit. Triggers the unit_dropdown for temperature units (\u00b0C, \u00b0F, K) via the enrichment engine.",
   "template_type": "decimal_with_unit",
   "namespace": "bat",
   "target_class": "https://schema.org/QuantitativeValue",
-  "display_label": "Temperature",
+  "display_label": "Min Operating Temperature",
   "leaf_properties": [
     {
       "path": "http://qudt.org/schema/qudt/value",
@@ -33,7 +33,7 @@
       "has_value": null,
       "min_count": 1,
       "max_count": 1,
-      "description": "Temperature unit — enrichment engine queries QUDT for applicable units (°C, °F, K).",
+      "description": "Temperature unit \u2014 enrichment engine queries QUDT for applicable units (\u00b0C, \u00b0F, K).",
       "min_inclusive": null,
       "max_inclusive": null,
       "single_line": null,
@@ -41,9 +41,16 @@
     }
   ],
   "xone_alternatives": [],
-  "tags": ["temperature", "thermal", "qudt", "unit", "battery", "dpp"],
+  "tags": [
+    "temperature",
+    "thermal",
+    "qudt",
+    "unit",
+    "battery",
+    "dpp"
+  ],
   "created_at": "2026-06-18T12:00:00.000000",
-  "updated_at": "2026-06-18T12:00:00.000000",
+  "updated_at": "2026-06-29T13:07:09.737697",
   "metadata": {
     "qudt_quantity_kind": "http://qudt.org/vocab/quantitykind/Temperature"
   },

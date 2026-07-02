@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>EV Battery Digital Product Passport — Form</title>
-  <script src="https://cdn.jsdelivr.net/npm/@ulb-darmstadt/shacl-form/dist/bundle.js" type="module"></script>
+  <script type="module" src="https://unpkg.com/@ulb-darmstadt/shacl-form@3.1.0/dist/bundle.js"></script>
   <style>
     body { font-family: Arial, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; }
     h1 { font-size: 1.4rem; color: #333; border-bottom: 2px solid #007bff; padding-bottom: 8px; }
@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>EV Battery Digital Product Passport</h1>
-  <p>EU Battery Regulation 2023/1542 — Digital Product Passport for electric vehicle batteries. Covers identification, physical properties (mass, capacity, operating temperature) and environmental data (carbon footprint, recyclability).</p>
+  <p>EU Battery Regulation 2023/1542 — Digital Product Passport for electric vehicle batteries. Hierarchical schema: identification (incl. manufacturer), physical properties (mass, dimensions, capacity, temperature) and environmental data (carbon footprint, recyclability). Material branch covers component chemistry with public substance vocabulary links.</p>
   <shacl-form id="shacl-form" data-collapse="open"></shacl-form>
   <div class="actions">
     <button class="btn-submit" onclick="submitForm()">Review &amp; Submit</button>
@@ -26,6 +26,7 @@
     const form = document.getElementById('shacl-form');
     form.setAttribute('data-shapes', `@prefix bat: <http://example.org/bat#> .
 @prefix dash: <http://datashapes.org/dash#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://example.org/schema/ev-battery-dpp-001/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -82,9 +83,10 @@ schema:EVBatteryDPP a sh:NodeShape ;
         dash:viewer dash:LabelViewer ;
     ] ;
     sh:property [
-        sh:path <https://schema.org/identifier> ;
+        sh:path bat:identification ;
         sh:node schema:BatteryIdentification ;
-        sh:name "BatteryIdentification"@en ;
+        sh:name "Battery Identification"@en ;
+        sh:description "Unique identification of this battery unit. EU Battery Reg. Art. 77."@en ;
         sh:order 0 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -92,71 +94,43 @@ schema:EVBatteryDPP a sh:NodeShape ;
         dash:viewer dash:DetailsViewer ;
     ] ;
     sh:property [
-        sh:path <https://schema.org/manufacturer> ;
-        sh:node schema:Manufacturer ;
-        sh:name "Manufacturer"@en ;
-        sh:order 0 ;
+        sh:path bat:physicalProperties ;
+        sh:node schema:PhysicalProperties ;
+        sh:name "Physical Properties"@en ;
+        sh:description "Physical characteristics of the battery: mass, dimensions, rated capacity and operating temperature range."@en ;
+        sh:order 2 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         dash:editor dash:DetailsEditor ;
         dash:viewer dash:DetailsViewer ;
     ] ;
     sh:property [
-        sh:path <https://schema.org/weight> ;
-        sh:node schema:Mass ;
-        sh:name "Mass"@en ;
-        sh:order 0 ;
+        sh:path org:has ;
+        sh:node schema:Person_with_Address ;
+        sh:name "Person with Address"@en ;
+        sh:order 4 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         dash:editor dash:DetailsEditor ;
         dash:viewer dash:DetailsViewer ;
     ] ;
     sh:property [
-        sh:path <https://schema.org/value> ;
-        sh:node schema:BatteryCapacity ;
-        sh:name "BatteryCapacity"@en ;
-        sh:order 0 ;
+        sh:path bat:environmental ;
+        sh:node schema:Environmental ;
+        sh:name "Environmental Data"@en ;
+        sh:description "Environmental and sustainability data required by EU Battery Regulation Arts. 7-8."@en ;
+        sh:order 8 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         dash:editor dash:DetailsEditor ;
         dash:viewer dash:DetailsViewer ;
     ] ;
     sh:property [
-        sh:path bat:operatingTemperatureMin ;
-        sh:node schema:Temperature ;
-        sh:name "Temperature"@en ;
-        sh:order 0 ;
-        sh:minCount 0 ;
-        sh:maxCount 1 ;
-        dash:editor dash:DetailsEditor ;
-        dash:viewer dash:DetailsViewer ;
-    ] ;
-    sh:property [
-        sh:path bat:operatingTemperatureMin ;
-        sh:node schema:Temperature ;
-        sh:name "Temperature"@en ;
-        sh:order 0 ;
-        sh:minCount 0 ;
-        sh:maxCount 1 ;
-        dash:editor dash:DetailsEditor ;
-        dash:viewer dash:DetailsViewer ;
-    ] ;
-    sh:property [
-        sh:path <https://schema.org/hasMeasurement> ;
-        sh:node schema:CarbonFootprint ;
-        sh:name "CarbonFootprint"@en ;
-        sh:order 0 ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        dash:editor dash:DetailsEditor ;
-        dash:viewer dash:DetailsViewer ;
-    ] ;
-    sh:property [
-        sh:path <https://schema.org/hasMeasurement> ;
-        sh:node schema:RecyclabilityRate ;
-        sh:name "RecyclabilityRate"@en ;
-        sh:order 0 ;
-        sh:minCount 1 ;
+        sh:path bat:hasMaterial ;
+        sh:node schema:Material ;
+        sh:name "Material"@en ;
+        sh:description "A material used in the battery. May appear multiple times (one per distinct material). EU Battery Reg. Art. 13."@en ;
+        sh:order 11 ;
         dash:editor dash:DetailsEditor ;
         dash:viewer dash:DetailsViewer ;
     ] .
@@ -202,16 +176,29 @@ schema:BatteryIdentification a sh:NodeShape ;
     sh:property [
         sh:path <https://schema.org/countryOfOrigin> ;
         sh:name "Country of Manufacture"@en ;
-        sh:description "ISO 3166-1 alpha-2 country code where the battery was manufactured."@en ;
+        sh:description "ISO 3166-1 alpha-2 country code where the battery was manufactured. EU member states listed first, followed by major battery-producing countries."@en ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
+        sh:in ("AT" "BE" "BG" "HR" "CY" "CZ" "DK" "EE" "FI" "FR" "DE" "GR" "HU" "IE" "IT" "LV" "LT" "LU" "MT" "NL" "PL" "PT" "RO" "SK" "SI" "ES" "SE" "CN" "JP" "KR" "US" "GB" "NO" "CH" "IN" "AU" "CA" "MX" "BR" "ZA" "Other") ;
         sh:order 3 ;
         dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LabelViewer ;
-    ] .
+    ] ;
+    sh:property [
+        sh:path <https://schema.org/manufacturer> ;
+        sh:node schema:Manufacturer ;
+        sh:name "Manufacturer"@en ;
+        sh:description "Manufacturer or responsible economic operator. EU Battery Reg. Art. 38."@en ;
+        sh:order 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:order 0 .
 
-# Component: b1000002-ba77-4000-8000-000000000002 (depth 0)
+# Component: b1000002-ba77-4000-8000-000000000002 (depth 1)
 schema:Manufacturer a sh:NodeShape ;
     sh:targetClass <https://schema.org/Organization> ;
     rdfs:label "Manufacturer" ;
@@ -241,10 +228,11 @@ schema:Manufacturer a sh:NodeShape ;
     sh:property [
         sh:path <https://schema.org/addressCountry> ;
         sh:name "Country"@en ;
-        sh:description "ISO 3166-1 alpha-2 country code of the manufacturer's registered address."@en ;
+        sh:description "ISO 3166-1 alpha-2 country code of the manufacturer's registered address. EU member states listed first, followed by major battery-producing countries."@en ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
+        sh:in ("AT" "BE" "BG" "HR" "CY" "CZ" "DK" "EE" "FI" "FR" "DE" "GR" "HU" "IE" "IT" "LV" "LT" "LU" "MT" "NL" "PL" "PT" "RO" "SK" "SI" "ES" "SE" "CN" "JP" "KR" "US" "GB" "NO" "CH" "IN" "AU" "CA" "MX" "BR" "ZA" "Other") ;
         sh:order 2 ;
         dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LabelViewer ;
@@ -270,9 +258,80 @@ schema:Manufacturer a sh:NodeShape ;
         sh:order 4 ;
         dash:editor dash:URIEditor ;
         dash:viewer dash:URIViewer ;
-    ] .
+    ] ;
+    sh:order 1 .
 
-# Component: b1000003-ba77-4000-8000-000000000003 (depth 0)
+# Component: b1000010-ba77-4000-8000-000000000010 (depth 0)
+schema:PhysicalProperties a sh:NodeShape ;
+    sh:targetClass <https://schema.org/QuantitativeValue> ;
+    rdfs:label "PhysicalProperties" ;
+    rdfs:comment "Intermediate grouping node for the physical characteristics of a battery: mass, dimensions, rated capacity and operating temperature range. Acts as a container in the schema tree — child bricks supply the actual measured values." ;
+    sh:property [
+        sh:path <https://schema.org/description> ;
+        sh:name "Notes"@en ;
+        sh:description "Optional free-text notes on the physical characteristics of this battery."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 0 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:mass ;
+        sh:node schema:Mass ;
+        sh:name "Mass"@en ;
+        sh:description "Total mass of the battery. Unit dropdown auto-populated from QUDT (kg, g, lb …)."@en ;
+        sh:order 3 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:dimensions ;
+        sh:node schema:Dimensions ;
+        sh:name "Dimensions"@en ;
+        sh:description "External dimensions (L × W × H). Unit dropdown auto-populated from QUDT (mm, cm, m …)."@en ;
+        sh:order 4 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:ratedCapacity ;
+        sh:node schema:BatteryCapacity ;
+        sh:name "Battery Capacity"@en ;
+        sh:description "Rated electrical capacity. Unit dropdown auto-populated from QUDT (Ah, mAh, C …)."@en ;
+        sh:order 5 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:operatingTemperatureMin ;
+        sh:node schema:Temperature_Min ;
+        sh:name "Min Operating Temperature"@en ;
+        sh:description "Minimum recommended operating temperature."@en ;
+        sh:order 6 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:operatingTemperatureMax ;
+        sh:node schema:Temperature_Max ;
+        sh:name "Max Operating Temperature"@en ;
+        sh:description "Maximum recommended operating temperature."@en ;
+        sh:order 7 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:order 2 .
+
+# Component: b1000003-ba77-4000-8000-000000000003 (depth 1)
 schema:Mass a sh:NodeShape ;
     sh:targetClass <https://schema.org/QuantitativeValue> ;
     rdfs:label "Mass" ;
@@ -301,9 +360,66 @@ schema:Mass a sh:NodeShape ;
         sh:order 1 ;
         dash:editor dash:InstancesSelectEditor ;
         dash:viewer dash:LabelViewer ;
-    ] .
+    ] ;
+    sh:order 3 .
 
-# Component: b1000004-ba77-4000-8000-000000000004 (depth 0)
+# Component: b1000009-ba77-4000-8000-000000000009 (depth 1)
+schema:Dimensions a sh:NodeShape ;
+    sh:targetClass <https://schema.org/QuantitativeValue> ;
+    rdfs:label "Dimensions" ;
+    rdfs:comment "Physical dimensions (length, width, height) of a battery cell, module or pack. Each axis uses QUDT length units — triggers unit_dropdown automatically via enrichment engine." ;
+    sh:property [
+        sh:path bat:length ;
+        sh:name "Length"@en ;
+        sh:description "Longest dimension of the battery (X-axis)."@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:order 0 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:width ;
+        sh:name "Width"@en ;
+        sh:description "Width of the battery (Y-axis)."@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:order 1 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:height ;
+        sh:name "Height"@en ;
+        sh:description "Height of the battery (Z-axis)."@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:order 2 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <http://qudt.org/schema/qudt/hasUnit> ;
+        sh:name "Unit"@en ;
+        sh:description "Length unit — enrichment engine queries QUDT for applicable units (mm, cm, m, in, ft)."@en ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class <http://qudt.org/vocab/quantitykind/Length> ;
+        sh:in (unit:ANGSTROM unit:AU unit:BTU_IT-PER-LB_F unit:CHAIN unit:CHAIN_US unit:CentiM unit:DecaM unit:DeciM unit:FATH unit:FM unit:FT unit:FT_US unit:FUR unit:FemtoM unit:GAUGE_FR unit:GA_Charriere unit:HectoM unit:IN unit:KiloM unit:LY unit:M unit:MI unit:MI_N unit:MI_UK unit:MI_US unit:MicroIN unit:MicroM unit:MilLength unit:MilliIN unit:MilliM unit:NanoM unit:PARSEC unit:PCA unit:PT unit:PicoM unit:PlanckLength unit:ROD unit:YD unit:ZOLL) ;
+        sh:defaultValue unit:MilliM ;
+        sh:order 3 ;
+        dash:editor dash:InstancesSelectEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:order 4 .
+
+# Component: b1000004-ba77-4000-8000-000000000004 (depth 1)
 schema:BatteryCapacity a sh:NodeShape ;
     sh:targetClass <https://schema.org/QuantitativeValue> ;
     rdfs:label "BatteryCapacity" ;
@@ -332,13 +448,14 @@ schema:BatteryCapacity a sh:NodeShape ;
         sh:order 1 ;
         dash:editor dash:InstancesSelectEditor ;
         dash:viewer dash:LabelViewer ;
-    ] .
+    ] ;
+    sh:order 5 .
 
-# Component: b1000005-ba77-4000-8000-000000000005 (depth 0)
-schema:Temperature a sh:NodeShape ;
+# Component: b1000005-ba77-4000-8000-000000000005 (depth 1)
+schema:Temperature_Min a sh:NodeShape ;
     sh:targetClass <https://schema.org/QuantitativeValue> ;
-    rdfs:label "Temperature" ;
-    rdfs:comment "Temperature measurement with QUDT unit. Triggers unit_dropdown for temperature units (°C, °F, K) via enrichment engine." ;
+    rdfs:label "Temperature_Min" ;
+    rdfs:comment "Minimum operating temperature measurement with QUDT unit. Triggers the unit_dropdown for temperature units (°C, °F, K) via the enrichment engine." ;
     sh:property [
         sh:path <http://qudt.org/schema/qudt/value> ;
         sh:name "Value"@en ;
@@ -362,9 +479,80 @@ schema:Temperature a sh:NodeShape ;
         sh:order 1 ;
         dash:editor dash:InstancesSelectEditor ;
         dash:viewer dash:LabelViewer ;
-    ] .
+    ] ;
+    sh:order 6 .
 
-# Component: b1000006-ba77-4000-8000-000000000006 (depth 0)
+# Component: b1000012-ba77-4000-8000-000000000012 (depth 1)
+schema:Temperature_Max a sh:NodeShape ;
+    sh:targetClass <https://schema.org/QuantitativeValue> ;
+    rdfs:label "Temperature_Max" ;
+    rdfs:comment "Maximum operating temperature measurement with QUDT unit. Triggers the unit_dropdown for temperature units (°C, °F, K) via the enrichment engine." ;
+    sh:property [
+        sh:path <http://qudt.org/schema/qudt/value> ;
+        sh:name "Value"@en ;
+        sh:description "Numeric temperature value."@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 0 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <http://qudt.org/schema/qudt/hasUnit> ;
+        sh:name "Unit"@en ;
+        sh:description "Temperature unit — enrichment engine queries QUDT for applicable units (°C, °F, K)."@en ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class <http://qudt.org/vocab/quantitykind/Temperature> ;
+        sh:in (unit:DEG_C unit:DEG_C_GROWING_CEREAL unit:DEG_F unit:DEG_R unit:DecaK unit:K unit:MegaK unit:MilliDEG_C unit:MilliK unit:PlanckTemperature) ;
+        sh:defaultValue unit:DEG_C ;
+        sh:order 1 ;
+        dash:editor dash:InstancesSelectEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:order 7 .
+
+# Component: b1000011-ba77-4000-8000-000000000011 (depth 0)
+schema:Environmental a sh:NodeShape ;
+    sh:targetClass <https://schema.org/QuantitativeValue> ;
+    rdfs:label "Environmental" ;
+    rdfs:comment "Intermediate grouping node for environmental and sustainability data of a battery: lifecycle carbon footprint and end-of-life recyclability rates. Required by EU Battery Regulation 2023/1542 Arts. 7 and 8." ;
+    sh:property [
+        sh:path <https://schema.org/description> ;
+        sh:name "Notes"@en ;
+        sh:description "Optional free-text notes on environmental performance or data sources."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 0 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:carbonFootprint ;
+        sh:node schema:CarbonFootprint ;
+        sh:name "Carbon Footprint"@en ;
+        sh:description "Lifecycle carbon footprint (CO₂eq/kWh). EU Battery Reg. Art. 7."@en ;
+        sh:order 9 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:recyclabilityRate ;
+        sh:node schema:RecyclabilityRate ;
+        sh:name "Recyclability Rate"@en ;
+        sh:description "Percentage of material recoverable by category. EU Battery Reg. Art. 8. One entry per material category."@en ;
+        sh:order 10 ;
+        sh:minCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:order 8 .
+
+# Component: b1000006-ba77-4000-8000-000000000006 (depth 1)
 schema:CarbonFootprint a sh:NodeShape ;
     sh:targetClass <https://schema.org/QuantitativeValue> ;
     rdfs:label "CarbonFootprint" ;
@@ -404,9 +592,10 @@ schema:CarbonFootprint a sh:NodeShape ;
         sh:order 2 ;
         dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LabelViewer ;
-    ] .
+    ] ;
+    sh:order 9 .
 
-# Component: b1000007-ba77-4000-8000-000000000007 (depth 0)
+# Component: b1000007-ba77-4000-8000-000000000007 (depth 1)
 schema:RecyclabilityRate a sh:NodeShape ;
     sh:targetClass <https://schema.org/QuantitativeValue> ;
     rdfs:label "RecyclabilityRate" ;
@@ -435,7 +624,245 @@ schema:RecyclabilityRate a sh:NodeShape ;
         sh:order 1 ;
         dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LabelViewer ;
-    ] .
+    ] ;
+    sh:order 10 .
+
+# Component: 5fa9ec35-26e5-45ad-8704-c04122e9b00f (depth 0)
+schema:Material a sh:NodeShape ;
+    sh:targetClass <http://w3id.org/dppo/ontology/dpp-core/Material> ;
+    rdfs:label "Material" ;
+    sh:property [
+        sh:path <http://www.w3.org/ns/org#identifier> ;
+        sh:name "ID"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class <https://schema.org/identifier> ;
+        sh:order 0 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:hasComponent ;
+        sh:node schema:Component ;
+        sh:name "Component"@en ;
+        sh:description "A physical component of this material (e.g. cathode, anode, separator)."@en ;
+        sh:order 12 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:hasComposition ;
+        sh:node schema:Composition ;
+        sh:name "Chemical Composition"@en ;
+        sh:description "Chemical substance entry (from vocabulary or free text) with weight fraction and hazard flag. EU Battery Reg. Art. 13 / REACH."@en ;
+        sh:order 14 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:order 11 .
+
+# Component: 4cfa5964-16ab-41f2-a795-40c0236968cc (depth 1)
+schema:Component a sh:NodeShape ;
+    sh:targetClass <http://w3id.org/dppo/ontology/dpp-core/Component> ;
+    rdfs:label "Component" ;
+    rdfs:comment "A physical component of a battery (e.g. cathode, anode, electrolyte, separator). Captures component type, material reference and part identifier." ;
+    sh:property [
+        sh:path <https://schema.org/name> ;
+        sh:name "Component Name"@en ;
+        sh:description "Human-readable name of this component (e.g. Cathode, Anode, Electrolyte, Separator)."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 0 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://schema.org/identifier> ;
+        sh:name "Part Identifier"@en ;
+        sh:description "Manufacturer part number or internal identifier for this component."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://schema.org/description> ;
+        sh:name "Description"@en ;
+        sh:description "Optional free-text description of the component's function or specification."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:hasCathode ;
+        sh:node schema:Cathode ;
+        sh:name "Cathode"@en ;
+        sh:description "Cathode active material chemistry (NMC, LFP, NCA …). EU Battery Reg. Art. 13."@en ;
+        sh:order 13 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:order 12 .
+
+# Component: 2de3dc1e-3a42-49b7-b402-ea2522400cf0 (depth 2)
+schema:Cathode a sh:NodeShape ;
+    sh:targetClass <http://w3id.org/dppo/ontology/dpp-core/Component> ;
+    rdfs:label "Cathode" ;
+    rdfs:comment "Cathode component of a battery cell. Captures active material chemistry (e.g. NMC, LFP, NCA), supplier and part reference. Required for material disclosure under EU Battery Regulation Art. 13." ;
+    sh:property [
+        sh:path <https://schema.org/material> ;
+        sh:name "Active Material Chemistry"@en ;
+        sh:description "Active cathode material type. Common abbreviations: NMC = Lithium Nickel Manganese Cobalt Oxide, LFP = Lithium Iron Phosphate, NCA = Lithium Nickel Cobalt Aluminium Oxide."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ("NMC111" "NMC622" "NMC811" "NCA" "LFP" "LCO" "LMFP" "Other") ;
+        sh:order 0 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://schema.org/manufacturer> ;
+        sh:name "Material Supplier"@en ;
+        sh:description "Name of the cathode active material supplier."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://schema.org/identifier> ;
+        sh:name "Part Number"@en ;
+        sh:description "Supplier part number or internal cathode component identifier."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:order 13 .
+
+# Component: 84e6cc19-b7ca-45dd-9845-c80ac0cb04d6 (depth 1)
+schema:Composition a sh:NodeShape ;
+    sh:targetClass <http://w3id.org/dppo/ontology/dpp-core/Material> ;
+    rdfs:label "Composition" ;
+    rdfs:comment "Chemical composition of a battery material or component. Captures substance name, CAS number and weight fraction. Supports hazardous substance disclosure under EU Battery Regulation Art. 13 and REACH." ;
+    sh:property [
+        sh:path <https://schema.org/hasMeasurement> ;
+        sh:name "Substance (from vocabulary)"@en ;
+        sh:description "Select substance from the battery substances vocabulary (SKOS). Concept IRIs resolve to PubChem. Leave blank and use the free-text field below for unlisted substances."@en ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:class <https://shaclforms.example.org/battery#BatterySubstances> ;
+        sh:order 0 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://schema.org/name> ;
+        sh:name "Substance Name (free text)"@en ;
+        sh:description "IUPAC or common name for substances not in the vocabulary. Use this as fallback or override."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:casNumber ;
+        sh:name "CAS Number"@en ;
+        sh:description "Chemical Abstracts Service registry number (e.g. 7439-93-2 for Lithium). Auto-populated from skos:notation when vocabulary entry is selected."@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <http://qudt.org/schema/qudt/value> ;
+        sh:name "Weight Fraction (%)"@en ;
+        sh:description "Weight percentage of this substance in the parent material (0–100)."@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 100 ;
+        sh:order 3 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path bat:hazardous ;
+        sh:name "Hazardous Substance"@en ;
+        sh:description "True if this substance is classified as hazardous under REACH Regulation (EC) No 1907/2006."@en ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 4 ;
+        dash:editor dash:BooleanSelectEditor ;
+        dash:viewer dash:BooleanViewer ;
+    ] ;
+    sh:order 14 .
+
+# Component: 11b65052-988d-49c4-927e-1c770ce2de08 (depth 0)
+schema:Person_with_Address a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    rdfs:label "Person with Address" ;
+    rdfs:comment "Person that can have US, EU, or freeform address" ;
+    sh:property [
+        sh:path schema:givenName ;
+        sh:name "First Name"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 10 ;
+        sh:pattern "^[a-zA-Z \\\\',.-]+$" ;
+        sh:order 0 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path schema:familyName ;
+        sh:name "Last Name"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path schema:email ;
+        sh:name "Email"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:pattern "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$" ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path schema:address ;
+        sh:name "Address"@en ;
+        sh:description "Choose address format"@en ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:order 4 .
 
 # Property Groups
 schema:identification a sh:PropertyGroup ;
@@ -450,21 +877,25 @@ schema:environmental a sh:PropertyGroup ;
     rdfs:label "Environmental" ;
     sh:order 0 .
 
+schema:material a sh:PropertyGroup ;
+    rdfs:label "Material & Composition" ;
+    sh:order 0 .
+
 # Schema Metadata
 # Schema ID: ev-battery-dpp-001
 # Schema Name: EV Battery Digital Product Passport
-# Description: EU Battery Regulation 2023/1542 — Digital Product Passport for electric vehicle batteries. Covers identification, physical properties (mass, capacity, operating temperature) and environmental data (carbon footprint, recyclability).
+# Description: EU Battery Regulation 2023/1542 — Digital Product Passport for electric vehicle batteries. Hierarchical schema: identification (incl. manufacturer), physical properties (mass, dimensions, capacity, temperature) and environmental data (carbon footprint, recyclability). Material branch covers component chemistry with public substance vocabulary links.
 # Created: 2026-06-18T12:00:00.000000
-# Updated: 2026-06-18T12:00:00.000000
+# Updated: 2026-06-30T15:31:52.151676
 # Root Brick: b1000008-ba77-4000-8000-000000000008
-# Component Bricks: 8
-# Components: b1000008-ba77-4000-8000-000000000008, b1000001-ba77-4000-8000-000000000001, b1000002-ba77-4000-8000-000000000002, b1000003-ba77-4000-8000-000000000003, b1000004-ba77-4000-8000-000000000004, b1000005-ba77-4000-8000-000000000005, b1000006-ba77-4000-8000-000000000006, b1000007-ba77-4000-8000-000000000007
+# Component Bricks: 17
+# Components: b1000008-ba77-4000-8000-000000000008, b1000001-ba77-4000-8000-000000000001, b1000002-ba77-4000-8000-000000000002, b1000010-ba77-4000-8000-000000000010, b1000003-ba77-4000-8000-000000000003, b1000009-ba77-4000-8000-000000000009, b1000004-ba77-4000-8000-000000000004, b1000012-ba77-4000-8000-000000000012, b1000011-ba77-4000-8000-000000000011, b1000006-ba77-4000-8000-000000000006, b1000007-ba77-4000-8000-000000000007, 5fa9ec35-26e5-45ad-8704-c04122e9b00f, 4cfa5964-16ab-41f2-a795-40c0236968cc, 2de3dc1e-3a42-49b7-b402-ea2522400cf0, 84e6cc19-b7ca-45dd-9845-c80ac0cb04d6, b1000005-ba77-4000-8000-000000000005, 11b65052-988d-49c4-927e-1c770ce2de08
 
 # Additional Metadata:
 # regulation: EU Battery Regulation 2023/1542
 # brick_library: battery_dpp
 # demo: True
-# note: Demo schema used in basic_intro and technical_deep_dive presentations.
+# note: Demo schema used in basic_intro and technical_deep_dive presentations. Rebuilt to Option B hierarchical tree structure.
 `);
     window.submitForm = async () => {
       const valid = await form.validate(false);
