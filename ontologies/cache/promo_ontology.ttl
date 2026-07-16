@@ -1,0 +1,1409 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix promo: <http://example.org#> .
+@prefix qudt: <http://qudt.org/vocab/unit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+promo:AmountOfSubstance a rdfs:Class,
+        owl:Class ;
+    rdfs:label "AmountOfSubstance" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_139>,
+        <http://example.org/macroscopic#V_203>,
+        <http://example.org/physical#V_111> ;
+    promo:dimensionalSignature "0 0 0 0 0 1 0" ;
+    promo:hasSymbol "MolarMass",
+        "n",
+        "no",
+        "nt" ;
+    promo:has_unit qudt:CentiMOL,
+        qudt:FemtoMOL,
+        qudt:IU,
+        qudt:KiloMOL,
+        qudt:MOL,
+        qudt:MOL_LB,
+        qudt:MicroMOL,
+        qudt:MilliMOL,
+        qudt:MilliOSM,
+        qudt:NCM,
+        qudt:NCM_1ATM_0DEG_C_NL,
+        qudt:NanoMOL,
+        qudt:OSM,
+        qudt:PicoMOL,
+        qudt:SCF,
+        qudt:SCM,
+        qudt:SCM_1ATM_0DEG_C,
+        qudt:SCM_1ATM_15DEG_C_ISO,
+        qudt:SCM_1ATM_15DEG_C_NL ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/AmountOfSubstance> ;
+    promo:siUnit qudt:CentiMOL ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T0 Θ0 I0 N1 J0. Derived from 3 ProMo variable(s) with symbols: MolarMass, no, nt. Documentation: total number of moles; initial mass; fundamental state -- molar mass." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "AmountOfSubstance" .
+
+promo:AmountRate a rdfs:Class,
+        owl:Class ;
+    rdfs:label "AmountRate" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_154>,
+        <http://example.org/macroscopic#V_155>,
+        <http://example.org/macroscopic#V_156>,
+        <http://example.org/macroscopic#V_160>,
+        <http://example.org/macroscopic#V_194>,
+        <http://example.org/macroscopic#V_195>,
+        <http://example.org/macroscopic#V_196>,
+        <http://example.org/macroscopic#V_212>,
+        <http://example.org/macroscopic#V_213> ;
+    promo:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    promo:hasSymbol "an",
+        "anc_x",
+        "and_x",
+        "and_y",
+        "and_z",
+        "fnc_x",
+        "fnd_x",
+        "fnd_y",
+        "fnd_z",
+        "ṅ" ;
+    promo:has_unit qudt:KiloMOL-PER-MIN,
+        qudt:KiloMOL-PER-SEC,
+        qudt:MOL-PER-HR,
+        qudt:MOL-PER-MIN,
+        qudt:MOL-PER-SEC,
+        qudt:SCF-PER-HR,
+        qudt:SCF-PER-MIN,
+        qudt:SCM-PER-HR,
+        qudt:SCM-PER-MIN ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/MolarFlowRate> ;
+    promo:siUnit qudt:KiloMOL-PER-MIN ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T-1 Θ0 I0 N1 J0. Derived from 9 ProMo variable(s) with symbols: an, anc_x, and_x, and_y, and_z, fnc_x, fnd_x, fnd_y, fnd_z. Documentation: molar convective flow in x-direction; accumulation of molar mass due to convection; diffusion flow in x-direction; differential mass balance without reaction; accumulation due to diffusion in y-direction; accumulation due to diffusion in z-direction; diffusion flow in y-direction; diffusion flow in z-direction; accumulation due to diffusion in x-direction." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "AmountRate" .
+
+promo:Area a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Area" ;
+    promo:derivedFrom <http://example.org/physical#V_148>,
+        <http://example.org/physical#V_149>,
+        <http://example.org/physical#V_150> ;
+    promo:dimensionalSignature "0 2 0 0 0 0 0" ;
+    promo:hasSymbol "A",
+        "Axy",
+        "Axz",
+        "Ayz" ;
+    promo:has_unit qudt:AC,
+        qudt:ARE,
+        qudt:BARN,
+        qudt:CentiM2,
+        qudt:DecaARE,
+        qudt:DeciM2,
+        qudt:FT2,
+        qudt:HA,
+        qudt:IN2,
+        qudt:KiloM2,
+        qudt:KiloMIL_Circ,
+        qudt:M2,
+        qudt:MI2,
+        qudt:MIL_Circ,
+        qudt:MI_US2,
+        qudt:MicroM2,
+        qudt:MilliM2,
+        qudt:NanoM2,
+        qudt:PIXEL_AREA,
+        qudt:PlanckArea,
+        qudt:YD2 ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Area> ;
+    promo:siUnit qudt:AC ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L2 T0 Θ0 I0 N0 J0. Derived from 3 ProMo variable(s) with symbols: Axy, Axz, Ayz. Documentation: cross sectional area yz; cross sectional area xy; cross sectional are xz." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Area" .
+
+promo:AvogadroConstant a rdfs:Class,
+        owl:Class ;
+    rdfs:label "AvogadroConstant" ;
+    promo:derivedFrom <http://example.org/physical#V_121> ;
+    promo:dimensionalSignature "0 0 0 0 0 -1 0" ;
+    promo:hasSymbol "AvogadroConstant",
+        "N_A" ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T0 Θ0 I0 N-1 J0. Derived from 1 ProMo variable(s) with symbols: AvogadroConstant. Documentation: Avogadro constant." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "AvogadroConstant" .
+
+promo:Concentration a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Concentration" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_138>,
+        <http://example.org/macroscopic#V_158>,
+        <http://example.org/macroscopic_reactions#V_162>,
+        <http://example.org/reactions#V_163> ;
+    promo:dimensionalSignature "0 -3 0 0 0 1 0" ;
+    promo:hasSymbol "_c",
+        "c",
+        "c_AS" ;
+    promo:has_unit qudt:CentiMOL-PER-L,
+        qudt:FemtoMOL-PER-L,
+        qudt:KiloMOL-PER-M3,
+        qudt:MOL-PER-DeciM3,
+        qudt:MOL-PER-L,
+        qudt:MOL-PER-M3,
+        qudt:MicroMOL-PER-L,
+        qudt:MilliMOL-PER-L,
+        qudt:MilliMOL-PER-M3,
+        qudt:NanoMOL-PER-L,
+        qudt:PicoMOL-PER-L,
+        qudt:PicoMOL-PER-M3 ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Concentration> ;
+    promo:siUnit qudt:MOL-PER-M3 ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L-3 T0 Θ0 I0 N1 J0. Derived from 4 ProMo variable(s) with symbols: _c, c, c_AS. Documentation: link variable _c to interface macroscopic >>> reactions with source:node; concentration in convective event-dynamic flow; molar concentration; link variable _c to interface reactions." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Concentration" .
+
+promo:ConcentrationRate a rdfs:Class,
+        owl:Class ;
+    rdfs:label "ConcentrationRate" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_202>,
+        <http://example.org/reactions#V_198>,
+        <http://example.org/reactions#V_199>,
+        <http://example.org/reactions#V_200>,
+        <http://example.org/reactions_macroscopic#V_201> ;
+    promo:dimensionalSignature "0 -3 -1 0 0 1 0" ;
+    promo:hasSymbol "K",
+        "Ko",
+        "_np",
+        "np",
+        "ċ" ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L-3 T-1 Θ0 I0 N1 J0. Derived from 5 ProMo variable(s) with symbols: K, Ko, _np, np. Documentation: Arrhenius frequency factor; production from reaction set; link variable _np to interface reactions >>> macroscopic with source:node; Arrhenius reaction \"constant\"; link variable _np to interface macroscopic." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "ConcentrationRate" .
+
+promo:Density a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Density" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_189>,
+        <http://example.org/physical#V_143> ;
+    promo:dimensionalSignature "1 -3 0 0 0 0 0" ;
+    promo:hasSymbol "rho",
+        "rhoA",
+        "ρ" ;
+    promo:has_unit qudt:DEGREE_BALLING,
+        qudt:DEGREE_BAUME,
+        qudt:DEGREE_BAUME_US_HEAVY,
+        qudt:DEGREE_BAUME_US_LIGHT,
+        qudt:DEGREE_BRIX,
+        qudt:DEGREE_OECHSLE,
+        qudt:DEGREE_PLATO,
+        qudt:DEGREE_TWADDELL,
+        qudt:FemtoGM-PER-L,
+        qudt:GM-PER-CentiM3,
+        qudt:GM-PER-DeciL,
+        qudt:GM-PER-DeciM3,
+        qudt:GM-PER-L,
+        qudt:GM-PER-M3,
+        qudt:GM-PER-MilliL,
+        qudt:GRAIN-PER-GAL_IMP,
+        qudt:GRAIN-PER-GAL_US,
+        qudt:GRAIN-PER-M3,
+        qudt:KiloGM-PER-CentiM3,
+        qudt:KiloGM-PER-DeciM3,
+        qudt:KiloGM-PER-L,
+        qudt:KiloGM-PER-M3,
+        qudt:LB-PER-FT3,
+        qudt:LB-PER-GAL_IMP,
+        qudt:LB-PER-GAL_UK,
+        qudt:LB-PER-GAL_US,
+        qudt:LB-PER-IN3,
+        qudt:LB-PER-M3,
+        qudt:LB-PER-YD3,
+        qudt:MegaGM-PER-M3,
+        qudt:MicroGM-PER-DeciL,
+        qudt:MicroGM-PER-L,
+        qudt:MicroGM-PER-M3,
+        qudt:MicroGM-PER-MilliL,
+        qudt:MilliGM-PER-DeciL,
+        qudt:MilliGM-PER-L,
+        qudt:MilliGM-PER-M3,
+        qudt:MilliGM-PER-MilliL,
+        qudt:NanoGM-PER-DeciL,
+        qudt:NanoGM-PER-L,
+        qudt:NanoGM-PER-M3,
+        qudt:NanoGM-PER-MicroL,
+        qudt:NanoGM-PER-MilliL,
+        qudt:OZ-PER-GAL_IMP,
+        qudt:OZ-PER-GAL_UK,
+        qudt:OZ-PER-GAL_US,
+        qudt:OZ-PER-IN3,
+        qudt:OZ-PER-YD3,
+        qudt:PicoGM-PER-L,
+        qudt:PicoGM-PER-MilliL,
+        qudt:PlanckDensity,
+        qudt:SLUG-PER-FT3,
+        qudt:TONNE-PER-M3,
+        qudt:TON_LONG-PER-YD3,
+        qudt:TON_Metric-PER-M3,
+        qudt:TON_SHORT-PER-YD3,
+        qudt:TON_UK-PER-YD3,
+        qudt:TON_US-PER-YD3 ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Density> ;
+    promo:siUnit qudt:DEGREE_BALLING ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L-3 T0 Θ0 I0 N0 J0. Derived from 2 ProMo variable(s) with symbols: rho, rhoA. Documentation: density; density in arc." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Density" .
+
+promo:Dimensionless a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Dimensionless" ;
+    promo:derivedFrom <http://example.org/control#V_226>,
+        <http://example.org/control#V_227>,
+        <http://example.org/control#V_231>,
+        <http://example.org/control#V_237>,
+        <http://example.org/control#V_238>,
+        <http://example.org/control#V_239>,
+        <http://example.org/control_macroscopic#V_242>,
+        <http://example.org/macroscopic#V_140>,
+        <http://example.org/macroscopic#V_157>,
+        <http://example.org/macroscopic#V_224>,
+        <http://example.org/macroscopic#V_243>,
+        <http://example.org/macroscopic_control#V_225>,
+        <http://example.org/macroscopic_reactions#V_164>,
+        <http://example.org/reactions#V_165>,
+        <http://example.org/reactions#V_168>,
+        <http://example.org/reactions#V_169>,
+        <http://example.org/reactions#V_26>,
+        <http://example.org/root#V_10>,
+        <http://example.org/root#V_101>,
+        <http://example.org/root#V_102>,
+        <http://example.org/root#V_103>,
+        <http://example.org/root#V_104>,
+        <http://example.org/root#V_11>,
+        <http://example.org/root#V_12>,
+        <http://example.org/root#V_13>,
+        <http://example.org/root#V_14>,
+        <http://example.org/root#V_15>,
+        <http://example.org/root#V_16>,
+        <http://example.org/root#V_17>,
+        <http://example.org/root#V_18>,
+        <http://example.org/root#V_19>,
+        <http://example.org/root#V_2>,
+        <http://example.org/root#V_20>,
+        <http://example.org/root#V_21>,
+        <http://example.org/root#V_22>,
+        <http://example.org/root#V_27>,
+        <http://example.org/root#V_3>,
+        <http://example.org/root#V_4>,
+        <http://example.org/root#V_5>,
+        <http://example.org/root#V_6>,
+        <http://example.org/root#V_7>,
+        <http://example.org/root#V_8>,
+        <http://example.org/root#V_9> ;
+    promo:dimensionalSignature "0 0 0 0 0 0 0" ;
+    promo:hasSymbol "A_Npq",
+        "A_Ntu",
+        "F",
+        "F_AI_sink",
+        "F_AI_source",
+        "F_NA_sink",
+        "F_NA_source",
+        "F_NI_sink",
+        "F_NI_source",
+        "I_NA",
+        "I_tu",
+        "N",
+        "S_Ap",
+        "S_Aq",
+        "S_Ip",
+        "S_Iq",
+        "S_Npu",
+        "S_Nqt",
+        "T_meas",
+        "T_setpoint",
+        "_T_meas",
+        "_x",
+        "_y_p_positive",
+        "control_error",
+        "cz_I",
+        "cz_N",
+        "d",
+        "factor",
+        "mv_I",
+        "one",
+        "oneHalf",
+        "p",
+        "probability",
+        "u_Ntu",
+        "value",
+        "x",
+        "y_Ntu",
+        "y_p_control",
+        "y_p_positive",
+        "zero",
+        "—" ;
+    promo:has_unit qudt:BasePair,
+        qudt:COUNT,
+        qudt:DECADE,
+        qudt:FLIGHT,
+        qudt:GigaBasePair,
+        qudt:NP,
+        qudt:NUM,
+        qudt:OCT,
+        qudt:RPK,
+        qudt:SUSCEPTIBILITY_ELEC,
+        qudt:SUSCEPTIBILITY_MAG,
+        qudt:UNITLESS ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+    promo:siUnit qudt:BasePair ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T0 Θ0 I0 N0 J0. Derived from 43 ProMo variable(s) with symbols: A_Npq, A_Ntu, F, F_AI_sink, F_AI_source, F_NA_sink, F_NA_source, F_NI_sink, F_NI_source, I_NA, I_tu, N, S_Ap, S_Aq, S_Ip, S_Iq, S_Npu, S_Nqt, T_meas, T_setpoint, _T_meas, _x, _y_p_positive, control_error, cz_I, cz_N, d, factor, mv_I, one, oneHalf, p, probability, u_Ntu, value, x, y_Ntu, y_p_control, y_p_positive, zero. Documentation: input signal in control domain; link variable _x to interface reactions; numerical value one; controller gain; link variable _y_p_positive to interface macroscopic; incidence matrix NA source; numerical value zero; flow direction of convective flow; output of proportional controller; link variable _y_p_positive to interface control >>> macroscopic with source:arc; link variable _x to interface macroscopic >>> reactions with source:node; incidence matrix; link variable _T_meas to interface control; probability of reaction to take place; positive signal only; identity mapping from <N> to <A>; incidence matrix NA sink; incidence matrix AI source; numerical value; link variable _T_meas to interface macroscopic >>> control with source:node; identity mapping from <t> to <u>; incidence matrix NI sink; selection matrix arcs to outputs; selection matrix interface species-related measures; output from control; incidence matrix NI source; stoichiometric matrix; selection matrix interface to control output; mole fraction; incidence matrix AI sink; selection matrix interface to control input; interface variable macro --> control; setpoint for temperatue; selection matrix or splitter; mapping from inputs to outputs; output signal in control domain; mapping from input elements to outputs; factor for probability computation; temperature measurement; selection matrix for stacker; numerical value one half; control error in normed temperature; interface variable macro --> control." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Dimensionless" .
+
+promo:ElectricCharge a rdfs:Class,
+        owl:Class ;
+    rdfs:label "ElectricCharge" ;
+    promo:derivedFrom <http://example.org/physical#V_144> ;
+    promo:dimensionalSignature "0 0 1 0 1 0 0" ;
+    promo:hasSymbol "ElectricCharge",
+        "Q" ;
+    promo:has_unit qudt:A-HR,
+        qudt:A-SEC,
+        qudt:AttoC,
+        qudt:C,
+        qudt:C_Ab,
+        qudt:C_Stat,
+        qudt:CentiC,
+        qudt:DecaC,
+        qudt:DeciC,
+        qudt:E,
+        qudt:ElementaryCharge,
+        qudt:ExaC,
+        qudt:F,
+        qudt:FR,
+        qudt:FemtoC,
+        qudt:GigaC,
+        qudt:HectoC,
+        qudt:KiloA-HR,
+        qudt:KiloC,
+        qudt:KiloJ-PER-KiloV,
+        qudt:MegaC,
+        qudt:MicroC,
+        qudt:MilliA-HR,
+        qudt:MilliA-SEC,
+        qudt:MilliC,
+        qudt:NanoC,
+        qudt:PetaC,
+        qudt:PicoC,
+        qudt:PlanckCharge,
+        qudt:TeraC,
+        qudt:YoctoC,
+        qudt:YottaC,
+        qudt:ZeptoC,
+        qudt:ZettaC ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/ElectricCharge> ;
+    promo:siUnit qudt:C ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T1 Θ0 I1 N0 J0. Derived from 1 ProMo variable(s) with symbols: ElectricCharge. Documentation: fundamental state -- charge." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "ElectricCharge" .
+
+promo:ElectricCurrent a rdfs:Class,
+        owl:Class ;
+    rdfs:label "ElectricCurrent" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_218> ;
+    promo:dimensionalSignature "0 0 0 0 1 0 0" ;
+    promo:hasSymbol "I",
+        "current" ;
+    promo:has_unit qudt:A,
+        qudt:A_Ab,
+        qudt:A_Stat,
+        qudt:AttoA,
+        qudt:BIOT,
+        qudt:FemtoA,
+        qudt:GigaA,
+        qudt:KiloA,
+        qudt:MegaA,
+        qudt:MicroA,
+        qudt:MilliA,
+        qudt:NanoA,
+        qudt:PetaA,
+        qudt:PicoA,
+        qudt:PlanckCurrent,
+        qudt:TeraA ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/ElectricCurrent> ;
+    promo:siUnit qudt:A ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T0 Θ0 I1 N0 J0. Derived from 1 ProMo variable(s) with symbols: current. Documentation: current definition." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "ElectricCurrent" .
+
+promo:ElectricalResistance a rdfs:Class,
+        owl:Class ;
+    rdfs:label "ElectricalResistance" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_219> ;
+    promo:dimensionalSignature "1 2 -3 0 -2 0 0" ;
+    promo:hasSymbol "R",
+        "elResistant" ;
+    promo:has_unit qudt:NanoOHM ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/ElectricalResistance> ;
+    promo:siUnit qudt:NanoOHM ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L2 T-3 Θ0 I-2 N0 J0. Derived from 1 ProMo variable(s) with symbols: elResistant. Documentation: electrical resistant." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "ElectricalResistance" .
+
+promo:Energy a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Energy" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_115>,
+        <http://example.org/macroscopic#V_116>,
+        <http://example.org/macroscopic#V_117>,
+        <http://example.org/macroscopic#V_216>,
+        <http://example.org/physical#V_108> ;
+    promo:dimensionalSignature "1 2 -2 0 0 0 0" ;
+    promo:hasSymbol "E",
+        "EnergyInternal",
+        "Enthalpy",
+        "GibbsEnergy",
+        "HelmholtzEnergy",
+        "Ho" ;
+    promo:has_unit qudt:AttoJ,
+        qudt:BTU_IT,
+        qudt:BTU_TH,
+        qudt:CAL_IT,
+        qudt:CAL_TH,
+        qudt:ERG,
+        qudt:EV,
+        qudt:E_h,
+        qudt:ExaJ,
+        qudt:FT-LB_F,
+        qudt:FT-PDL,
+        qudt:FemtoJ,
+        qudt:GigaEV,
+        qudt:GigaJ,
+        qudt:GigaW-HR,
+        qudt:J,
+        qudt:KiloBTU_IT,
+        qudt:KiloBTU_TH,
+        qudt:KiloCAL,
+        qudt:KiloEV,
+        qudt:KiloJ,
+        qudt:KiloW-HR,
+        qudt:MegaBTU_IT,
+        qudt:MegaEV,
+        qudt:MegaJ,
+        qudt:MegaTOE,
+        qudt:MegaW-HR,
+        qudt:MicroJ,
+        qudt:MilliJ,
+        qudt:NanoJ,
+        qudt:PetaJ,
+        qudt:PicoJ,
+        qudt:PlanckEnergy,
+        qudt:QUAD,
+        qudt:THERM_EC,
+        qudt:THERM_US,
+        qudt:THM_EEC,
+        qudt:THM_US,
+        qudt:TOE,
+        qudt:TeraJ,
+        qudt:TeraW-HR,
+        qudt:TonEnergy,
+        qudt:W-HR,
+        qudt:W-SEC ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Energy> ;
+    promo:siUnit qudt:AttoJ ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L2 T-2 Θ0 I0 N0 J0. Derived from 5 ProMo variable(s) with symbols: EnergyInternal, Enthalpy, GibbsEnergy, HelmholtzEnergy, Ho. Documentation: initial enthalpy; Helmholtz energy; Enthalpy; Gibbs free energy; fundamental state -- internal energy." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Energy" .
+
+promo:GasConstant a rdfs:Class,
+        owl:Class ;
+    rdfs:label "GasConstant" ;
+    promo:derivedFrom <http://example.org/physical#V_123> ;
+    promo:dimensionalSignature "1 2 -2 -1 0 -1 0" ;
+    promo:hasSymbol "R" ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L2 T-2 Θ-1 I0 N-1 J0. Derived from 1 ProMo variable(s) with symbols: R. Documentation: gas constant." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "GasConstant" .
+
+promo:HeatCapacity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "HeatCapacity" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_124>,
+        <http://example.org/macroscopic#V_125>,
+        <http://example.org/physical#V_109>,
+        <http://example.org/physical#V_122> ;
+    promo:dimensionalSignature "1 2 -2 -1 0 0 0" ;
+    promo:hasSymbol "BoltzmannConstant",
+        "C",
+        "CV",
+        "Cp",
+        "Entropy" ;
+    promo:has_unit qudt:BTU_IT-PER-DEG_F,
+        qudt:BTU_IT-PER-DEG_R,
+        qudt:EV-PER-K,
+        qudt:J-PER-K,
+        qudt:MegaJ-PER-K ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/HeatCapacity> ;
+    promo:siUnit qudt:J-PER-K ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L2 T-2 Θ-1 I0 N0 J0. Derived from 4 ProMo variable(s) with symbols: BoltzmannConstant, CV, Cp, Entropy. Documentation: fundamental state -- internal entropy; Boltzmann constant; total heat capacity at constant volume; total heat capacity at constant pressure." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "HeatCapacity" .
+
+promo:Kda_z a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Kda_z" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_180>,
+        <http://example.org/macroscopic#V_181>,
+        <http://example.org/macroscopic#V_182> ;
+    promo:dimensionalSignature "-1 -4 1 0 0 2 0" ;
+    promo:hasSymbol "kdA_x",
+        "kdA_y",
+        "kdA_z" ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M-1 L-4 T1 Θ0 I0 N2 J0. Derived from 3 ProMo variable(s) with symbols: kdA_x, kdA_y, kdA_z. Documentation: diffusivity in arc and z-direction; diffusivity in arc and y-direction; diffusivity in arc and x-direction." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Kda_z" .
+
+promo:KinematicDiffusivity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "KinematicDiffusivity" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_183>,
+        <http://example.org/macroscopic#V_184>,
+        <http://example.org/macroscopic#V_185> ;
+    promo:dimensionalSignature "0 -1 1 0 0 0 0" ;
+    promo:hasSymbol "D",
+        "kcA_x",
+        "kcA_y",
+        "kcA_z" ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/KinematicViscosityOrDiffusionConstantOrThermalDiffusivity> ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L-1 T1 Θ0 I0 N0 J0. Derived from 3 ProMo variable(s) with symbols: kcA_x, kcA_y, kcA_z. Documentation: convecive mass conductivity in arc and y-direction; convective mass conductivity in arc and x diretion; convective mass conductivity in arc and y-direction." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "KinematicDiffusivity" .
+
+promo:Kqa_x a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Kqa_x" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_186>,
+        <http://example.org/macroscopic#V_187>,
+        <http://example.org/macroscopic#V_188> ;
+    promo:dimensionalSignature "1 0 -3 -1 0 0 0" ;
+    promo:hasSymbol "kqA_x",
+        "kqA_y",
+        "kqA_z" ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L0 T-3 Θ-1 I0 N0 J0. Derived from 3 ProMo variable(s) with symbols: kqA_x, kqA_y, kqA_z. Documentation: thermal conductivity in arc and x-direction; thermal conductivity in arc and y-direction; thermal conductivity in arc and z-direction." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Kqa_x" .
+
+promo:Length a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Length" ;
+    promo:derivedFrom <http://example.org/physical#V_23>,
+        <http://example.org/physical#V_24>,
+        <http://example.org/physical#V_25> ;
+    promo:dimensionalSignature "0 1 0 0 0 0 0" ;
+    promo:hasSymbol "l",
+        "r_x",
+        "r_y",
+        "r_z" ;
+    promo:has_unit qudt:ANGSTROM,
+        qudt:AU,
+        qudt:BTU_IT-PER-LB_F,
+        qudt:CHAIN,
+        qudt:CHAIN_US,
+        qudt:CentiM,
+        qudt:DecaM,
+        qudt:DeciM,
+        qudt:FATH,
+        qudt:FM,
+        qudt:FT,
+        qudt:FT_US,
+        qudt:FUR,
+        qudt:FemtoM,
+        qudt:GAUGE_FR,
+        qudt:GA_Charriere,
+        qudt:HectoM,
+        qudt:IN,
+        qudt:KiloM,
+        qudt:LY,
+        qudt:M,
+        qudt:MI,
+        qudt:MI_N,
+        qudt:MI_UK,
+        qudt:MI_US,
+        qudt:MicroIN,
+        qudt:MicroM,
+        qudt:MilLength,
+        qudt:MilliIN,
+        qudt:MilliM,
+        qudt:NanoM,
+        qudt:PARSEC,
+        qudt:PCA,
+        qudt:PT,
+        qudt:PicoM,
+        qudt:PlanckLength,
+        qudt:ROD,
+        qudt:YD,
+        qudt:ZOLL ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    promo:siUnit qudt:M ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L1 T0 Θ0 I0 N0 J0. Derived from 3 ProMo variable(s) with symbols: r_x, r_y, r_z. Documentation: y-coordinate; z-coordinate; x-coordinate." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Length" .
+
+promo:Mass a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Mass" ;
+    promo:derivedFrom <http://example.org/physical#V_137> ;
+    promo:dimensionalSignature "1 0 0 0 0 0 0" ;
+    promo:hasSymbol "Mass",
+        "m" ;
+    promo:has_unit qudt:AMU,
+        qudt:CARAT,
+        qudt:CWT_LONG,
+        qudt:CWT_SHORT,
+        qudt:CentiGM,
+        qudt:DRAM_UK,
+        qudt:DRAM_US,
+        qudt:DWT,
+        qudt:DecaGM,
+        qudt:DeciGM,
+        qudt:DeciTONNE,
+        qudt:DeciTON_Metric,
+        qudt:EarthMass,
+        qudt:FemtoGM,
+        qudt:GM,
+        qudt:GM_Carbon,
+        qudt:GM_DRY,
+        qudt:GM_Nitrogen,
+        qudt:GRAIN,
+        qudt:HectoGM,
+        qudt:Hundredweight_UK,
+        qudt:Hundredweight_US,
+        qudt:KiloGM,
+        qudt:KiloLB,
+        qudt:KiloTONNE,
+        qudt:KiloTON_Metric,
+        qudt:LB,
+        qudt:LB_M,
+        qudt:LB_T,
+        qudt:LunarMass,
+        qudt:MOMME_Pearl,
+        qudt:MOMME_Textile,
+        qudt:MegaGM,
+        qudt:MegaTON,
+        qudt:MegaTONNE,
+        qudt:MicroGM,
+        qudt:MilliGM,
+        qudt:NanoGM,
+        qudt:OZ,
+        qudt:OZ_M,
+        qudt:OZ_TROY,
+        qudt:PENNYWEIGHT,
+        qudt:PFUND,
+        qudt:PicoGM,
+        qudt:PlanckMass,
+        qudt:Quarter_UK,
+        qudt:SLUG,
+        qudt:SolarMass,
+        qudt:Stone_UK,
+        qudt:TON,
+        qudt:TONNE,
+        qudt:TON_Assay,
+        qudt:TON_LONG,
+        qudt:TON_Metric,
+        qudt:TON_SHORT,
+        qudt:TON_UK,
+        qudt:TON_US,
+        qudt:U ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+    promo:siUnit qudt:KiloGM ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L0 T0 Θ0 I0 N0 J0. Derived from 1 ProMo variable(s) with symbols: Mass. Documentation: mass." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Mass" .
+
+promo:MassFlow a rdfs:Class,
+        owl:Class ;
+    rdfs:label "MassFlow" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_234> ;
+    promo:dimensionalSignature "1 0 -1 0 0 0 0" ;
+    promo:hasSymbol "fm",
+        "ṁ" ;
+    promo:has_unit qudt:DYN-SEC-PER-CentiM,
+        qudt:GM-PER-DAY,
+        qudt:GM-PER-HR,
+        qudt:GM-PER-MIN,
+        qudt:GM-PER-SEC,
+        qudt:KiloGM-PER-DAY,
+        qudt:KiloGM-PER-HR,
+        qudt:KiloGM-PER-MIN,
+        qudt:KiloGM-PER-SEC,
+        qudt:KiloGM-PER-YR,
+        qudt:KiloLB-PER-HR,
+        qudt:KiloTONNE-PER-YR,
+        qudt:LB-PER-DAY,
+        qudt:LB-PER-HR,
+        qudt:LB-PER-MIN,
+        qudt:LB-PER-SEC,
+        qudt:MegaTONNE-PER-YR,
+        qudt:MilliGM-PER-DAY,
+        qudt:MilliGM-PER-HR,
+        qudt:MilliGM-PER-MIN,
+        qudt:MilliGM-PER-SEC,
+        qudt:OZ-PER-DAY,
+        qudt:OZ-PER-HR,
+        qudt:OZ-PER-MIN,
+        qudt:OZ-PER-SEC,
+        qudt:SLUG-PER-DAY,
+        qudt:SLUG-PER-HR,
+        qudt:SLUG-PER-MIN,
+        qudt:SLUG-PER-SEC,
+        qudt:TONNE-PER-DAY,
+        qudt:TONNE-PER-HR,
+        qudt:TONNE-PER-MIN,
+        qudt:TONNE-PER-MO,
+        qudt:TONNE-PER-SEC,
+        qudt:TONNE-PER-YR,
+        qudt:TON_Metric-PER-DAY,
+        qudt:TON_Metric-PER-HR,
+        qudt:TON_Metric-PER-MIN,
+        qudt:TON_Metric-PER-SEC,
+        qudt:TON_SHORT-PER-HR,
+        qudt:TON_UK-PER-DAY,
+        qudt:TON_UK-PER-HR,
+        qudt:TON_US-PER-DAY,
+        qudt:TON_US-PER-HR ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/MassFlowRate> ;
+    promo:siUnit qudt:KiloGM-PER-SEC ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L0 T-1 Θ0 I0 N0 J0. Derived from 1 ProMo variable(s) with symbols: fm. Documentation: convective mass flow." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "MassFlow" .
+
+promo:MolarEnergy a rdfs:Class,
+        owl:Class ;
+    rdfs:label "MolarEnergy" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_114>,
+        <http://example.org/macroscopic#V_136>,
+        <http://example.org/macroscopic#V_161>,
+        <http://example.org/macroscopic#V_193>,
+        <http://example.org/reactions#V_197> ;
+    promo:dimensionalSignature "1 2 -2 0 0 -1 0" ;
+    promo:hasSymbol "ChemicalPotential",
+        "E_m",
+        "Ea",
+        "chemPotStandard",
+        "h",
+        "hA" ;
+    promo:has_unit qudt:J-PER-MOL,
+        qudt:KiloCAL-PER-MOL,
+        qudt:KiloJ-PER-MOL ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/MolarEnergy> ;
+    promo:siUnit qudt:J-PER-MOL ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L2 T-2 Θ0 I0 N-1 J0. Derived from 5 ProMo variable(s) with symbols: ChemicalPotential, Ea, chemPotStandard, h, hA. Documentation: partial molar enthalpiies in arc; instantiating standard chemical potential; Arrhenius activation energy; partial molar enthalpies; chemical potential." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "MolarEnergy" .
+
+promo:MolarMass a rdfs:Class,
+        owl:Class ;
+    rdfs:label "MolarMass" ;
+    promo:derivedFrom <http://example.org/physical#V_132> ;
+    promo:dimensionalSignature "1 0 0 0 0 -1 0" ;
+    promo:hasSymbol "M",
+        "Mm" ;
+    promo:has_unit qudt:GM-PER-MOL,
+        qudt:KiloGM-PER-KiloMOL,
+        qudt:KiloGM-PER-MOL ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/MolarMass> ;
+    promo:siUnit qudt:KiloGM-PER-MOL ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L0 T0 Θ0 I0 N-1 J0. Derived from 1 ProMo variable(s) with symbols: Mm. Documentation: molecular masses." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "MolarMass" .
+
+promo:PhysicalVariable a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Physical Variable" ;
+    rdfs:comment "Physical/chemical quantity kinds derived from the ProMo ontology." ;
+    rdfs:subClassOf promo:Variable .
+
+promo:Power a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Power" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_151>,
+        <http://example.org/macroscopic#V_152>,
+        <http://example.org/macroscopic#V_153>,
+        <http://example.org/macroscopic#V_204>,
+        <http://example.org/macroscopic#V_205>,
+        <http://example.org/macroscopic#V_206>,
+        <http://example.org/macroscopic#V_207>,
+        <http://example.org/macroscopic#V_208>,
+        <http://example.org/macroscopic#V_209>,
+        <http://example.org/macroscopic#V_210>,
+        <http://example.org/macroscopic#V_211>,
+        <http://example.org/macroscopic#V_214>,
+        <http://example.org/macroscopic#V_215> ;
+    promo:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    promo:hasSymbol "P",
+        "aHnc_x",
+        "aHnd_x",
+        "aHnd_y",
+        "aHnd_z",
+        "aq_x",
+        "aq_y",
+        "aq_z",
+        "aw",
+        "dH",
+        "fq_x",
+        "fq_y",
+        "fq_z",
+        "fw" ;
+    promo:has_unit qudt:BAR-L-PER-SEC,
+        qudt:BAR-M3-PER-SEC,
+        qudt:BTU_IT-PER-HR,
+        qudt:BTU_IT-PER-SEC,
+        qudt:ERG-PER-SEC,
+        qudt:ExaJ-PER-SEC,
+        qudt:ExaW,
+        qudt:FT-LB_F-PER-HR,
+        qudt:FT-LB_F-PER-MIN,
+        qudt:FT-LB_F-PER-SEC,
+        qudt:GigaJ-PER-HR,
+        qudt:GigaJ-PER-SEC,
+        qudt:GigaW,
+        qudt:HP,
+        qudt:HP_Boiler,
+        qudt:HP_Brake,
+        qudt:HP_Electric,
+        qudt:HP_H2O,
+        qudt:HP_Metric,
+        qudt:HectoPA-L-PER-SEC,
+        qudt:HectoPA-M3-PER-SEC,
+        qudt:J-PER-DAY,
+        qudt:J-PER-HR,
+        qudt:J-PER-MIN,
+        qudt:J-PER-SEC,
+        qudt:KiloBTU_IT-PER-HR,
+        qudt:KiloCAL-PER-MIN,
+        qudt:KiloCAL-PER-SEC,
+        qudt:KiloGM_F-M-PER-SEC,
+        qudt:KiloJ-PER-DAY,
+        qudt:KiloJ-PER-HR,
+        qudt:KiloJ-PER-MIN,
+        qudt:KiloJ-PER-SEC,
+        qudt:KiloW,
+        qudt:MegaBTU_IT-PER-HR,
+        qudt:MegaJ-PER-HR,
+        qudt:MegaJ-PER-SEC,
+        qudt:MegaPA-L-PER-SEC,
+        qudt:MegaPA-M3-PER-SEC,
+        qudt:MegaW,
+        qudt:MicroJ-PER-SEC,
+        qudt:MicroW,
+        qudt:MilliBAR-L-PER-SEC,
+        qudt:MilliBAR-M3-PER-SEC,
+        qudt:MilliJ-PER-SEC,
+        qudt:MilliW,
+        qudt:NanoJ-PER-SEC,
+        qudt:NanoW,
+        qudt:PA-L-PER-SEC,
+        qudt:PA-M3-PER-SEC,
+        qudt:PFERDESTAERKE,
+        qudt:PSI-IN3-PER-SEC,
+        qudt:PSI-L-PER-SEC,
+        qudt:PSI-M3-PER-SEC,
+        qudt:PSI-YD3-PER-SEC,
+        qudt:PetaJ-PER-SEC,
+        qudt:PetaW,
+        qudt:PicoJ-PER-SEC,
+        qudt:PicoW,
+        qudt:PlanckPower,
+        qudt:THM_US-PER-HR,
+        qudt:TON_FG,
+        qudt:TeraJ-PER-SEC,
+        qudt:TeraW,
+        qudt:TeraW-HR-PER-YR,
+        qudt:W ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Power> ;
+    promo:siUnit qudt:W ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L2 T-3 Θ0 I0 N0 J0. Derived from 13 ProMo variable(s) with symbols: aHnc_x, aHnd_x, aHnd_y, aHnd_z, aq_x, aq_y, aq_z, aw, dH, fq_x, fq_y, fq_z, fw. Documentation: a fixed work flow to start with; accumulation due to heat flow in z-direction; heat flow in y-direction; heat flow in x-direction; accumulation due to heat flow in y-direction; accumulation due to heat flow in x-direction; accumulation of enthalpy; accumulation of enthalpy due to diffusional mass flow in z-direction; accumulation of enthalpy due to work flow; heat flow in z-direction; accumulation of enthalpy due to convective mass flow in x-direction; accumulation of enthalpy due to diffusional mass flow in y-direction; accumulation of enthalpy due to diffusional mass flow in x-direction." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Power" .
+
+promo:Pressure a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Pressure" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_112> ;
+    promo:dimensionalSignature "1 -1 -2 0 0 0 0" ;
+    promo:hasSymbol "Pressure",
+        "p" ;
+    promo:has_unit qudt:ATM,
+        qudt:ATM_T,
+        qudt:BAR,
+        qudt:BARAD,
+        qudt:BARYE,
+        qudt:BAR_A,
+        qudt:CentiBAR,
+        qudt:CentiM_H2O,
+        qudt:CentiM_H2O_4DEG_C,
+        qudt:CentiM_HG,
+        qudt:CentiM_HG_0DEG_C,
+        qudt:DYN-PER-CentiM2,
+        qudt:DecaPA,
+        qudt:DeciBAR,
+        qudt:FT_H2O,
+        qudt:FT_H2O_39dot2DEG_F,
+        qudt:FT_HG,
+        qudt:GM_F-PER-CentiM2,
+        qudt:GigaPA,
+        qudt:HectoBAR,
+        qudt:HectoPA,
+        qudt:IN_H2O,
+        qudt:IN_H2O_39dot2DEG_F,
+        qudt:IN_H2O_60DEG_F,
+        qudt:IN_HG,
+        qudt:IN_HG_32DEG_F,
+        qudt:IN_HG_60DEG_F,
+        qudt:KIP_F-PER-IN2,
+        qudt:KiloBAR,
+        qudt:KiloGM-PER-M-SEC2,
+        qudt:KiloGM_F-PER-CentiM2,
+        qudt:KiloGM_F-PER-M2,
+        qudt:KiloGM_F-PER-MilliM2,
+        qudt:KiloLB_F-PER-IN2,
+        qudt:KiloN-PER-CentiM2,
+        qudt:KiloN-PER-M2,
+        qudt:KiloN-PER-MilliM2,
+        qudt:KiloPA,
+        qudt:KiloPA_A,
+        qudt:LB_F-PER-FT2,
+        qudt:LB_F-PER-IN2,
+        qudt:M_H2O,
+        qudt:MegaBAR,
+        qudt:MegaN-PER-M2,
+        qudt:MegaPA,
+        qudt:MegaPSI,
+        qudt:MicroATM,
+        qudt:MicroBAR,
+        qudt:MicroPA,
+        qudt:MicroTORR,
+        qudt:MilliBAR,
+        qudt:MilliBAR_A,
+        qudt:MilliM_H2O,
+        qudt:MilliM_HG,
+        qudt:MilliM_HGA,
+        qudt:MilliPA,
+        qudt:MilliTORR,
+        qudt:N-PER-CentiM2,
+        qudt:N-PER-M2,
+        qudt:N-PER-MilliM2,
+        qudt:PA,
+        qudt:PDL-PER-FT2,
+        qudt:PDL-PER-IN2,
+        qudt:PSI,
+        qudt:PicoPA,
+        qudt:PlanckPressure,
+        qudt:TORR ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Pressure> ;
+    promo:siUnit qudt:ATM ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L-1 T-2 Θ0 I0 N0 J0. Derived from 1 ProMo variable(s) with symbols: Pressure. Documentation: thermodynamic pressure." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Pressure" .
+
+promo:SpecificHeatCapacity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "SpecificHeatCapacity" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_141>,
+        <http://example.org/macroscopic#V_142> ;
+    promo:dimensionalSignature "0 2 -2 -1 0 0 0" ;
+    promo:hasSymbol "cV",
+        "c_p",
+        "cp" ;
+    promo:has_unit qudt:BTU_IT-PER-LB-DEG_F,
+        qudt:BTU_IT-PER-LB-DEG_R,
+        qudt:BTU_TH-PER-LB-DEG_F,
+        qudt:CAL_IT-PER-GM-DEG_C,
+        qudt:CAL_IT-PER-GM-K,
+        qudt:CAL_TH-PER-GM-DEG_C,
+        qudt:CAL_TH-PER-GM-K,
+        qudt:J-PER-GM-DEG_C,
+        qudt:J-PER-GM-K,
+        qudt:J-PER-KiloGM-DEG_C,
+        qudt:J-PER-KiloGM-K,
+        qudt:KiloCAL-PER-GM-DEG_C,
+        qudt:KiloJ-PER-KiloGM-K,
+        qudt:M2-PER-SEC2-K ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/SpecificHeatCapacity> ;
+    promo:siUnit qudt:J-PER-KiloGM-K ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L2 T-2 Θ-1 I0 N0 J0. Derived from 2 ProMo variable(s) with symbols: cV, cp. Documentation: specific heat capacity at constant volume; specific heat capacity at constant pressure." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "SpecificHeatCapacity" .
+
+promo:Temperature a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Temperature" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_113>,
+        <http://example.org/macroscopic#V_222>,
+        <http://example.org/macroscopic#V_223>,
+        <http://example.org/macroscopic_reactions#V_166>,
+        <http://example.org/reactions#V_167> ;
+    promo:dimensionalSignature "0 0 0 1 0 0 0" ;
+    promo:hasSymbol "T",
+        "T_meas_norming",
+        "T_ref",
+        "Temperature",
+        "_T" ;
+    promo:has_unit qudt:DEG_C,
+        qudt:DEG_C_GROWING_CEREAL,
+        qudt:DEG_F,
+        qudt:DEG_R,
+        qudt:DecaK,
+        qudt:K,
+        qudt:MegaK,
+        qudt:MilliDEG_C,
+        qudt:MilliK,
+        qudt:PlanckTemperature ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Temperature> ;
+    promo:siUnit qudt:DEG_C ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T0 Θ1 I0 N0 J0. Derived from 5 ProMo variable(s) with symbols: T, T_meas_norming, T_ref, Temperature, _T. Documentation: value to norm measurement of temperature; link variable _T to interface reactions; temperature; link variable _T to interface macroscopic >>> reactions with source:node; reference temperature." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Temperature" .
+
+promo:ThermalConductance a rdfs:Class,
+        owl:Class ;
+    rdfs:label "ThermalConductance" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_217>,
+        <http://example.org/macroscopic#V_220> ;
+    promo:dimensionalSignature "1 2 -3 0 -1 0 0" ;
+    promo:hasSymbol "G",
+        "Ue",
+        "dUe" ;
+    promo:has_unit qudt:KiloVA-PER-K,
+        qudt:MicroVA-PER-K,
+        qudt:MilliVA-PER-K,
+        qudt:VA-PER-K,
+        qudt:W-PER-K ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/ThermalConductance> ;
+    promo:siUnit qudt:KiloVA-PER-K ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M1 L2 T-3 Θ0 I-1 N0 J0. Derived from 2 ProMo variable(s) with symbols: Ue, dUe. Documentation: electrical potential -- voltage; Kirkhoffs first law." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "ThermalConductance" .
+
+promo:Time a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Time" ;
+    promo:derivedFrom <http://example.org/root#V_1>,
+        <http://example.org/root#V_105>,
+        <http://example.org/root#V_106>,
+        <http://example.org/root#V_107> ;
+    promo:dimensionalSignature "0 0 1 0 0 0 0" ;
+    promo:hasSymbol "Time",
+        "t",
+        "t_interval",
+        "te",
+        "to" ;
+    promo:has_unit qudt:AttoSEC,
+        qudt:CentiPOISE-PER-BAR,
+        qudt:DAY,
+        qudt:DAY_Sidereal,
+        qudt:DeciSEC,
+        qudt:FemtoSEC,
+        qudt:H-PER-KiloOHM,
+        qudt:H-PER-OHM,
+        qudt:HR,
+        qudt:HR_Sidereal,
+        qudt:KiloSEC,
+        qudt:KiloYR,
+        qudt:MIN,
+        qudt:MIN_Sidereal,
+        qudt:MO,
+        qudt:MO_MeanGREGORIAN,
+        qudt:MO_MeanJulian,
+        qudt:MO_Synodic,
+        qudt:MegaSEC,
+        qudt:MegaYR,
+        qudt:MicroH-PER-KiloOHM,
+        qudt:MicroH-PER-OHM,
+        qudt:MicroSEC,
+        qudt:MilliH-PER-KiloOHM,
+        qudt:MilliH-PER-OHM,
+        qudt:MilliPA-SEC-PER-BAR,
+        qudt:MilliSEC,
+        qudt:NanoSEC,
+        qudt:PA-SEC-PER-BAR,
+        qudt:POISE-PER-BAR,
+        qudt:POISE-PER-PA,
+        qudt:PicoSEC,
+        qudt:PlanckTime,
+        qudt:SEC,
+        qudt:SH,
+        qudt:WK,
+        qudt:YR,
+        qudt:YR_Common,
+        qudt:YR_Metrology,
+        qudt:YR_Sidereal,
+        qudt:YR_TROPICAL ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    promo:siUnit qudt:AttoSEC ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L0 T1 Θ0 I0 N0 J0. Derived from 4 ProMo variable(s) with symbols: Time, t_interval, te, to. Documentation: end time; starting time; time; time interval." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Time" .
+
+promo:Variable a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Variable" ;
+    rdfs:comment "Top class for ProMo variables." .
+
+promo:Velocity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Velocity" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_118>,
+        <http://example.org/macroscopic#V_119>,
+        <http://example.org/macroscopic#V_120>,
+        <http://example.org/macroscopic#V_190>,
+        <http://example.org/macroscopic#V_191>,
+        <http://example.org/macroscopic#V_192> ;
+    promo:dimensionalSignature "0 1 -1 0 0 0 0" ;
+    promo:hasSymbol "kdAFick_x",
+        "kdAFick_y",
+        "kdAFick_z",
+        "v",
+        "v_x",
+        "v_y",
+        "v_z" ;
+    promo:has_unit qudt:CentiM-PER-HR,
+        qudt:CentiM-PER-KiloYR,
+        qudt:CentiM-PER-SEC,
+        qudt:CentiM-PER-YR,
+        qudt:FT-PER-DAY,
+        qudt:FT-PER-HR,
+        qudt:FT-PER-MIN,
+        qudt:FT-PER-SEC,
+        qudt:GigaHZ-M,
+        qudt:IN-PER-MIN,
+        qudt:IN-PER-SEC,
+        qudt:IN-PER-YR,
+        qudt:KN,
+        qudt:KiloM-PER-DAY,
+        qudt:KiloM-PER-HR,
+        qudt:KiloM-PER-SEC,
+        qudt:M-PER-DAY,
+        qudt:M-PER-HR,
+        qudt:M-PER-MIN,
+        qudt:M-PER-SEC,
+        qudt:M-PER-YR,
+        qudt:MI-PER-HR,
+        qudt:MI-PER-MIN,
+        qudt:MI-PER-SEC,
+        qudt:MI_N-PER-HR,
+        qudt:MI_N-PER-MIN,
+        qudt:MicroM-PER-MIN,
+        qudt:MicroM-PER-SEC,
+        qudt:MilliM-PER-DAY,
+        qudt:MilliM-PER-HR,
+        qudt:MilliM-PER-MIN,
+        qudt:MilliM-PER-SEC,
+        qudt:MilliM-PER-YR,
+        qudt:YD-PER-HR,
+        qudt:YD-PER-MIN,
+        qudt:YD-PER-SEC ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/Velocity> ;
+    promo:siUnit qudt:M-PER-SEC ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L1 T-1 Θ0 I0 N0 J0. Derived from 6 ProMo variable(s) with symbols: kdAFick_x, kdAFick_y, kdAFick_z, v_x, v_y, v_z. Documentation: Fick diffusivity in arc and y-direction; Fick diffusivity in arc and z-direction; velocity in y-direction; velocity in z-direction; Fick's diffusivity in arc and x-direction; velocity in x-direction." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Velocity" .
+
+promo:Volume a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Volume" ;
+    promo:derivedFrom <http://example.org/physical#V_110> ;
+    promo:dimensionalSignature "0 3 0 0 0 0 0" ;
+    promo:hasSymbol "V",
+        "Volume" ;
+    promo:has_unit qudt:AC-FT,
+        qudt:AC-FT_US,
+        qudt:ANGSTROM3,
+        qudt:BBL,
+        qudt:BBL_UK_PET,
+        qudt:BU_US_DRY,
+        qudt:CentiM3,
+        qudt:DecaL,
+        qudt:DecaM3,
+        qudt:DeciL,
+        qudt:DeciM3,
+        qudt:FBM,
+        qudt:FT3,
+        qudt:FemtoL,
+        qudt:GI_UK,
+        qudt:GI_US,
+        qudt:HectoL,
+        qudt:IN3,
+        qudt:KiloCubicFT,
+        qudt:KiloL,
+        qudt:L,
+        qudt:M3,
+        qudt:MI3,
+        qudt:MI_UK3,
+        qudt:MegaL,
+        qudt:MicroL,
+        qudt:MicroM3,
+        qudt:MilliL,
+        qudt:MilliM3,
+        qudt:NanoL,
+        qudt:OZ_VOL_UK,
+        qudt:PINT,
+        qudt:PINT_UK,
+        qudt:PK_UK,
+        qudt:PicoL,
+        qudt:PlanckVolume,
+        qudt:QT_UK,
+        qudt:QT_US,
+        qudt:STANDARD,
+        qudt:STR,
+        qudt:TBSP,
+        qudt:TON_SHIPPING_UK,
+        qudt:TON_SHIPPING_US,
+        qudt:TSP,
+        qudt:YD3 ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/CartesianVolume> ;
+    promo:siUnit qudt:AC-FT ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L3 T0 Θ0 I0 N0 J0. Derived from 1 ProMo variable(s) with symbols: Volume. Documentation: volume." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "Volume" .
+
+promo:VolumetricFlow a rdfs:Class,
+        owl:Class ;
+    rdfs:label "VolumetricFlow" ;
+    promo:derivedFrom <http://example.org/macroscopic#V_159> ;
+    promo:dimensionalSignature "0 3 -1 0 0 0 0" ;
+    promo:hasSymbol "Q",
+        "fV" ;
+    promo:has_unit qudt:BBL_UK_PET-PER-DAY,
+        qudt:BBL_UK_PET-PER-HR,
+        qudt:BBL_UK_PET-PER-MIN,
+        qudt:BBL_UK_PET-PER-SEC,
+        qudt:BBL_US-PER-DAY,
+        qudt:BBL_US-PER-MIN,
+        qudt:BBL_US_PET-PER-HR,
+        qudt:BBL_US_PET-PER-SEC,
+        qudt:BU_UK-PER-DAY,
+        qudt:BU_UK-PER-HR,
+        qudt:BU_UK-PER-MIN,
+        qudt:BU_UK-PER-SEC,
+        qudt:BU_US_DRY-PER-DAY,
+        qudt:BU_US_DRY-PER-HR,
+        qudt:BU_US_DRY-PER-MIN,
+        qudt:BU_US_DRY-PER-SEC,
+        qudt:CentiM3-PER-DAY,
+        qudt:CentiM3-PER-HR,
+        qudt:CentiM3-PER-MIN,
+        qudt:CentiM3-PER-SEC,
+        qudt:DeciM3-PER-DAY,
+        qudt:DeciM3-PER-HR,
+        qudt:DeciM3-PER-MIN,
+        qudt:DeciM3-PER-SEC,
+        qudt:FT3-PER-DAY,
+        qudt:FT3-PER-HR,
+        qudt:FT3-PER-MIN,
+        qudt:FT3-PER-SEC,
+        qudt:GAL_UK-PER-DAY,
+        qudt:GAL_UK-PER-HR,
+        qudt:GAL_UK-PER-MIN,
+        qudt:GAL_UK-PER-SEC,
+        qudt:GAL_US-PER-DAY,
+        qudt:GAL_US-PER-HR,
+        qudt:GAL_US-PER-MIN,
+        qudt:GAL_US-PER-SEC,
+        qudt:GI_UK-PER-DAY,
+        qudt:GI_UK-PER-HR,
+        qudt:GI_UK-PER-MIN,
+        qudt:GI_UK-PER-SEC,
+        qudt:GI_US-PER-DAY,
+        qudt:GI_US-PER-HR,
+        qudt:GI_US-PER-MIN,
+        qudt:GI_US-PER-SEC,
+        qudt:IN3-PER-HR,
+        qudt:IN3-PER-MIN,
+        qudt:IN3-PER-SEC,
+        qudt:KiloL-PER-HR,
+        qudt:L-PER-DAY,
+        qudt:L-PER-HR,
+        qudt:L-PER-MIN,
+        qudt:L-PER-SEC,
+        qudt:M3-PER-DAY,
+        qudt:M3-PER-HR,
+        qudt:M3-PER-MIN,
+        qudt:M3-PER-SEC,
+        qudt:M3-PER-YR,
+        qudt:MilliL-PER-DAY,
+        qudt:MilliL-PER-HR,
+        qudt:MilliL-PER-MIN,
+        qudt:MilliL-PER-SEC,
+        qudt:OZ_VOL_UK-PER-DAY,
+        qudt:OZ_VOL_UK-PER-HR,
+        qudt:OZ_VOL_UK-PER-MIN,
+        qudt:OZ_VOL_UK-PER-SEC,
+        qudt:OZ_VOL_US-PER-DAY,
+        qudt:OZ_VOL_US-PER-HR,
+        qudt:OZ_VOL_US-PER-MIN,
+        qudt:OZ_VOL_US-PER-SEC,
+        qudt:PINT_UK-PER-DAY,
+        qudt:PINT_UK-PER-HR,
+        qudt:PINT_UK-PER-MIN,
+        qudt:PINT_UK-PER-SEC,
+        qudt:PINT_US-PER-DAY,
+        qudt:PINT_US-PER-HR,
+        qudt:PINT_US-PER-MIN,
+        qudt:PINT_US-PER-SEC,
+        qudt:PK_UK-PER-DAY,
+        qudt:PK_UK-PER-HR,
+        qudt:PK_UK-PER-MIN,
+        qudt:PK_UK-PER-SEC,
+        qudt:PK_US_DRY-PER-DAY,
+        qudt:PK_US_DRY-PER-HR,
+        qudt:PK_US_DRY-PER-MIN,
+        qudt:PK_US_DRY-PER-SEC,
+        qudt:QT_UK-PER-DAY,
+        qudt:QT_UK-PER-HR,
+        qudt:QT_UK-PER-MIN,
+        qudt:QT_UK-PER-SEC,
+        qudt:QT_US-PER-DAY,
+        qudt:QT_US-PER-HR,
+        qudt:QT_US-PER-MIN,
+        qudt:QT_US-PER-SEC,
+        qudt:YD3-PER-DAY,
+        qudt:YD3-PER-HR,
+        qudt:YD3-PER-MIN,
+        qudt:YD3-PER-SEC ;
+    promo:quantityKind <http://qudt.org/vocab/quantitykind/VolumeFlowRate> ;
+    promo:siUnit qudt:M3-PER-SEC ;
+    rdfs:comment "ProMo quantity kind with dimensional signature M0 L3 T-1 Θ0 I0 N0 J0. Derived from 1 ProMo variable(s) with symbols: fV. Documentation: volumetric flow in x-direction." ;
+    rdfs:subClassOf promo:PhysicalVariable ;
+    skos:prefLabel "VolumetricFlow" .
+
+promo:derivedFrom a owl:ObjectProperty ;
+    rdfs:label "derived from" ;
+    rdfs:comment "Original ProMo variable IRI used to derive this quantity kind." ;
+    rdfs:domain promo:PhysicalVariable .
+
+promo:dimensionalSignature a owl:DatatypeProperty ;
+    rdfs:label "dimensional signature" ;
+    rdfs:comment "SI dimension exponents in order: mass, length, time, temperature, current, amount, luminosity." ;
+    rdfs:domain promo:PhysicalVariable ;
+    rdfs:range xsd:string .
+
+promo:hasSymbol a owl:DatatypeProperty ;
+    rdfs:label "has symbol" ;
+    rdfs:comment "Short symbol for the quantity kind, e.g. T, p, ρ." ;
+    rdfs:domain promo:PhysicalVariable ;
+    rdfs:range xsd:string .
+
+promo:quantityKind a owl:ObjectProperty ;
+    rdfs:label "quantity kind" ;
+    rdfs:comment "Link to the corresponding QUDT quantity kind." ;
+    rdfs:domain promo:PhysicalVariable ;
+    rdfs:range <http://qudt.org/schema/qudt/QuantityKind> .
+
+promo:siUnit a owl:ObjectProperty ;
+    rdfs:label "SI unit" ;
+    rdfs:comment "Preferred SI unit for this quantity kind." ;
+    rdfs:domain promo:PhysicalVariable ;
+    rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+    rdfs:subPropertyOf promo:has_unit .
+
+promo:has_unit a owl:ObjectProperty ;
+    rdfs:label "has unit" ;
+    rdfs:comment "Applicable units for this quantity kind." ;
+    rdfs:domain promo:PhysicalVariable ;
+    rdfs:range <http://qudt.org/schema/qudt/Unit> .
+
