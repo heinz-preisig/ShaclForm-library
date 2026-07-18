@@ -1,0 +1,2939 @@
+@prefix app: <https://w3id.org/promo/property/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/promo/property/control/V_226> a owl:Class ;
+    rdfs:label "link variable _T_meas to interface control" ;
+    dcterms:created "2024-06-19T12:15:34"^^xsd:dateTime ;
+    dcterms:identifier "V_226" ;
+    dcterms:modified "2024-06-19T12:31:58"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "T_meas" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/control> ;
+    app:hasLatexRepresentation "E_125:\\left({{F^{sink}}}{_{N, I}} \\, . \\, {\\_T\\_meas}{_{I}}\\right) \\stackrel{I}{\\star} {{S}}{_{I, p}}" ;
+    app:isDefinedByExpression "E_125: D_0 V_4 O_4 V_225 D_1  O_5 I_3 V_9" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "T_meas" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/algebraic> .
+
+<https://w3id.org/promo/property/control/V_227> a owl:Class ;
+    rdfs:label "setpoint for temperatue" ;
+    dcterms:created "2024-06-19T12:17:04"^^xsd:dateTime ;
+    dcterms:identifier "V_227" ;
+    dcterms:modified "2024-06-19T12:32:13"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "T_setpoint" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/control> ;
+    app:hasLatexRepresentation "E_126:\\textbf{Instantiate}({{\\bar{T}}}{_{N, p}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_126: O_10 D_0 V_226 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "T_setpoint" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/algebraic> .
+
+<https://w3id.org/promo/property/control/V_231> a owl:Class ;
+    rdfs:label "control error in normed temperature" ;
+    dcterms:created "2024-06-19T15:52:40"^^xsd:dateTime ;
+    dcterms:identifier "V_231" ;
+    dcterms:modified "2024-06-19T15:56:53"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "control_error" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/control> ;
+    app:hasLatexRepresentation "E_130:{{T_{setpoint}}}{_{N, p}}  - {{\\bar{T}}}{_{N, p}}" ;
+    app:isDefinedByExpression "E_130: V_227 O_1 V_226" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "control_error" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/algebraic> .
+
+<https://w3id.org/promo/property/control/V_237> a owl:Class ;
+    rdfs:label "controller gain" ;
+    dcterms:created "2024-07-11T10:25:05"^^xsd:dateTime ;
+    dcterms:identifier "V_237" ;
+    dcterms:modified "2024-07-11T10:25:48"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "p" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/control> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "p" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/algebraic> .
+
+<https://w3id.org/promo/property/control/V_238> a owl:Class ;
+    rdfs:label "output of proportional controller" ;
+    dcterms:created "2024-07-11T10:29:13"^^xsd:dateTime ;
+    dcterms:identifier "V_238" ;
+    dcterms:modified "2024-07-11T10:29:13"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "y_p_control" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/control> ;
+    app:hasLatexRepresentation "E_136:\\left( -{p}{_{N, p, q}} \\right) \\stackrel{p}{\\star} {e}{_{N, p}}" ;
+    app:isDefinedByExpression "E_136: F_11 D_0 V_237 D_1  O_5 I_7 V_231" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "y_p_control" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/algebraic> .
+
+<https://w3id.org/promo/property/control/V_239> a owl:Class ;
+    rdfs:label "positive signal only" ;
+    dcterms:created "2024-07-11T10:34:07"^^xsd:dateTime ;
+    dcterms:identifier "V_239" ;
+    dcterms:modified "2024-07-11T10:37:13"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "y_p_positive" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/control> ;
+    app:hasLatexRepresentation "E_137:\\mathbf{max}\\left( {0}{_{}} \\, . \\, {{y^{p}}}{_{N, q}}, {{y^{p}}}{_{N, q}} \\right)" ;
+    app:isDefinedByExpression "E_137: O_11 D_0 V_102 O_4 V_238 D_7 V_238 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "y_p_positive" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/algebraic> .
+
+app:dimensionalSignature a owl:DatatypeProperty ;
+    rdfs:label "dimensional signature" .
+
+app:domain a owl:ObjectProperty ;
+    rdfs:label "domain" .
+
+app:hasLatexRepresentation a owl:DatatypeProperty ;
+    rdfs:label "has LaTeX representation" .
+
+app:hasUnit a owl:ObjectProperty ;
+    rdfs:label "has unit" ;
+    rdfs:subPropertyOf qudt:applicableUnit .
+
+app:isDefinedByExpression a owl:DatatypeProperty ;
+    rdfs:label "is defined by expression" .
+
+app:isPortVariable a owl:DatatypeProperty ;
+    rdfs:label "is port variable" .
+
+<https://w3id.org/promo/property/macroscopic/V_112> a owl:Class ;
+    rdfs:label "thermodynamic pressure" ;
+    dcterms:created "2024-03-28T09:05:37"^^xsd:dateTime ;
+    dcterms:identifier "V_112" ;
+    dcterms:modified "2024-03-28T09:06:01"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "p" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 -1 -2 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_8:\\frac{\\partial{{U}{_{N}}}}{\\partial{{V}{_{N}}}}" ;
+    app:isDefinedByExpression "E_8: O_6 D_0 V_108 D_7 V_110 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -1 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Pressure" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/effort> .
+
+<https://w3id.org/promo/property/macroscopic/V_113> a owl:Class ;
+    rdfs:label "temperature" ;
+    dcterms:created "2024-03-28T09:09:07"^^xsd:dateTime ;
+    dcterms:identifier "V_113" ;
+    dcterms:modified "2024-03-28T10:01:04"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "T" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_121:{H}{_{N}} \\, . \\, \\left( {{C_p}}{_{N}} \\right)^{-1}  + {{T^{ref}}}{_{N}}" ;
+    app:hasUnit <http://qudt.org/vocab/unit/K> ;
+    app:isDefinedByExpression "E_121: V_115 O_4 F_15 D_0 V_124 D_1 O_0 V_222" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "Temperature" ;
+    app:temperatureExponent 1 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/effort> .
+
+<https://w3id.org/promo/property/macroscopic/V_114> a owl:Class ;
+    rdfs:label "chemical potential" ;
+    dcterms:created "2024-03-28T09:09:57"^^xsd:dateTime ;
+    dcterms:identifier "V_114" ;
+    dcterms:modified "2024-03-28T09:16:51"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "chemPot" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_10:\\frac{\\partial{{U}{_{N}}}}{\\partial{{n}{_{N, S}}}}" ;
+    app:isDefinedByExpression "E_10: O_6 D_0 V_108 D_7 V_111 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "ChemicalPotential" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/effort> .
+
+<https://w3id.org/promo/property/macroscopic/V_115> a owl:Class ;
+    rdfs:label "Enthalpy" ;
+    dcterms:created "2024-03-28T09:12:06"^^xsd:dateTime ;
+    dcterms:identifier "V_115" ;
+    dcterms:modified "2024-03-28T09:14:53"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "H" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_112:\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {{\\dot{H}}}{_{N}} \\enskip d\\,{t}{_{}}  + {{H^o}}{_{N}}" ;
+    app:isDefinedByExpression "E_112: O_8 D_0 V_215 D_8 V_1 O_13 D_2 V_105 D_7 V_106 D_3 D_1 O_0 V_216" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Enthalpy" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/macroscopic/V_116> a owl:Class ;
+    rdfs:label "Helmholtz energy" ;
+    dcterms:created "2024-03-28T09:12:52"^^xsd:dateTime ;
+    dcterms:identifier "V_116" ;
+    dcterms:modified "2024-03-28T09:14:44"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "A" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_12:{U}{_{N}}  - {T}{_{N}} \\, . \\, {S}{_{N}}" ;
+    app:isDefinedByExpression "E_12: V_108 O_1 V_113 O_4 V_109" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "HelmholtzEnergy" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/macroscopic/V_117> a owl:Class ;
+    rdfs:label "Gibbs free energy" ;
+    dcterms:created "2024-03-28T09:13:35"^^xsd:dateTime ;
+    dcterms:identifier "V_117" ;
+    dcterms:modified "2024-03-28T09:14:35"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "G" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_13:{U}{_{N}}  + {p}{_{N}} \\, . \\, {V}{_{N}}  - {T}{_{N}} \\, . \\, {S}{_{N}}" ;
+    app:isDefinedByExpression "E_13: V_108 O_0 V_112 O_4 V_110 O_1 V_113 O_4 V_109" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "GibbsEnergy" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/macroscopic/V_118> a owl:Class ;
+    rdfs:label "velocity in x-direction" ;
+    dcterms:created "2024-03-28T10:02:46"^^xsd:dateTime ;
+    dcterms:identifier "V_118" ;
+    dcterms:modified "2024-03-28T10:02:46"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "v_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_14:\\frac{\\partial{{{r_x}}{_{N}}}}{\\partial{{t}{_{}}}}" ;
+    app:isDefinedByExpression "E_14: O_6 D_0 V_23 D_7 V_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "v_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_119> a owl:Class ;
+    rdfs:label "velocity in y-direction" ;
+    dcterms:created "2024-03-28T10:03:43"^^xsd:dateTime ;
+    dcterms:identifier "V_119" ;
+    dcterms:modified "2024-03-28T10:03:43"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "v_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_15:\\frac{\\partial{{{r_y}}{_{N}}}}{\\partial{{t}{_{}}}}" ;
+    app:isDefinedByExpression "E_15: O_6 D_0 V_24 D_7 V_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "v_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_120> a owl:Class ;
+    rdfs:label "velocity in z-direction" ;
+    dcterms:created "2024-03-28T10:04:21"^^xsd:dateTime ;
+    dcterms:identifier "V_120" ;
+    dcterms:modified "2024-03-28T10:04:58"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "v_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_16:\\frac{\\partial{{{r_z}}{_{N}}}}{\\partial{{t}{_{}}}}" ;
+    app:isDefinedByExpression "E_16: O_6 D_0 V_25 D_7 V_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "v_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_124> a owl:Class ;
+    rdfs:label "total heat capacity at constant pressure" ;
+    dcterms:created "2024-03-28T10:19:38"^^xsd:dateTime ;
+    dcterms:identifier "V_124" ;
+    dcterms:modified "2024-05-10T15:44:29"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Cp" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_117:{m}{_{N}} \\, . \\, {{c_p}}{_{N}}" ;
+    app:isDefinedByExpression "E_117: V_137 O_4 V_141" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Cp" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_125> a owl:Class ;
+    rdfs:label "total heat capacity at constant volume" ;
+    dcterms:created "2024-03-28T10:20:47"^^xsd:dateTime ;
+    dcterms:identifier "V_125" ;
+    dcterms:modified "2024-05-10T15:44:43"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "CV" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_19:\\frac{\\partial{{U}{_{N}}}}{\\partial{{T}{_{N}}}}" ;
+    app:isDefinedByExpression "E_19: O_6 D_0 V_108 D_7 V_113 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "CV" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_136> a owl:Class ;
+    rdfs:label "partial molar enthalpies" ;
+    dcterms:created "2024-03-28T13:48:32"^^xsd:dateTime ;
+    dcterms:identifier "V_136" ;
+    dcterms:modified "2024-03-28T13:48:32"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "h" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_29:{H}{_{N}} \\, . \\, \\left( {n}{_{N, S}} \\right)^{-1}" ;
+    app:isDefinedByExpression "E_29: V_115 O_4 F_15 D_0 V_111 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "h" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_138> a owl:Class ;
+    rdfs:label "molar concentration" ;
+    dcterms:created "2024-03-28T13:52:08"^^xsd:dateTime ;
+    dcterms:identifier "V_138" ;
+    dcterms:modified "2024-03-28T13:52:08"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "c" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -3 0 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_31:\\left( {V}{_{N}} \\right)^{-1} \\, . \\, {n}{_{N, S}}" ;
+    app:isDefinedByExpression "E_31: F_15 D_0 V_110 D_1 O_4 V_111" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "c" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_139> a owl:Class ;
+    rdfs:label "total number of moles" ;
+    dcterms:created "2024-03-28T14:12:42"^^xsd:dateTime ;
+    dcterms:identifier "V_139" ;
+    dcterms:modified "2024-03-28T14:13:35"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "nt" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_32:\\textbf{reduceSum}\\left({n}{_{N, S}},S\\right)" ;
+    app:hasUnit <http://qudt.org/vocab/unit/MOL> ;
+    app:isDefinedByExpression "E_32: O_15 D_0 V_111 D_7 I_4 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "nt" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_140> a owl:Class ;
+    rdfs:label "mole fraction" ;
+    dcterms:created "2024-03-28T14:13:19"^^xsd:dateTime ;
+    dcterms:identifier "V_140" ;
+    dcterms:modified "2024-03-28T14:13:19"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_33:\\left( {{n^t}}{_{N}} \\right)^{-1} \\, . \\, {n}{_{N, S}}" ;
+    app:isDefinedByExpression "E_33: F_15 D_0 V_139 D_1 O_4 V_111" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_141> a owl:Class ;
+    rdfs:label "specific heat capacity at constant pressure" ;
+    dcterms:created "2024-03-30T13:47:18"^^xsd:dateTime ;
+    dcterms:identifier "V_141" ;
+    dcterms:modified "2024-03-30T13:48:58"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "cp" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 2 -2 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_120:\\textbf{Instantiate}({{c_p}}{_{N}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_120: O_10 D_0 V_141 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "cp" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_142> a owl:Class ;
+    rdfs:label "specific heat capacity at constant volume" ;
+    dcterms:created "2024-03-30T13:48:44"^^xsd:dateTime ;
+    dcterms:identifier "V_142" ;
+    dcterms:modified "2024-03-30T13:48:44"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "cV" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 2 -2 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_35:{{C_V}}{_{N}} \\, . \\, \\left( {m}{_{N}} \\right)^{-1}" ;
+    app:isDefinedByExpression "E_35: V_125 O_4 F_15 D_0 V_137 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "cV" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_151> a owl:Class ;
+    rdfs:label "heat flow in x-direction" ;
+    dcterms:created "2024-03-30T15:23:46"^^xsd:dateTime ;
+    dcterms:identifier "V_151" ;
+    dcterms:modified "2024-03-30T15:23:46"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fq_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_43:{{k^q_x}}{_{A}} \\, . \\, {{A_{yz}}}{_{N}} \\, . \\, {{F}}{_{N, A}} \\stackrel{N}{\\star} {T}{_{N}}" ;
+    app:isDefinedByExpression "E_43: V_186 O_4 V_150 O_4 V_2  O_5 I_1 V_113" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "fq_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_152> a owl:Class ;
+    rdfs:label "heat flow in y-direction" ;
+    dcterms:created "2024-03-30T15:24:47"^^xsd:dateTime ;
+    dcterms:identifier "V_152" ;
+    dcterms:modified "2024-03-30T15:24:47"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fq_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_44:{{k^q_y}}{_{A}} \\, . \\, {{A_{xz}}}{_{N}} \\, . \\, {{F}}{_{N, A}} \\stackrel{N}{\\star} {T}{_{N}}" ;
+    app:isDefinedByExpression "E_44: V_187 O_4 V_149 O_4 V_2  O_5 I_1 V_113" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "fq_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_153> a owl:Class ;
+    rdfs:label "heat flow in z-direction" ;
+    dcterms:created "2024-03-30T15:25:40"^^xsd:dateTime ;
+    dcterms:identifier "V_153" ;
+    dcterms:modified "2024-03-30T15:25:40"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fq_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_45:{{k^q_z}}{_{A}} \\, . \\, {{A_{xy}}}{_{N}} \\, . \\, {{F}}{_{N, A}} \\stackrel{N}{\\star} {T}{_{N}}" ;
+    app:isDefinedByExpression "E_45: V_188 O_4 V_148 O_4 V_2  O_5 I_1 V_113" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "fq_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_154> a owl:Class ;
+    rdfs:label "diffusion flow in x-direction" ;
+    dcterms:created "2024-03-30T15:31:09"^^xsd:dateTime ;
+    dcterms:identifier "V_154" ;
+    dcterms:modified "2024-04-03T17:08:52"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fnd_x" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_46:{{\\hat{k}^{d,Fick}_x}}{_{A, S}} \\, . \\, {{A_{yz}}}{_{N}} \\, . \\, {{F}}{_{N, A}} \\stackrel{N}{\\star} {c}{_{N, S}}" ;
+    app:isDefinedByExpression "E_46: V_190 O_4 V_150 O_4 V_2  O_5 I_1 V_138" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "fnd_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_155> a owl:Class ;
+    rdfs:label "diffusion flow in y-direction" ;
+    dcterms:created "2024-03-30T15:32:35"^^xsd:dateTime ;
+    dcterms:identifier "V_155" ;
+    dcterms:modified "2024-04-03T17:09:37"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fnd_y" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_47:{{\\hat{k}^{d,Fick}_y}}{_{A, S}} \\, . \\, {{A_{xz}}}{_{N}} \\, . \\, {{F}}{_{N, A}} \\stackrel{N}{\\star} {c}{_{N, S}}" ;
+    app:isDefinedByExpression "E_47: V_191 O_4 V_149 O_4 V_2  O_5 I_1 V_138" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "fnd_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_156> a owl:Class ;
+    rdfs:label "diffusion flow in z-direction" ;
+    dcterms:created "2024-03-30T15:33:31"^^xsd:dateTime ;
+    dcterms:identifier "V_156" ;
+    dcterms:modified "2024-04-03T17:05:46"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fnd_z" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_48:{{\\hat{k}^{d,Fick}_z}}{_{A, S}} \\, . \\, \\left({{A_{xy}}}{_{N}} \\, . \\, {{F}}{_{N, A}}\\right) \\stackrel{N}{\\star} {c}{_{N, S}}" ;
+    app:isDefinedByExpression "E_48: V_192 O_4 D_0 V_148 O_4 V_2 D_1  O_5 I_1 V_138" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "fnd_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_157> a owl:Class ;
+    rdfs:label "flow direction of convective flow" ;
+    dcterms:created "2024-03-30T15:36:54"^^xsd:dateTime ;
+    dcterms:identifier "V_157" ;
+    dcterms:modified "2024-03-30T15:36:54"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "d" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_49:\\textbf{sign} \\left( {{F}}{_{N, A}} \\stackrel{N}{\\star} {p}{_{N}} \\right)" ;
+    app:isDefinedByExpression "E_49: F_16 D_0 V_2  O_5 I_1 V_112 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "d" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_158> a owl:Class ;
+    rdfs:label "concentration in convective event-dynamic flow" ;
+    dcterms:created "2024-03-30T15:39:39"^^xsd:dateTime ;
+    dcterms:identifier "V_158" ;
+    dcterms:modified "2024-03-30T15:39:39"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "c_AS" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -3 0 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_50:\\left({0.5}{_{}} \\, . \\, \\left({{F}}{_{N, A}}  - {d}{_{A}} \\, . \\, |{{F}}{_{N, A}}|\\right)\\right) \\stackrel{N}{\\star} {c}{_{N, S}}" ;
+    app:isDefinedByExpression "E_50: D_0 V_104 O_4 D_0 V_2 O_1 V_157 O_4 F_10 D_0 V_2 D_1 D_1 D_1  O_5 I_1 V_138" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "c_AS" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_159> a owl:Class ;
+    rdfs:label "volumetric flow in x-direction" ;
+    dcterms:created "2024-03-30T15:42:22"^^xsd:dateTime ;
+    dcterms:identifier "V_159" ;
+    dcterms:modified "2024-03-30T15:42:22"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fV" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 3 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_142:{{y^{p+}}}{_{A}} \\, . \\, \\left( {{\\rho}}{_{A}} \\right)^{-1} \\, . \\, {{k^c_x}}{_{A}} \\, . \\, {{A_{yz}}}{_{N}} \\, . \\, {{F}}{_{N, A}} \\stackrel{N}{\\star} {p}{_{N}}" ;
+    app:isDefinedByExpression "E_142: V_243 O_4 F_15 D_0 V_189 D_1 O_4 V_183 O_4 V_150 O_4 V_2  O_5 I_1 V_112" ;
+    app:isPortVariable false ;
+    app:lengthExponent 3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "fV" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_160> a owl:Class ;
+    rdfs:label "molar convective flow in x-direction" ;
+    dcterms:created "2024-03-30T15:43:52"^^xsd:dateTime ;
+    dcterms:identifier "V_160" ;
+    dcterms:modified "2024-03-30T15:43:52"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fnc_x" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_52:{{\\hat{V}}}{_{A}} \\, . \\, {c}{_{A, S}}" ;
+    app:isDefinedByExpression "E_52: V_159 O_4 V_158" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "fnc_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_161> a owl:Class ;
+    rdfs:label "instantiating standard chemical potential" ;
+    dcterms:created "2024-03-30T15:46:57"^^xsd:dateTime ;
+    dcterms:identifier "V_161" ;
+    dcterms:modified "2024-03-30T15:46:57"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "chemPotStandard" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_53:\\textbf{Instantiate}({{\\mu}}{_{N, S}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_53: O_10 D_0 V_114 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "chemPotStandard" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/effort> .
+
+<https://w3id.org/promo/property/macroscopic/V_180> a owl:Class ;
+    rdfs:label "diffusivity in arc and x-direction" ;
+    dcterms:created "2024-04-03T09:37:45"^^xsd:dateTime ;
+    dcterms:identifier "V_180" ;
+    dcterms:modified "2024-04-03T09:41:34"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kdA_x" ;
+    app:amountExponent 2 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "-1 -4 1 0 0 2 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_73:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left( {{\\mu}}{_{N, S}} \\right)^{-1} \\, . \\, \\left({{v_x}}{_{N}} \\, . \\, \\left(\\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{{\\mu}}{_{N, S}}}}\\right)\\right)\\right)" ;
+    app:isDefinedByExpression "E_73: V_27  O_5 I_1 D_0 F_15 D_0 V_114 D_1 O_4 D_0 V_118 O_4 D_0 F_15 D_0 V_110 D_1 O_4 O_6 D_0 V_108 D_7 V_114 D_1 D_1 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -4 ;
+    app:lightExponent 0 ;
+    app:massExponent -1 ;
+    app:sourceName "kdA_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_181> a owl:Class ;
+    rdfs:label "diffusivity in arc and y-direction" ;
+    dcterms:created "2024-04-03T09:38:38"^^xsd:dateTime ;
+    dcterms:identifier "V_181" ;
+    dcterms:modified "2024-04-03T09:38:38"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kdA_y" ;
+    app:amountExponent 2 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "-1 -4 1 0 0 2 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_74:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left( {{\\mu}}{_{N, S}} \\right)^{-1} \\, . \\, \\left({{v_y}}{_{N}} \\, . \\, \\left(\\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{{\\mu}}{_{N, S}}}}\\right)\\right)\\right)" ;
+    app:isDefinedByExpression "E_74: V_27  O_5 I_1 D_0 F_15 D_0 V_114 D_1 O_4 D_0 V_119 O_4 D_0 F_15 D_0 V_110 D_1 O_4 O_6 D_0 V_108 D_7 V_114 D_1 D_1 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -4 ;
+    app:lightExponent 0 ;
+    app:massExponent -1 ;
+    app:sourceName "kdA_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_182> a owl:Class ;
+    rdfs:label "diffusivity in arc and z-direction" ;
+    dcterms:created "2024-04-03T09:41:23"^^xsd:dateTime ;
+    dcterms:identifier "V_182" ;
+    dcterms:modified "2024-04-03T09:41:23"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kdA_z" ;
+    app:amountExponent 2 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "-1 -4 1 0 0 2 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_75:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left( {{\\mu}}{_{N, S}} \\right)^{-1} \\, . \\, \\left({{v_z}}{_{N}} \\, . \\, \\left(\\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{{\\mu}}{_{N, S}}}}\\right)\\right)\\right)" ;
+    app:isDefinedByExpression "E_75: V_27  O_5 I_1 D_0 F_15 D_0 V_114 D_1 O_4 D_0 V_120 O_4 D_0 F_15 D_0 V_110 D_1 O_4 O_6 D_0 V_108 D_7 V_114 D_1 D_1 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -4 ;
+    app:lightExponent 0 ;
+    app:massExponent -1 ;
+    app:sourceName "kdA_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_183> a owl:Class ;
+    rdfs:label "convective mass conductivity in arc and x diretion" ;
+    dcterms:created "2024-04-03T09:44:02"^^xsd:dateTime ;
+    dcterms:identifier "V_183" ;
+    dcterms:modified "2024-04-03T09:44:02"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kcA_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -1 1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_76:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left({{\\lambda}}{_{S}} \\stackrel{S}{\\star} \\left( {{\\mu}}{_{N, S}} \\right)^{-1}\\right) \\, . \\, \\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{p}{_{N}}}} \\, . \\, {{v_x}}{_{N}}\\right)" ;
+    app:isDefinedByExpression "E_76: V_27  O_5 I_1 D_0 D_0 V_132  O_5 I_4 F_15 D_0 V_114 D_1 D_1 O_4 F_15 D_0 V_110 D_1 O_4 O_6 D_0 V_108 D_7 V_112 D_1 O_4 V_118 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "kcA_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_184> a owl:Class ;
+    rdfs:label "convective mass conductivity in arc and y-direction" ;
+    dcterms:created "2024-04-03T09:45:18"^^xsd:dateTime ;
+    dcterms:identifier "V_184" ;
+    dcterms:modified "2024-04-03T16:27:55"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kcA_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -1 1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_77:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left({{\\lambda}}{_{S}} \\stackrel{S}{\\star} \\left( {{\\mu}}{_{N, S}} \\right)^{-1}\\right) \\, . \\, \\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{p}{_{N}}}} \\, . \\, {{v_y}}{_{N}}\\right)" ;
+    app:isDefinedByExpression "E_77: V_27  O_5 I_1 D_0 D_0 V_132  O_5 I_4 F_15 D_0 V_114 D_1 D_1 O_4 F_15 D_0 V_110 D_1 O_4 O_6 D_0 V_108 D_7 V_112 D_1 O_4 V_119 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "kcA_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_185> a owl:Class ;
+    rdfs:label "convecive mass conductivity in arc and y-direction" ;
+    dcterms:created "2024-04-03T09:46:27"^^xsd:dateTime ;
+    dcterms:identifier "V_185" ;
+    dcterms:modified "2024-04-03T09:46:27"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kcA_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -1 1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_78:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left({{\\lambda}}{_{S}} \\stackrel{S}{\\star} \\left( {{\\mu}}{_{N, S}} \\right)^{-1}\\right) \\, . \\, \\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{p}{_{N}}}} \\, . \\, {{v_z}}{_{N}}\\right)" ;
+    app:isDefinedByExpression "E_78: V_27  O_5 I_1 D_0 D_0 V_132  O_5 I_4 F_15 D_0 V_114 D_1 D_1 O_4 F_15 D_0 V_110 D_1 O_4 O_6 D_0 V_108 D_7 V_112 D_1 O_4 V_120 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "kcA_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_186> a owl:Class ;
+    rdfs:label "thermal conductivity in arc and x-direction" ;
+    dcterms:created "2024-04-03T09:49:18"^^xsd:dateTime ;
+    dcterms:identifier "V_186" ;
+    dcterms:modified "2024-04-03T09:49:18"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kqA_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 0 -3 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_79:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left( {V}{_{N}} \\right)^{-1} \\, . \\, {{C_p}}{_{N}} \\, . \\, {{v_x}}{_{N}}\\right)" ;
+    app:isDefinedByExpression "E_79: V_27  O_5 I_1 D_0 F_15 D_0 V_110 D_1 O_4 V_124 O_4 V_118 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "kqA_x" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_187> a owl:Class ;
+    rdfs:label "thermal conductivity in arc and y-direction" ;
+    dcterms:created "2024-04-03T09:50:21"^^xsd:dateTime ;
+    dcterms:identifier "V_187" ;
+    dcterms:modified "2024-04-03T09:50:21"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kqA_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 0 -3 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_80:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left( {V}{_{N}} \\right)^{-1} \\, . \\, {{C_p}}{_{N}} \\, . \\, {{v_y}}{_{N}}\\right)" ;
+    app:isDefinedByExpression "E_80: V_27  O_5 I_1 D_0 F_15 D_0 V_110 D_1 O_4 V_124 O_4 V_119 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "kqA_y" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_188> a owl:Class ;
+    rdfs:label "thermal conductivity in arc and z-direction" ;
+    dcterms:created "2024-04-03T09:51:17"^^xsd:dateTime ;
+    dcterms:identifier "V_188" ;
+    dcterms:modified "2024-04-03T09:51:17"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kqA_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 0 -3 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_81:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left(\\left( {V}{_{N}} \\right)^{-1} \\, . \\, {{C_p}}{_{N}} \\, . \\, {{v_z}}{_{N}}\\right)" ;
+    app:isDefinedByExpression "E_81: V_27  O_5 I_1 D_0 F_15 D_0 V_110 D_1 O_4 V_124 O_4 V_120 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "kqA_z" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_189> a owl:Class ;
+    rdfs:label "density in arc" ;
+    dcterms:created "2024-04-03T09:54:50"^^xsd:dateTime ;
+    dcterms:identifier "V_189" ;
+    dcterms:modified "2024-04-03T09:54:50"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "rhoA" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 -3 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_82:{{I}}{_{N, A}} \\stackrel{N}{\\star} {{\\rho}}{_{N}}" ;
+    app:isDefinedByExpression "E_82: V_27  O_5 I_1 V_143" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "rhoA" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_190> a owl:Class ;
+    rdfs:label "Fick's diffusivity in arc and x-direction" ;
+    dcterms:created "2024-04-03T10:00:15"^^xsd:dateTime ;
+    dcterms:identifier "V_190" ;
+    dcterms:modified "2024-04-03T17:13:21"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kdAFick_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_83:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left({{v_x}}{_{N}} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{{\\mu}}{_{N, S}}}} \\, . \\, \\left( {n}{_{N, S}} \\right)^{-1}\\right)" ;
+    app:isDefinedByExpression "E_83: V_27  O_5 I_1 D_0 V_118 O_4 O_6 D_0 V_108 D_7 V_114 D_1 O_4 F_15 D_0 V_111 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "kdAFick_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_191> a owl:Class ;
+    rdfs:label "Fick diffusivity in arc and y-direction" ;
+    dcterms:created "2024-04-03T10:00:56"^^xsd:dateTime ;
+    dcterms:identifier "V_191" ;
+    dcterms:modified "2024-04-03T17:13:31"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kdAFick_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_84:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left({{v_y}}{_{N}} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{{\\mu}}{_{N, S}}}} \\, . \\, \\left( {n}{_{N, S}} \\right)^{-1}\\right)" ;
+    app:isDefinedByExpression "E_84: V_27  O_5 I_1 D_0 V_119 O_4 O_6 D_0 V_108 D_7 V_114 D_1 O_4 F_15 D_0 V_111 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "kdAFick_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_192> a owl:Class ;
+    rdfs:label "Fick diffusivity in arc and z-direction" ;
+    dcterms:created "2024-04-03T10:02:03"^^xsd:dateTime ;
+    dcterms:identifier "V_192" ;
+    dcterms:modified "2024-04-03T17:13:38"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "kdAFick_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_85:{{I}}{_{N, A}} \\stackrel{N}{\\star} \\left({{v_z}}{_{N}} \\, . \\, \\frac{\\partial{{U}{_{N}}}}{\\partial{{{\\mu}}{_{N, S}}}} \\, . \\, \\left( {n}{_{N, S}} \\right)^{-1}\\right)" ;
+    app:isDefinedByExpression "E_85: V_27  O_5 I_1 D_0 V_120 O_4 O_6 D_0 V_108 D_7 V_114 D_1 O_4 F_15 D_0 V_111 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "kdAFick_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_193> a owl:Class ;
+    rdfs:label "partial molar enthalpiies in arc" ;
+    dcterms:created "2024-04-03T16:33:28"^^xsd:dateTime ;
+    dcterms:identifier "V_193" ;
+    dcterms:modified "2024-04-03T16:33:28"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "hA" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_86:{{I}}{_{N, A}} \\stackrel{N}{\\star} {h}{_{N, S}}" ;
+    app:isDefinedByExpression "E_86: V_27  O_5 I_1 V_136" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "hA" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_194> a owl:Class ;
+    rdfs:label "accumulation of molar mass due to convection" ;
+    dcterms:created "2024-04-03T16:37:41"^^xsd:dateTime ;
+    dcterms:identifier "V_194" ;
+    dcterms:modified "2024-05-10T15:45:26"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "anc_x" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_87:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{n}^c_x}}{_{A, S}}" ;
+    app:isDefinedByExpression "E_87: V_2  O_5 I_2 V_160" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "anc_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_195> a owl:Class ;
+    rdfs:label "accumulation due to diffusion in x-direction" ;
+    dcterms:created "2024-04-03T16:43:54"^^xsd:dateTime ;
+    dcterms:identifier "V_195" ;
+    dcterms:modified "2024-04-04T15:53:20"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "and_x" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_88:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{n}^{d}_x}}{_{A, S}}" ;
+    app:isDefinedByExpression "E_88: V_2  O_5 I_2 V_154" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "and_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_196> a owl:Class ;
+    rdfs:label "differential mass balance without reaction" ;
+    dcterms:created "2024-04-03T17:22:56"^^xsd:dateTime ;
+    dcterms:identifier "V_196" ;
+    dcterms:modified "2024-04-03T17:22:56"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "an" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_92:{{\\dot{n}^c_x}}{_{N, S}}  + {{\\dot{n}^d_x}}{_{N, S}}  + {V}{_{N}} \\, . \\, {{\\tilde{n}}}{_{N, S}}" ;
+    app:isDefinedByExpression "E_92: V_194 O_0 V_195 O_0 V_110 O_4 V_202" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "an" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/diffState> .
+
+<https://w3id.org/promo/property/macroscopic/V_202> a owl:Class ;
+    rdfs:label "link variable _np to interface macroscopic" ;
+    dcterms:created "2024-04-04T11:57:25"^^xsd:dateTime ;
+    dcterms:identifier "V_202" ;
+    dcterms:modified "2024-04-04T11:58:45"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "np" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -3 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_97:{{F^{source}}}{_{N, I}} \\stackrel{I}{\\star} {\\_np}{_{I, S}}" ;
+    app:isDefinedByExpression "E_97: V_3  O_5 I_3 V_201" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "np" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/conversion> .
+
+<https://w3id.org/promo/property/macroscopic/V_203> a owl:Class ;
+    rdfs:label "initial mass" ;
+    dcterms:created "2024-04-04T12:00:19"^^xsd:dateTime ;
+    dcterms:identifier "V_203" ;
+    dcterms:modified "2024-04-04T12:00:19"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "no" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_98:\\textbf{Instantiate}({n}{_{N, S}}, {{\\#}}{_{}})" ;
+    app:hasUnit <http://qudt.org/vocab/unit/MOL> ;
+    app:isDefinedByExpression "E_98: O_10 D_0 V_111 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "no" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/macroscopic/V_204> a owl:Class ;
+    rdfs:label "accumulation of enthalpy due to convective mass flow in x-direction" ;
+    dcterms:created "2024-04-04T13:39:50"^^xsd:dateTime ;
+    dcterms:identifier "V_204" ;
+    dcterms:modified "2024-04-04T13:41:01"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aHnc_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_99:{{F}}{_{N, A}} \\stackrel{A}{\\star} \\left({{\\hat{n}^c_x}}{_{A, S}} \\stackrel{S}{\\star} {h}{_{N, S}}\\right)" ;
+    app:isDefinedByExpression "E_99: V_2  O_5 I_2 D_0 V_160  O_5 I_4 V_136 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aHnc_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_205> a owl:Class ;
+    rdfs:label "accumulation of enthalpy due to diffusional mass flow in x-direction" ;
+    dcterms:created "2024-04-04T13:43:06"^^xsd:dateTime ;
+    dcterms:identifier "V_205" ;
+    dcterms:modified "2024-04-04T13:45:51"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aHnd_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_100:{{F}}{_{N, A}} \\stackrel{A}{\\star} \\left({{\\hat{n}^{d}_x}}{_{A, S}} \\stackrel{S}{\\star} {h}{_{N, S}}\\right)" ;
+    app:isDefinedByExpression "E_100: V_2  O_5 I_2 D_0 V_154  O_5 I_4 V_136 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aHnd_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_206> a owl:Class ;
+    rdfs:label "accumulation of enthalpy due to diffusional mass flow in y-direction" ;
+    dcterms:created "2024-04-04T13:44:07"^^xsd:dateTime ;
+    dcterms:identifier "V_206" ;
+    dcterms:modified "2024-04-04T13:45:20"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aHnd_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_101:{{F}}{_{N, A}} \\stackrel{A}{\\star} \\left({{\\hat{n}^{d}_y}}{_{A, S}} \\stackrel{S}{\\star} {h}{_{N, S}}\\right)" ;
+    app:isDefinedByExpression "E_101: V_2  O_5 I_2 D_0 V_155  O_5 I_4 V_136 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aHnd_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_207> a owl:Class ;
+    rdfs:label "accumulation of enthalpy due to diffusional mass flow in z-direction" ;
+    dcterms:created "2024-04-04T13:49:22"^^xsd:dateTime ;
+    dcterms:identifier "V_207" ;
+    dcterms:modified "2024-04-04T13:55:56"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aHnd_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_102:{{F}}{_{N, A}} \\stackrel{A}{\\star} \\left({{\\hat{n}^{d}_z}}{_{A, S}} \\stackrel{S}{\\star} {h}{_{N, S}}\\right)" ;
+    app:isDefinedByExpression "E_102: V_2  O_5 I_2 D_0 V_156  O_5 I_4 V_136 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aHnd_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_208> a owl:Class ;
+    rdfs:label "accumulation due to heat flow in x-direction" ;
+    dcterms:created "2024-04-04T13:51:19"^^xsd:dateTime ;
+    dcterms:identifier "V_208" ;
+    dcterms:modified "2024-04-04T13:54:19"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aq_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_103:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{q}_x}}{_{A}}" ;
+    app:isDefinedByExpression "E_103: V_2  O_5 I_2 V_151" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aq_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_209> a owl:Class ;
+    rdfs:label "accumulation due to heat flow in y-direction" ;
+    dcterms:created "2024-04-04T13:52:29"^^xsd:dateTime ;
+    dcterms:identifier "V_209" ;
+    dcterms:modified "2024-04-04T13:54:37"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aq_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_104:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{q}_y}}{_{A}}" ;
+    app:isDefinedByExpression "E_104: V_2  O_5 I_2 V_152" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aq_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_210> a owl:Class ;
+    rdfs:label "accumulation due to heat flow in z-direction" ;
+    dcterms:created "2024-04-04T13:54:05"^^xsd:dateTime ;
+    dcterms:identifier "V_210" ;
+    dcterms:modified "2024-04-04T13:54:05"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aq_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_105:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{q}_z}}{_{A}}" ;
+    app:isDefinedByExpression "E_105: V_2  O_5 I_2 V_153" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aq_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_211> a owl:Class ;
+    rdfs:label "a fixed work flow to start with" ;
+    dcterms:created "2024-04-04T15:39:31"^^xsd:dateTime ;
+    dcterms:identifier "V_211" ;
+    dcterms:modified "2024-04-04T15:39:31"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fw" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_106:\\textbf{Instantiate}({{\\hat{q}_x}}{_{A}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_106: O_10 D_0 V_151 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "fw" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_212> a owl:Class ;
+    rdfs:label "accumulation due to diffusion in y-direction" ;
+    dcterms:created "2024-04-04T15:43:45"^^xsd:dateTime ;
+    dcterms:identifier "V_212" ;
+    dcterms:modified "2024-04-04T15:53:10"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "and_y" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_107:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{n}^{d}_y}}{_{A, S}}" ;
+    app:isDefinedByExpression "E_107: V_2  O_5 I_2 V_155" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "and_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_213> a owl:Class ;
+    rdfs:label "accumulation due to diffusion in z-direction" ;
+    dcterms:created "2024-04-04T15:44:16"^^xsd:dateTime ;
+    dcterms:identifier "V_213" ;
+    dcterms:modified "2024-04-04T15:53:28"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "and_z" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_108:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{n}^{d}_z}}{_{A, S}}" ;
+    app:isDefinedByExpression "E_108: V_2  O_5 I_2 V_156" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "and_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_214> a owl:Class ;
+    rdfs:label "accumulation of enthalpy due to work flow" ;
+    dcterms:created "2024-04-04T15:51:23"^^xsd:dateTime ;
+    dcterms:identifier "V_214" ;
+    dcterms:modified "2024-04-04T15:51:23"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "aw" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_109:{{F}}{_{N, A}} \\stackrel{A}{\\star} {{\\hat{w}}}{_{A}}" ;
+    app:isDefinedByExpression "E_109: V_2  O_5 I_2 V_211" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "aw" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_215> a owl:Class ;
+    rdfs:label "accumulation of enthalpy" ;
+    dcterms:created "2024-04-04T15:51:54"^^xsd:dateTime ;
+    dcterms:identifier "V_215" ;
+    dcterms:modified "2024-04-04T15:52:24"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "dH" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -3 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_110:{{\\dot{H}^c_x}}{_{N}}  + {{\\dot{H}^d_x}}{_{N}}  + {{\\dot{H}^d_y}}{_{N}}  + {{\\dot{H}^d_z}}{_{N}}  + {{\\dot{q}_x}}{_{N}}  + {{\\dot{q}_y}}{_{N}}  + {{\\dot{q}_z}}{_{N}}  + {{\\dot{w}}}{_{N}}" ;
+    app:isDefinedByExpression "E_110: V_204 O_0 V_205 O_0 V_206 O_0 V_207 O_0 V_208 O_0 V_209 O_0 V_210 O_0 V_214" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "dH" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/diffState> .
+
+<https://w3id.org/promo/property/macroscopic/V_216> a owl:Class ;
+    rdfs:label "initial enthalpy" ;
+    dcterms:created "2024-04-04T15:54:47"^^xsd:dateTime ;
+    dcterms:identifier "V_216" ;
+    dcterms:modified "2024-04-04T15:54:47"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Ho" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_111:\\textbf{Instantiate}({H}{_{N}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_111: O_10 D_0 V_115 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Ho" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/macroscopic/V_217> a owl:Class ;
+    rdfs:label "electrical potential -- voltage" ;
+    dcterms:created "2024-04-04T16:05:08"^^xsd:dateTime ;
+    dcterms:identifier "V_217" ;
+    dcterms:modified "2024-04-04T16:05:08"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Ue" ;
+    app:amountExponent 0 ;
+    app:currentExponent -1 ;
+    app:dimensionalSignature "1 2 -3 0 -1 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_113:\\left( {C}{_{N}} \\right)^{-1} \\, . \\, {U}{_{N}}" ;
+    app:isDefinedByExpression "E_113: F_15 D_0 V_144 D_1 O_4 V_108" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Ue" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/effort> .
+
+<https://w3id.org/promo/property/macroscopic/V_218> a owl:Class ;
+    rdfs:label "current definition" ;
+    dcterms:created "2024-04-04T16:08:05"^^xsd:dateTime ;
+    dcterms:identifier "V_218" ;
+    dcterms:modified "2024-04-04T16:21:53"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "current" ;
+    app:amountExponent 0 ;
+    app:currentExponent 1 ;
+    app:dimensionalSignature "0 0 0 0 1 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_114:\\frac{d\\,{{C}{_{N}}}}{d\\,{{t}{_{}}}}" ;
+    app:hasUnit <http://qudt.org/vocab/unit/A> ;
+    app:isDefinedByExpression "E_114: O_7 D_0 V_144 D_7 V_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "current" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/internalTransport> .
+
+<https://w3id.org/promo/property/macroscopic/V_219> a owl:Class ;
+    rdfs:label "electrical resistant" ;
+    dcterms:created "2024-04-04T16:11:09"^^xsd:dateTime ;
+    dcterms:identifier "V_219" ;
+    dcterms:modified "2024-04-04T16:21:39"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "elResistant" ;
+    app:amountExponent 0 ;
+    app:currentExponent -2 ;
+    app:dimensionalSignature "1 2 -3 0 -2 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_115:\\left( {{I^e}}{_{N}} \\right)^{-1} \\, . \\, {{U^e}}{_{N}}" ;
+    app:isDefinedByExpression "E_115: F_15 D_0 V_218 D_1 O_4 V_217" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "elResistant" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/properties> .
+
+<https://w3id.org/promo/property/macroscopic/V_220> a owl:Class ;
+    rdfs:label "Kirkhoffs first law" ;
+    dcterms:created "2024-04-04T16:18:57"^^xsd:dateTime ;
+    dcterms:identifier "V_220" ;
+    dcterms:modified "2024-04-04T16:18:57"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "dUe" ;
+    app:amountExponent 0 ;
+    app:currentExponent -1 ;
+    app:dimensionalSignature "1 2 -3 0 -1 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_116:{{F}}{_{N, A}} \\stackrel{A}{\\star} \\left({{R^e}}{_{N}} \\, . \\, {{I^e}}{_{N}}\\right)" ;
+    app:isDefinedByExpression "E_116: V_2  O_5 I_2 D_0 V_219 O_4 V_218 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "dUe" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -3 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/diffState> .
+
+<https://w3id.org/promo/property/macroscopic/V_222> a owl:Class ;
+    rdfs:label "reference temperature" ;
+    dcterms:created "2024-06-18T13:57:45"^^xsd:dateTime ;
+    dcterms:identifier "V_222" ;
+    dcterms:modified "2024-06-18T13:57:45"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "T_ref" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_119:\\textbf{Instantiate}({T}{_{N}}, {{\\#}}{_{}})" ;
+    app:hasUnit <http://qudt.org/vocab/unit/K> ;
+    app:isDefinedByExpression "E_119: O_10 D_0 V_113 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "T_ref" ;
+    app:temperatureExponent 1 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/macroscopic/V_223> a owl:Class ;
+    rdfs:label "value to norm measurement of temperature" ;
+    dcterms:created "2024-06-19T12:09:11"^^xsd:dateTime ;
+    dcterms:identifier "V_223" ;
+    dcterms:modified "2024-06-19T12:13:50"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "T_meas_norming" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_122:\\textbf{Instantiate}({T}{_{N}}, {{\\#}}{_{}})" ;
+    app:hasUnit <http://qudt.org/vocab/unit/K> ;
+    app:isDefinedByExpression "E_122: O_10 D_0 V_113 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "T_meas_norming" ;
+    app:temperatureExponent 1 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/observation> .
+
+<https://w3id.org/promo/property/macroscopic/V_224> a owl:Class ;
+    rdfs:label "temperature measurement" ;
+    dcterms:created "2024-06-19T12:12:49"^^xsd:dateTime ;
+    dcterms:identifier "V_224" ;
+    dcterms:modified "2024-06-19T12:12:49"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "T_meas" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_123:{T}{_{N}} \\, . \\, \\left( {{T^n}}{_{N}} \\right)^{-1}" ;
+    app:isDefinedByExpression "E_123: V_113 O_4 F_15 D_0 V_223 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "T_meas" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/observation> .
+
+<https://w3id.org/promo/property/macroscopic/V_234> a owl:Class ;
+    rdfs:label "convective mass flow" ;
+    dcterms:created "2024-06-20T13:20:43"^^xsd:dateTime ;
+    dcterms:identifier "V_234" ;
+    dcterms:modified "2024-07-11T15:10:50"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "fm" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 0 -1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_133:{{\\hat{V}}}{_{A}} \\, . \\, {{\\rho}}{_{N}}" ;
+    app:isDefinedByExpression "E_133: V_159 O_4 V_143" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "fm" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/macroscopic/V_243> a owl:Class ;
+    rdfs:label "link variable _y_p_positive to interface macroscopic" ;
+    dcterms:created "2024-07-11T15:07:14"^^xsd:dateTime ;
+    dcterms:identifier "V_243" ;
+    dcterms:modified "2024-07-11T15:11:16"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "y_p_positive" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/macroscopic> ;
+    app:hasLatexRepresentation "E_141:{{F^{source}}}{_{A, I}} \\stackrel{I}{\\star} {{\\_y^{p+}}}{_{I}}" ;
+    app:isDefinedByExpression "E_141: V_5  O_5 I_3 V_242" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "y_p_positive" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/transport> .
+
+<https://w3id.org/promo/property/physical/V_108> a owl:Class ;
+    rdfs:label "fundamental state -- internal energy" ;
+    dcterms:created "2024-03-27T18:45:18"^^xsd:dateTime ;
+    dcterms:identifier "V_108" ;
+    dcterms:modified "2024-03-28T09:15:12"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "U" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:isPortVariable true ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "EnergyInternal" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/physical/V_109> a owl:Class ;
+    rdfs:label "fundamental state -- internal entropy" ;
+    dcterms:created "2024-03-27T18:46:38"^^xsd:dateTime ;
+    dcterms:identifier "V_109" ;
+    dcterms:modified "2024-03-28T09:15:05"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "S" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:isPortVariable true ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Entropy" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/physical/V_110> a owl:Class ;
+    rdfs:label "volume" ;
+    dcterms:created "2024-03-27T18:48:38"^^xsd:dateTime ;
+    dcterms:identifier "V_110" ;
+    dcterms:modified "2024-03-28T09:15:23"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "V" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 3 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_7:{{r_x}}{_{N}} \\, . \\, {{r_y}}{_{N}} \\, . \\, {{r_z}}{_{N}}" ;
+    app:isDefinedByExpression "E_7: V_23 O_4 V_24 O_4 V_25" ;
+    app:isPortVariable false ;
+    app:lengthExponent 3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "Volume" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/physical/V_111> a owl:Class ;
+    rdfs:label "fundamental state -- molar mass" ;
+    dcterms:created "2024-03-27T18:48:45"^^xsd:dateTime ;
+    dcterms:identifier "V_111" ;
+    dcterms:modified "2024-03-28T09:15:45"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "n" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_93:\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {{\\dot{n}}}{_{N, S}} \\enskip d\\,{t}{_{}}  + {{n^o}}{_{N, S}}" ;
+    app:hasUnit <http://qudt.org/vocab/unit/MOL> ;
+    app:isDefinedByExpression "E_93: O_8 D_0 V_196 D_8 V_1 O_13 D_2 V_105 D_7 V_106 D_3 D_1 O_0 V_203" ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "MolarMass" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/physical/V_121> a owl:Class ;
+    rdfs:label "Avogadro constant" ;
+    dcterms:created "2024-03-28T10:09:44"^^xsd:dateTime ;
+    dcterms:identifier "V_121" ;
+    dcterms:modified "2024-03-28T10:15:55"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Avo" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "AvogadroConstant" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/physical/V_122> a owl:Class ;
+    rdfs:label "Boltzmann constant" ;
+    dcterms:created "2024-03-28T10:11:54"^^xsd:dateTime ;
+    dcterms:identifier "V_122" ;
+    dcterms:modified "2024-03-28T10:15:44"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Boltz" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 -1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:isPortVariable true ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "BoltzmannConstant" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/physical/V_123> a owl:Class ;
+    rdfs:label "gas constant" ;
+    dcterms:created "2024-03-28T10:17:37"^^xsd:dateTime ;
+    dcterms:identifier "V_123" ;
+    dcterms:modified "2024-03-28T10:17:37"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "R" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 -1 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_17:{{N^A}}{_{}} \\, . \\, {{k^B}}{_{}}" ;
+    app:isDefinedByExpression "E_17: V_121 O_4 V_122" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "R" ;
+    app:temperatureExponent -1 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/physical/V_132> a owl:Class ;
+    rdfs:label "molecular masses" ;
+    dcterms:created "2024-03-28T10:35:43"^^xsd:dateTime ;
+    dcterms:identifier "V_132" ;
+    dcterms:modified "2024-03-28T10:38:22"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Mm" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 0 0 0 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Mm" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/physical/V_137> a owl:Class ;
+    rdfs:label "mass" ;
+    dcterms:created "2024-03-28T13:50:17"^^xsd:dateTime ;
+    dcterms:identifier "V_137" ;
+    dcterms:modified "2024-03-30T13:54:59"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "m" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_30:{{\\lambda}}{_{S}} \\stackrel{S}{\\star} {n}{_{N, S}}" ;
+    app:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+    app:isDefinedByExpression "E_30: V_132  O_5 I_4 V_111" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Mass" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/physical/V_143> a owl:Class ;
+    rdfs:label "density" ;
+    dcterms:created "2024-03-30T13:49:59"^^xsd:dateTime ;
+    dcterms:identifier "V_143" ;
+    dcterms:modified "2024-03-30T13:50:33"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "rho" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 -3 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_36:\\left( {V}{_{N}} \\right)^{-1} \\, . \\, {m}{_{N}}" ;
+    app:isDefinedByExpression "E_36: F_15 D_0 V_110 D_1 O_4 V_137" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "rho" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/physical/V_144> a owl:Class ;
+    rdfs:label "fundamental state -- charge" ;
+    dcterms:created "2024-03-30T13:53:15"^^xsd:dateTime ;
+    dcterms:identifier "V_144" ;
+    dcterms:modified "2024-03-30T13:54:44"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "C" ;
+    app:amountExponent 0 ;
+    app:currentExponent 1 ;
+    app:dimensionalSignature "0 0 1 0 1 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "ElectricCharge" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/state> .
+
+<https://w3id.org/promo/property/physical/V_148> a owl:Class ;
+    rdfs:label "cross sectional area xy" ;
+    dcterms:created "2024-03-30T14:34:55"^^xsd:dateTime ;
+    dcterms:identifier "V_148" ;
+    dcterms:modified "2024-03-30T14:34:55"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Axy" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 2 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_40:{{r_x}}{_{N}} \\, . \\, {{r_y}}{_{N}}" ;
+    app:isDefinedByExpression "E_40: V_23 O_4 V_24" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "Axy" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/physical/V_149> a owl:Class ;
+    rdfs:label "cross sectional are xz" ;
+    dcterms:created "2024-03-30T14:35:41"^^xsd:dateTime ;
+    dcterms:identifier "V_149" ;
+    dcterms:modified "2024-03-30T14:35:41"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Axz" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 2 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_41:{{r_x}}{_{N}} \\, . \\, {{r_z}}{_{N}}" ;
+    app:isDefinedByExpression "E_41: V_23 O_4 V_25" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "Axz" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/physical/V_150> a owl:Class ;
+    rdfs:label "cross sectional area yz" ;
+    dcterms:created "2024-03-30T14:36:38"^^xsd:dateTime ;
+    dcterms:identifier "V_150" ;
+    dcterms:modified "2024-03-30T14:36:38"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Ayz" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 2 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasLatexRepresentation "E_42:{{r_y}}{_{N}} \\, . \\, {{r_z}}{_{N}}" ;
+    app:isDefinedByExpression "E_42: V_24 O_4 V_25" ;
+    app:isPortVariable false ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "Ayz" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/physical/V_23> a owl:Class ;
+    rdfs:label "x-coordinate" ;
+    dcterms:created "2024-03-27T09:08:55"^^xsd:dateTime ;
+    dcterms:identifier "V_23" ;
+    dcterms:modified "2024-03-27T18:50:59"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "r_x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasUnit <http://qudt.org/vocab/unit/M> ;
+    app:isPortVariable true ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "r_x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/frame> .
+
+<https://w3id.org/promo/property/physical/V_24> a owl:Class ;
+    rdfs:label "y-coordinate" ;
+    dcterms:created "2024-03-27T09:10:52"^^xsd:dateTime ;
+    dcterms:identifier "V_24" ;
+    dcterms:modified "2024-03-27T18:51:08"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "r_y" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasUnit <http://qudt.org/vocab/unit/M> ;
+    app:isPortVariable true ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "r_y" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/frame> .
+
+<https://w3id.org/promo/property/physical/V_25> a owl:Class ;
+    rdfs:label "z-coordinate" ;
+    dcterms:created "2024-03-27T09:11:31"^^xsd:dateTime ;
+    dcterms:identifier "V_25" ;
+    dcterms:modified "2024-03-27T18:51:19"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "r_z" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 1 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/physical> ;
+    app:hasUnit <http://qudt.org/vocab/unit/M> ;
+    app:isPortVariable true ;
+    app:lengthExponent 1 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "r_z" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/frame> .
+
+app:quantityKind a owl:ObjectProperty ;
+    rdfs:label "quantity kind" .
+
+<https://w3id.org/promo/property/reactions/V_163> a owl:Class ;
+    rdfs:label "link variable _c to interface reactions" ;
+    dcterms:created "2024-03-30T18:06:14"^^xsd:dateTime ;
+    dcterms:identifier "V_163" ;
+    dcterms:modified "2024-03-30T18:06:14"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "c" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -3 0 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:hasLatexRepresentation "E_56:\\left({{F^{sink}}}{_{N, I}} \\, . \\, {\\_c}{_{I, S}}\\right) \\stackrel{I}{\\star} {{S}}{_{I, p}}" ;
+    app:isDefinedByExpression "E_56: D_0 V_4 O_4 V_162 D_1  O_5 I_3 V_9" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "c" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/reactions/V_165> a owl:Class ;
+    rdfs:label "link variable _x to interface reactions" ;
+    dcterms:created "2024-03-30T18:08:41"^^xsd:dateTime ;
+    dcterms:identifier "V_165" ;
+    dcterms:modified "2024-03-30T18:08:41"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "x" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:hasLatexRepresentation "E_58:\\left({{F^{sink}}}{_{N, I}} \\, . \\, {\\_x}{_{I, S}}\\right) \\stackrel{I}{\\star} {{S}}{_{I, p}}" ;
+    app:isDefinedByExpression "E_58: D_0 V_4 O_4 V_164 D_1  O_5 I_3 V_9" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "x" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/secondaryState> .
+
+<https://w3id.org/promo/property/reactions/V_167> a owl:Class ;
+    rdfs:label "link variable _T to interface reactions" ;
+    dcterms:created "2024-03-30T18:09:03"^^xsd:dateTime ;
+    dcterms:identifier "V_167" ;
+    dcterms:modified "2024-03-30T18:09:03"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "T" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 1 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:hasLatexRepresentation "E_60:\\left({{F^{sink}}}{_{N, I}} \\, . \\, {\\_T}{_{I}}\\right) \\stackrel{I}{\\star} {{S}}{_{I, p}}" ;
+    app:hasUnit <http://qudt.org/vocab/unit/K> ;
+    app:isDefinedByExpression "E_60: D_0 V_4 O_4 V_166 D_1  O_5 I_3 V_9" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "T" ;
+    app:temperatureExponent 1 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/effort> .
+
+<https://w3id.org/promo/property/reactions/V_168> a owl:Class ;
+    rdfs:label "factor for probability computation" ;
+    dcterms:created "2024-03-30T18:34:24"^^xsd:dateTime ;
+    dcterms:identifier "V_168" ;
+    dcterms:modified "2024-03-30T18:34:24"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "factor" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:hasLatexRepresentation "E_61:{x}{_{N, S, p}}^{\\left(\\left(|{N}{_{S, K}}|\\right)\\right)}" ;
+    app:isDefinedByExpression "E_61: V_165 O_2 D_0 D_0 F_10 D_0 V_26 D_1 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "factor" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/conversion> .
+
+<https://w3id.org/promo/property/reactions/V_169> a owl:Class ;
+    rdfs:label "probability of reaction to take place" ;
+    dcterms:created "2024-03-30T18:35:15"^^xsd:dateTime ;
+    dcterms:identifier "V_169" ;
+    dcterms:modified "2024-03-31T16:01:01"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "probability" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:hasLatexRepresentation "E_62:\\prod_{S}  {{f}{_{N, S, K, p}}} " ;
+    app:isDefinedByExpression "E_62: O_9 D_0 V_168 D_7 I_4 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "probability" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/conversion> .
+
+<https://w3id.org/promo/property/reactions/V_197> a owl:Class ;
+    rdfs:label "Arrhenius activation energy" ;
+    dcterms:created "2024-04-04T11:13:28"^^xsd:dateTime ;
+    dcterms:identifier "V_197" ;
+    dcterms:modified "2024-04-04T11:16:04"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Ea" ;
+    app:amountExponent -1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "1 2 -2 0 0 -1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:isPortVariable true ;
+    app:lengthExponent 2 ;
+    app:lightExponent 0 ;
+    app:massExponent 1 ;
+    app:sourceName "Ea" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -2 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/reactions/V_198> a owl:Class ;
+    rdfs:label "Arrhenius frequency factor" ;
+    dcterms:created "2024-04-04T11:14:30"^^xsd:dateTime ;
+    dcterms:identifier "V_198" ;
+    dcterms:modified "2024-04-04T11:16:15"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "Ko" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -3 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:isPortVariable true ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "Ko" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/reactions/V_199> a owl:Class ;
+    rdfs:label "Arrhenius reaction \"constant\"" ;
+    dcterms:created "2024-04-04T11:53:09"^^xsd:dateTime ;
+    dcterms:identifier "V_199" ;
+    dcterms:modified "2024-04-04T11:53:09"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "K" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -3 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:hasLatexRepresentation "E_94:{{K^o}}{_{K}} \\, . \\, \\textbf{exp}\\left(\\left( -{{E^a}}{_{K}} \\right) \\, . \\, \\left( {R}{_{}} \\, . \\, {T}{_{N, p}} \\right)^{-1}\\right)" ;
+    app:isDefinedByExpression "E_94: V_198 O_4 F_0 D_0 F_11 D_0 V_197 D_1 O_4 F_15 D_0 V_123 O_4 V_167 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "K" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/conversion> .
+
+<https://w3id.org/promo/property/reactions/V_200> a owl:Class ;
+    rdfs:label "production from reaction set" ;
+    dcterms:created "2024-04-04T11:55:32"^^xsd:dateTime ;
+    dcterms:identifier "V_200" ;
+    dcterms:modified "2024-04-04T11:55:32"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "np" ;
+    app:amountExponent 1 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 -3 -1 0 0 1 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:hasLatexRepresentation "E_95:{{A}}{_{N, p, q}} \\stackrel{p}{\\star} \\left({N}{_{S, K}} \\stackrel{K}{\\star} \\left({K}{_{N, K, p}} \\, . \\, {\\xi}{_{N, K, p}}\\right)\\right)" ;
+    app:isDefinedByExpression "E_95: V_19  O_5 I_7 D_0 V_26  O_5 I_5 D_0 V_199 O_4 V_169 D_1 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent -3 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "np" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent -1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/conversion> .
+
+<https://w3id.org/promo/property/reactions/V_26> a owl:Class ;
+    rdfs:label "stoichiometric matrix" ;
+    dcterms:created "2024-03-27T09:14:44"^^xsd:dateTime ;
+    dcterms:identifier "V_26" ;
+    dcterms:modified "2024-03-31T14:08:05"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "N" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/reactions> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "N" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/root/V_1> a owl:Class ;
+    rdfs:label "time" ;
+    dcterms:created "2024-03-06T15:09:35"^^xsd:dateTime ;
+    dcterms:identifier "V_1" ;
+    dcterms:modified "2024-03-06T15:10:08"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "t" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:hasUnit <http://qudt.org/vocab/unit/SEC> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "Time" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/frame> .
+
+<https://w3id.org/promo/property/root/V_10> a owl:Class ;
+    rdfs:label "selection matrix interface to control output" ;
+    dcterms:created "2024-03-27T08:09:25"^^xsd:dateTime ;
+    dcterms:identifier "V_10" ;
+    dcterms:modified "2024-03-27T09:18:59"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "S_Iq" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "S_Iq" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_101> a owl:Class ;
+    rdfs:label "numerical value" ;
+    dcterms:created "2024-03-27T09:53:48"^^xsd:dateTime ;
+    dcterms:identifier "V_101" ;
+    dcterms:modified "2024-03-27T09:55:19"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "value" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "value" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/root/V_102> a owl:Class ;
+    rdfs:label "numerical value zero" ;
+    dcterms:created "2024-03-27T09:55:05"^^xsd:dateTime ;
+    dcterms:identifier "V_102" ;
+    dcterms:modified "2024-03-27T09:55:05"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "zero" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:hasLatexRepresentation "E_1:\\textbf{Instantiate}({{\\#}}{_{}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_1: O_10 D_0 V_101 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "zero" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/root/V_103> a owl:Class ;
+    rdfs:label "numerical value one" ;
+    dcterms:created "2024-03-27T11:43:17"^^xsd:dateTime ;
+    dcterms:identifier "V_103" ;
+    dcterms:modified "2024-03-27T11:43:17"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "one" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:hasLatexRepresentation "E_2:\\textbf{Instantiate}({{\\#}}{_{}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_2: O_10 D_0 V_101 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "one" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/root/V_104> a owl:Class ;
+    rdfs:label "numerical value one half" ;
+    dcterms:created "2024-03-27T11:44:56"^^xsd:dateTime ;
+    dcterms:identifier "V_104" ;
+    dcterms:modified "2024-03-27T11:44:56"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "oneHalf" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:hasLatexRepresentation "E_3:\\textbf{Instantiate}({{\\#}}{_{}}, {{\\#}}{_{}})" ;
+    app:isDefinedByExpression "E_3: O_10 D_0 V_101 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "oneHalf" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/constant> .
+
+<https://w3id.org/promo/property/root/V_105> a owl:Class ;
+    rdfs:label "starting time" ;
+    dcterms:created "2024-03-27T11:45:57"^^xsd:dateTime ;
+    dcterms:identifier "V_105" ;
+    dcterms:modified "2024-03-27T11:49:30"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "to" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:hasLatexRepresentation "E_4:\\textbf{Instantiate}({t}{_{}}, {{\\#}}{_{}})" ;
+    app:hasUnit <http://qudt.org/vocab/unit/SEC> ;
+    app:isDefinedByExpression "E_4: O_10 D_0 V_1 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "to" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/frame> .
+
+<https://w3id.org/promo/property/root/V_106> a owl:Class ;
+    rdfs:label "end time" ;
+    dcterms:created "2024-03-27T11:46:46"^^xsd:dateTime ;
+    dcterms:identifier "V_106" ;
+    dcterms:modified "2024-03-27T11:46:46"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "te" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:hasLatexRepresentation "E_5:\\textbf{Instantiate}({t}{_{}}, {{\\#}}{_{}})" ;
+    app:hasUnit <http://qudt.org/vocab/unit/SEC> ;
+    app:isDefinedByExpression "E_5: O_10 D_0 V_1 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "te" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/frame> .
+
+<https://w3id.org/promo/property/root/V_107> a owl:Class ;
+    rdfs:label "time interval" ;
+    dcterms:created "2024-03-27T11:49:22"^^xsd:dateTime ;
+    dcterms:identifier "V_107" ;
+    dcterms:modified "2024-03-27T11:49:22"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "t_interval" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 1 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:hasLatexRepresentation "E_6:\\textbf{Instantiate}({t}{_{}}, {{\\#}}{_{}})" ;
+    app:hasUnit <http://qudt.org/vocab/unit/SEC> ;
+    app:isDefinedByExpression "E_6: O_10 D_0 V_1 D_7 V_101 D_1" ;
+    app:isPortVariable false ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "t_interval" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 1 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/frame> .
+
+<https://w3id.org/promo/property/root/V_11> a owl:Class ;
+    rdfs:label "identity mapping from <t> to <u>" ;
+    dcterms:created "2024-03-27T08:19:40"^^xsd:dateTime ;
+    dcterms:identifier "V_11" ;
+    dcterms:modified "2024-03-27T09:19:13"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "I_tu" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "I_tu" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_12> a owl:Class ;
+    rdfs:label "selection matrix interface species-related measures" ;
+    dcterms:created "2024-03-27T08:20:50"^^xsd:dateTime ;
+    dcterms:identifier "V_12" ;
+    dcterms:modified "2024-03-27T09:19:04"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "S_Ap" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "S_Ap" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_13> a owl:Class ;
+    rdfs:label "selection matrix arcs to outputs" ;
+    dcterms:created "2024-03-27T08:48:06"^^xsd:dateTime ;
+    dcterms:identifier "V_13" ;
+    dcterms:modified "2024-03-27T09:17:26"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "S_Aq" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "S_Aq" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_14> a owl:Class ;
+    rdfs:label "selection matrix for stacker" ;
+    dcterms:created "2024-03-27T08:50:43"^^xsd:dateTime ;
+    dcterms:identifier "V_14" ;
+    dcterms:modified "2024-03-27T09:17:29"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "S_Npu" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "S_Npu" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_15> a owl:Class ;
+    rdfs:label "selection matrix or splitter" ;
+    dcterms:created "2024-03-27T08:57:14"^^xsd:dateTime ;
+    dcterms:identifier "V_15" ;
+    dcterms:modified "2024-03-27T09:17:55"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "S_Nqt" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "S_Nqt" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_16> a owl:Class ;
+    rdfs:label "interface variable macro --> control" ;
+    dcterms:created "2024-03-27T08:58:02"^^xsd:dateTime ;
+    dcterms:identifier "V_16" ;
+    dcterms:modified "2024-03-27T09:18:02"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "mv_I" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "mv_I" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_17> a owl:Class ;
+    rdfs:label "output from control" ;
+    dcterms:created "2024-03-27T08:58:58"^^xsd:dateTime ;
+    dcterms:identifier "V_17" ;
+    dcterms:modified "2024-03-27T09:18:14"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "cz_N" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "cz_N" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_18> a owl:Class ;
+    rdfs:label "interface variable macro --> control" ;
+    dcterms:created "2024-03-27T09:03:49"^^xsd:dateTime ;
+    dcterms:identifier "V_18" ;
+    dcterms:modified "2024-03-27T09:18:20"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "cz_I" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "cz_I" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_19> a owl:Class ;
+    rdfs:label "mapping from inputs to outputs" ;
+    dcterms:created "2024-03-27T09:04:40"^^xsd:dateTime ;
+    dcterms:identifier "V_19" ;
+    dcterms:modified "2024-03-31T15:22:35"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "A_Npq" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "A_Npq" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_2> a owl:Class ;
+    rdfs:label "incidence matrix" ;
+    dcterms:created "2024-03-06T15:10:23"^^xsd:dateTime ;
+    dcterms:identifier "V_2" ;
+    dcterms:modified "2024-03-27T09:19:21"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "F" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "F" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_20> a owl:Class ;
+    rdfs:label "mapping from input elements to outputs" ;
+    dcterms:created "2024-03-27T09:05:28"^^xsd:dateTime ;
+    dcterms:identifier "V_20" ;
+    dcterms:modified "2024-03-31T15:22:47"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "A_Ntu" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "A_Ntu" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_21> a owl:Class ;
+    rdfs:label "input signal in control domain" ;
+    dcterms:created "2024-03-27T09:06:27"^^xsd:dateTime ;
+    dcterms:identifier "V_21" ;
+    dcterms:modified "2024-03-27T09:18:36"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "u_Ntu" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "u_Ntu" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_22> a owl:Class ;
+    rdfs:label "output signal in control domain" ;
+    dcterms:created "2024-03-27T09:07:09"^^xsd:dateTime ;
+    dcterms:identifier "V_22" ;
+    dcterms:modified "2024-03-27T09:18:49"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "y_Ntu" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "y_Ntu" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_27> a owl:Class ;
+    rdfs:label "identity mapping from <N> to <A>" ;
+    dcterms:created "2024-03-30T14:44:46"^^xsd:dateTime ;
+    dcterms:identifier "V_27" ;
+    dcterms:modified "2024-03-30T14:49:25"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "I_NA" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "I_NA" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_3> a owl:Class ;
+    rdfs:label "incidence matrix NI source" ;
+    dcterms:created "2024-03-06T15:10:59"^^xsd:dateTime ;
+    dcterms:identifier "V_3" ;
+    dcterms:modified "2024-03-06T15:25:21"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "F_NI_source" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "F_NI_source" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_4> a owl:Class ;
+    rdfs:label "incidence matrix NI sink" ;
+    dcterms:created "2024-03-06T15:11:44"^^xsd:dateTime ;
+    dcterms:identifier "V_4" ;
+    dcterms:modified "2024-03-06T15:25:39"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "F_NI_sink" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "F_NI_sink" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_5> a owl:Class ;
+    rdfs:label "incidence matrix AI source" ;
+    dcterms:created "2024-03-06T15:12:14"^^xsd:dateTime ;
+    dcterms:identifier "V_5" ;
+    dcterms:modified "2024-03-06T15:25:53"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "F_AI_source" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "F_AI_source" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_6> a owl:Class ;
+    rdfs:label "incidence matrix AI sink" ;
+    dcterms:created "2024-03-06T15:12:39"^^xsd:dateTime ;
+    dcterms:identifier "V_6" ;
+    dcterms:modified "2024-03-06T15:26:02"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "F_AI_sink" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "F_AI_sink" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_7> a owl:Class ;
+    rdfs:label "incidence matrix NA source" ;
+    dcterms:created "2024-03-27T08:04:05"^^xsd:dateTime ;
+    dcterms:identifier "V_7" ;
+    dcterms:modified "2024-03-27T09:17:05"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "F_NA_source" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "F_NA_source" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_8> a owl:Class ;
+    rdfs:label "incidence matrix NA sink" ;
+    dcterms:created "2024-03-27T08:06:00"^^xsd:dateTime ;
+    dcterms:identifier "V_8" ;
+    dcterms:modified "2024-03-27T09:17:13"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "F_NA_sink" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "F_NA_sink" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+<https://w3id.org/promo/property/root/V_9> a owl:Class ;
+    rdfs:label "selection matrix interface to control input" ;
+    dcterms:created "2024-03-27T08:06:44"^^xsd:dateTime ;
+    dcterms:identifier "V_9" ;
+    dcterms:modified "2024-03-27T09:17:24"^^xsd:dateTime ;
+    rdfs:subClassOf app:PhysicalProperty ;
+    skos:notation "S_Ip" ;
+    app:amountExponent 0 ;
+    app:currentExponent 0 ;
+    app:dimensionalSignature "0 0 0 0 0 0 0" ;
+    app:domain <https://w3id.org/promo/property/domain/root> ;
+    app:isPortVariable true ;
+    app:lengthExponent 0 ;
+    app:lightExponent 0 ;
+    app:massExponent 0 ;
+    app:sourceName "S_Ip" ;
+    app:temperatureExponent 0 ;
+    app:timeExponent 0 ;
+    app:variableClass <https://w3id.org/promo/property/variable-class/network> .
+
+app:sourceName a owl:DatatypeProperty ;
+    rdfs:label "source name" .
+
+app:variableClass a owl:ObjectProperty ;
+    rdfs:label "variable class" .
+
+<https://w3id.org/promo/property/variable-class/internalTransport> a skos:Concept ;
+    skos:prefLabel "internalTransport" .
+
+<https://w3id.org/promo/property/variable-class/observation> a skos:Concept ;
+    skos:prefLabel "observation" .
+
+<https://w3id.org/promo/property/variable-class/diffState> a skos:Concept ;
+    skos:prefLabel "diffState" .
+
+<https://w3id.org/promo/property/variable-class/conversion> a skos:Concept ;
+    skos:prefLabel "conversion" .
+
+<https://w3id.org/promo/property/domain/control> a skos:Concept ;
+    skos:prefLabel "control" .
+
+<https://w3id.org/promo/property/variable-class/algebraic> a skos:Concept ;
+    skos:prefLabel "algebraic" .
+
+<https://w3id.org/promo/property/variable-class/effort> a skos:Concept ;
+    skos:prefLabel "effort" .
+
+<https://w3id.org/promo/property/variable-class/frame> a skos:Concept ;
+    skos:prefLabel "frame" .
+
+<https://w3id.org/promo/property/domain/reactions> a skos:Concept ;
+    skos:prefLabel "reactions" .
+
+<https://w3id.org/promo/property/variable-class/constant> a skos:Concept ;
+    skos:prefLabel "constant" .
+
+<https://w3id.org/promo/property/variable-class/state> a skos:Concept ;
+    skos:prefLabel "state" .
+
+<https://w3id.org/promo/property/variable-class/properties> a skos:Concept ;
+    skos:prefLabel "properties" .
+
+<https://w3id.org/promo/property/domain/physical> a skos:Concept ;
+    skos:prefLabel "physical" .
+
+<https://w3id.org/promo/property/variable-class/secondaryState> a skos:Concept ;
+    skos:prefLabel "secondaryState" .
+
+<https://w3id.org/promo/property/variable-class/network> a skos:Concept ;
+    skos:prefLabel "network" .
+
+<https://w3id.org/promo/property/variable-class/transport> a skos:Concept ;
+    skos:prefLabel "transport" .
+
+<https://w3id.org/promo/property/domain/root> a skos:Concept ;
+    skos:prefLabel "root" .
+
+<https://w3id.org/promo/property/domain/macroscopic> a skos:Concept ;
+    skos:prefLabel "macroscopic" .
+
+app:PhysicalProperty a owl:Class ;
+    rdfs:label "Physical property" .
+
