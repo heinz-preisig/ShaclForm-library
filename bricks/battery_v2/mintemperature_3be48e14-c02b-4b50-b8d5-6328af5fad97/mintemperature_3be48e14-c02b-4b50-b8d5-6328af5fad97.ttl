@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/3be48e14-c02b-4b50-b8d5-6328af5fad97> a sh:PropertyShape ;
+    rdfs:label "MinTemperature" ;
+    rdfs:comment "Minimum permissible operating temperature." ;
+    sh:datatype "xsd:decimal" .
+

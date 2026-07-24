@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/promo_physical_property> a sh:NodeShape ;
+    rdfs:label "PhysicalProperty" ;
+    rdfs:comment "Generic physical-property value brick. Specialise per schema usage by overriding sh:path, sh:name and sh:class with a concrete ProMo property class." .
+

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/99fc9bc2-cebf-4e2d-86ef-0475f144144b> a sh:PropertyShape ;
+    rdfs:label "Identifier" ;
+    rdfs:comment "Unique product identifier (e.g. serial number)." ;
+    sh:datatype "xsd:string" .
+

@@ -1,0 +1,25 @@
+{
+  "brick_id": "76be93bf-6a83-40c1-8f2b-b5974b8a3c1b",
+  "name": "ResponsiblePerson",
+  "description": "Person or organisation responsible for the battery information.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "ResponsiblePerson",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-23T17:41:05.303622",
+  "updated_at": "2026-07-23T17:41:05.303626",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/battery#responsiblePerson"
+}

@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/44cd2e72-775d-486d-95e2-727c166c5a05> a sh:NodeShape ;
+    rdfs:label "Battery" ;
+    rdfs:comment "Root shape for an EV battery digital product passport." .
+

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/69da5a9d-8282-4149-8297-694a4aafae6d> a sh:PropertyShape ;
+    rdfs:label "ManufactureDate" ;
+    rdfs:comment "Date when the battery was manufactured." ;
+    sh:datatype "xsd:date" .
+

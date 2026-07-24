@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/893d815c-59c7-443f-8bac-cb2eb0a97252> a sh:PropertyShape ;
+    rdfs:label "CycleCount" ;
+    rdfs:comment "Number of completed charge/discharge cycles." ;
+    sh:datatype "xsd:integer" .
+

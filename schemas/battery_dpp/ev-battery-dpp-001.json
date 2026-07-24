@@ -11,7 +11,6 @@
     "b1000003-ba77-4000-8000-000000000003",
     "b1000009-ba77-4000-8000-000000000009",
     "b1000004-ba77-4000-8000-000000000004",
-    "b1000012-ba77-4000-8000-000000000012",
     "b1000011-ba77-4000-8000-000000000011",
     "b1000006-ba77-4000-8000-000000000006",
     "b1000007-ba77-4000-8000-000000000007",
@@ -19,9 +18,13 @@
     "4cfa5964-16ab-41f2-a795-40c0236968cc",
     "2de3dc1e-3a42-49b7-b402-ea2522400cf0",
     "84e6cc19-b7ca-45dd-9845-c80ac0cb04d6",
-    "b1000005-ba77-4000-8000-000000000005",
-    "11b65052-988d-49c4-927e-1c770ce2de08"
+    "11b65052-988d-49c4-927e-1c770ce2de08",
+    "2fa7e651-c84f-47be-bdbe-259057b544e0"
   ],
+  "root_brick_version": "",
+  "component_versions": {
+    "2fa7e651-c84f-47be-bdbe-259057b544e0": "1.0.0"
+  },
   "flow_config": null,
   "inheritance_chain": [],
   "relationships": {},
@@ -35,7 +38,11 @@
       "max_count": 1,
       "collapsible": false,
       "description": "Unique identification of this battery unit. EU Battery Reg. Art. 77.",
-      "sequence": 0
+      "sequence": 0,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000002-ba77-4000-8000-000000000002",
@@ -46,7 +53,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Manufacturer or responsible economic operator. EU Battery Reg. Art. 38.",
-      "sequence": 1
+      "sequence": 1,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000010-ba77-4000-8000-000000000010",
@@ -57,7 +68,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Physical characteristics of the battery: mass, dimensions, rated capacity and operating temperature range.",
-      "sequence": 2
+      "sequence": 2,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000003-ba77-4000-8000-000000000003",
@@ -68,7 +83,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Total mass of the battery. Unit dropdown auto-populated from QUDT (kg, g, lb \u2026).",
-      "sequence": 3
+      "sequence": 3,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000009-ba77-4000-8000-000000000009",
@@ -79,7 +98,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "External dimensions (L \u00d7 W \u00d7 H). Unit dropdown auto-populated from QUDT (mm, cm, m \u2026).",
-      "sequence": 4
+      "sequence": 4,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000004-ba77-4000-8000-000000000004",
@@ -90,7 +113,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Rated electrical capacity. Unit dropdown auto-populated from QUDT (Ah, mAh, C \u2026).",
-      "sequence": 5
+      "sequence": 5,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000005-ba77-4000-8000-000000000005",
@@ -101,7 +128,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Minimum recommended operating temperature.",
-      "sequence": 6
+      "sequence": 6,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000012-ba77-4000-8000-000000000012",
@@ -112,7 +143,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Maximum recommended operating temperature.",
-      "sequence": 7
+      "sequence": 7,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000011-ba77-4000-8000-000000000011",
@@ -123,7 +158,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Environmental and sustainability data required by EU Battery Regulation Arts. 7-8.",
-      "sequence": 8
+      "sequence": 8,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000006-ba77-4000-8000-000000000006",
@@ -134,7 +173,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Lifecycle carbon footprint (CO\u2082eq/kWh). EU Battery Reg. Art. 7.",
-      "sequence": 9
+      "sequence": 9,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "b1000007-ba77-4000-8000-000000000007",
@@ -145,7 +188,11 @@
       "max_count": null,
       "collapsible": true,
       "description": "Percentage of material recoverable by category. EU Battery Reg. Art. 8. One entry per material category.",
-      "sequence": 10
+      "sequence": 10,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "5fa9ec35-26e5-45ad-8704-c04122e9b00f",
@@ -156,7 +203,11 @@
       "max_count": null,
       "collapsible": true,
       "description": "A material used in the battery. May appear multiple times (one per distinct material). EU Battery Reg. Art. 13.",
-      "sequence": 11
+      "sequence": 11,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "4cfa5964-16ab-41f2-a795-40c0236968cc",
@@ -167,7 +218,11 @@
       "max_count": null,
       "collapsible": true,
       "description": "A physical component of this material (e.g. cathode, anode, separator).",
-      "sequence": 12
+      "sequence": 12,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "2de3dc1e-3a42-49b7-b402-ea2522400cf0",
@@ -178,7 +233,11 @@
       "max_count": 1,
       "collapsible": true,
       "description": "Cathode active material chemistry (NMC, LFP, NCA \u2026). EU Battery Reg. Art. 13.",
-      "sequence": 13
+      "sequence": 13,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "84e6cc19-b7ca-45dd-9845-c80ac0cb04d6",
@@ -189,7 +248,11 @@
       "max_count": null,
       "collapsible": true,
       "description": "Chemical substance entry (from vocabulary or free text) with weight fraction and hazard flag. EU Battery Reg. Art. 13 / REACH.",
-      "sequence": 14
+      "sequence": 14,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
     },
     {
       "child_brick_id": "11b65052-988d-49c4-927e-1c770ce2de08",
@@ -200,7 +263,48 @@
       "max_count": 1,
       "collapsible": true,
       "description": "",
-      "sequence": 4
+      "sequence": 4,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
+    },
+    {
+      "child_brick_id": "0257cd8a-45d7-425b-adfc-ee039bf14c90",
+      "path_iri": "org:has",
+      "label": "Temperature",
+      "parent_brick_id": "b1000010-ba77-4000-8000-000000000010",
+      "min_count": 1,
+      "max_count": 1,
+      "collapsible": true,
+      "description": "",
+      "sequence": 5,
+      "brick_version": "",
+      "child_usage_id": "",
+      "usage_alias": "",
+      "leaf_overrides": {}
+    },
+    {
+      "child_brick_id": "promo_physical_property",
+      "path_iri": "ex:temperature",
+      "label": "min temperature",
+      "parent_brick_id": "b1000008-ba77-4000-8000-000000000008",
+      "min_count": 1,
+      "max_count": 1,
+      "collapsible": true,
+      "description": "",
+      "sequence": 0,
+      "brick_version": "1.0.0",
+      "child_usage_id": "2fa7e651-c84f-47be-bdbe-259057b544e0",
+      "usage_alias": "minTemperature",
+      "leaf_overrides": {
+        "ex:value": {
+          "path": "ex:temperature",
+          "label": "min temperature",
+          "sh_class": "https://w3id.org/promo/property/macroscopic/V_113",
+          "default_unit": "http://qudt.org/vocab/unit/K"
+        }
+      }
     }
   ],
   "metadata": {
@@ -250,5 +354,5 @@
   },
   "schema_refs": [],
   "created_at": "2026-06-18T12:00:00.000000",
-  "updated_at": "2026-06-30T15:31:52.151676"
+  "updated_at": "2026-07-22T07:27:14.887296"
 }

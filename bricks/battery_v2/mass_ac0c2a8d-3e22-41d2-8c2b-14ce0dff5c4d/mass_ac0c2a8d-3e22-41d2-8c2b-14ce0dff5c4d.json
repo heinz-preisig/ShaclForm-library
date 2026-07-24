@@ -1,0 +1,26 @@
+{
+  "brick_id": "ac0c2a8d-3e22-41d2-8c2b-14ce0dff5c4d",
+  "name": "Mass",
+  "description": "Total mass of the battery.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "Mass",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-23T17:41:05.301343",
+  "updated_at": "2026-07-23T17:41:05.301347",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:decimal",
+    "default_unit": "http://qudt.org/vocab/unit/KiloGM"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/battery#mass"
+}

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/f6858dde-6937-46fb-8577-e5dfd5094b62> a sh:PropertyShape ;
+    rdfs:label "MaxTemperature" ;
+    rdfs:comment "Maximum permissible operating temperature." ;
+    sh:datatype "xsd:decimal" .
+

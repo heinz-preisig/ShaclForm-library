@@ -1,0 +1,25 @@
+{
+  "brick_id": "fc14e516-41da-4740-acd2-5a313aba4197",
+  "name": "ManufactureDate",
+  "description": "Date when the battery was manufactured.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "ManufactureDate",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-23T17:41:05.303106",
+  "updated_at": "2026-07-23T17:41:05.303110",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:date"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/battery#manufactureDate"
+}

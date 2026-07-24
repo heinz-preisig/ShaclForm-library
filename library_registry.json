@@ -15,8 +15,13 @@
         },
         {
           "name": "battery_dpp",
-          "description": "EU Battery Regulation 2023/1542 — EV Battery Digital Product Passport demo library (presentation example)",
+          "description": "EU Battery Regulation 2023/1542 \u2014 EV Battery Digital Product Passport demo library (presentation example)",
           "created_at": "2026-06-18T12:00:00.000000"
+        },
+        {
+          "name": "battery_v2",
+          "description": "Battery DPP v2 sample brick pack",
+          "created_at": "2026-07-23T17:08:54.912600"
         }
       ]
     },
@@ -30,6 +35,11 @@
           "name": "battery_dpp",
           "description": "EV Battery DPP schemas (EU Battery Regulation demo)",
           "created_at": "2026-06-18T12:00:00.000000"
+        },
+        {
+          "name": "battery_v2",
+          "description": "Battery DPP v2 sample schemas",
+          "created_at": "2026-07-23T17:08:54.912892"
         }
       ]
     }

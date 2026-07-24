@@ -1,0 +1,133 @@
+@prefix app: <http://example.org/app#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://example.org/schema/ccb000ec-be7e-42cc-9fba-aca06a44ca6f/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Root Shape
+schema:Battery a sh:NodeShape ;
+    sh:targetClass <https://example.org/battery#Battery> ;
+    rdfs:label "Battery" ;
+    rdfs:comment "Root shape for an EV battery digital product passport." ;
+    dcterms:source <http://example.org/brick/44cd2e72-775d-486d-95e2-727c166c5a05/1.0.0/> ;
+    sh:property [
+        sh:path <https://example.org/battery#identifier> ;
+        sh:name "Serial number"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#nominalVoltage> ;
+        sh:name "Nominal voltage"@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        app:physicalProperty <https://w3id.org/promo/property/macroscopic/V_113> ;
+        sh:in (unit:K) ;
+        sh:defaultValue unit:V ;
+        sh:order 2 ;
+        dash:editor dash:InstancesSelectEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#ratedCapacity> ;
+        sh:name "Rated capacity"@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:defaultValue unit:A_HR ;
+        sh:order 3 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#mass> ;
+        sh:name "Mass"@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:defaultValue unit:KiloGM ;
+        sh:order 4 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#maxTemperature> ;
+        sh:name "Maximum operating temperature"@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:defaultValue unit:DEG_C ;
+        sh:order 5 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#minTemperature> ;
+        sh:name "Minimum operating temperature"@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:defaultValue unit:DEG_C ;
+        sh:order 6 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#manufactureDate> ;
+        sh:name "Manufacture date"@en ;
+        sh:datatype xsd:date ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 7 ;
+        dash:editor dash:DatePickerEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#responsiblePerson> ;
+        sh:name "Responsible person"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 8 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#stateOfHealth> ;
+        sh:name "State of health"@en ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:defaultValue unit:PERCENT ;
+        sh:order 9 ;
+        dash:editor dash:DecimalFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/battery#cycleCount> ;
+        sh:name "Cycle count"@en ;
+        sh:datatype xsd:integer ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 10 ;
+        dash:editor dash:IntegerFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# Schema Metadata
+# Schema ID: ccb000ec-be7e-42cc-9fba-aca06a44ca6f
+# Schema Name: BatteryPassport
+# Description: Sample EU Battery Regulation digital product passport schema.
+# Created: 2026-07-23T17:41:05.306405
+# Updated: 2026-07-23T17:41:05.306471
+# Root Brick: 44cd2e72-775d-486d-95e2-727c166c5a05
+# Component Bricks: 10
+# Components: baf6a634-a009-437f-ac4d-9196eb5f66ae, 2decf602-ea9a-4d93-b957-c59722617b42, f99577d2-2fd5-4c23-acc6-e63be8ddaec0, 1d29ed13-5324-44e5-b4e1-6a6b1b38db2f, da944de3-6fe2-4073-8b59-4f5c67a1d778, 84d7ac02-9709-4471-90cf-d4974f686ca4, 91abd779-b794-45a4-b167-e2ce9ea8926e, eed35478-4bfa-4779-a118-e428a816788b, b2eadfcf-813e-4343-aee3-10c508de6f29, 80ae11df-c857-4b1c-bda5-234422475416

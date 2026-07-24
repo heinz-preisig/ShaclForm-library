@@ -1,0 +1,23 @@
+{
+  "brick_id": "44cd2e72-775d-486d-95e2-727c166c5a05",
+  "name": "Battery",
+  "description": "Root shape for an EV battery digital product passport.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "https://example.org/battery#Battery",
+  "display_label": "",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-23T17:41:05.305239",
+  "updated_at": "2026-07-23T17:41:05.305243",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}

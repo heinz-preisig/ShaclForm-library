@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/7bb2cf12-2a37-4798-80db-6371dc517ece> a sh:PropertyShape ;
+    rdfs:label "Mass" ;
+    rdfs:comment "Total mass of the battery." ;
+    sh:datatype "xsd:decimal" .
+
