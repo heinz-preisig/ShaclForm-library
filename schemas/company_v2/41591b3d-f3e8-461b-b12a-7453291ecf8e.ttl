@@ -1,0 +1,131 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://example.org/schema/41591b3d-f3e8-461b-b12a-7453291ecf8e/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Root Shape
+schema:Company a sh:NodeShape ;
+    sh:targetClass <https://example.org/company#Company> ;
+    rdfs:label "Company" ;
+    rdfs:comment "A registered company or organisation." ;
+    dcterms:source <http://example.org/brick/5196dfff-abde-41d3-b7ce-a098d2994b1a/1.0.0/> ;
+    sh:property [
+        sh:path <https://example.org/company#companyName> ;
+        sh:name "Company name"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/company#registrationNumber> ;
+        sh:name "Registration number"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/company#contactEmail> ;
+        sh:name "Contact email"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/company#foundedDate> ;
+        sh:name "Founded date"@en ;
+        sh:datatype xsd:date ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 4 ;
+        dash:editor dash:DatePickerEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/company#registeredAddress> ;
+        sh:node schema:RegisteredAddress ;
+        sh:name "Registered address"@en ;
+        sh:order 5 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] .
+
+# Component: 4a6e37fd-69eb-4de5-be12-80757d11e81d (depth 0)
+schema:RegisteredAddress a sh:NodeShape ;
+    sh:targetClass <https://example.org/address#Address> ;
+    rdfs:label "RegisteredAddress" ;
+    rdfs:comment "A postal or physical address." ;
+    dcterms:source <http://example.org/brick/cb76e532-08ea-44db-b439-802ba99472d4/1.0.0/> ;
+    sh:property [
+        sh:path <https://example.org/address#street> ;
+        sh:name "Street"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#city> ;
+        sh:name "City"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#postalCode> ;
+        sh:name "Postal code"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#region> ;
+        sh:name "Region"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 4 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#country> ;
+        sh:name "Country"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 5 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:order 5 .
+
+# Schema Metadata
+# Schema ID: 41591b3d-f3e8-461b-b12a-7453291ecf8e
+# Schema Name: Company
+# Description: Sample company schema with a nested address reused from address_v2.
+# Created: 2026-07-24T15:59:37.645854
+# Updated: 2026-07-24T15:59:37.645933
+# Root Brick: 5196dfff-abde-41d3-b7ce-a098d2994b1a
+# Component Bricks: 10
+# Components: 1fe6f435-c07f-40c9-b86d-73bd1b3fa8cb, b388dc14-3d37-481e-87ed-2d0cf235f548, 1ae81dee-e56f-48e6-b658-48455f3469a0, 908f71ec-c2b3-4ad2-b4e7-809d9a62a6ed, 4a6e37fd-69eb-4de5-be12-80757d11e81d, c57e6e2d-5f30-4df1-8fe7-2837f2e8ab15, c85a8cad-a759-4167-a367-b8c2031fdac1, bd35b6d9-3cd1-47ec-89a5-dc63e7c7d997, 7059d1c8-2e38-429d-a4e0-e66676f07c8b, 4cf51cda-d9a5-49bf-9932-5db20dde6fa8

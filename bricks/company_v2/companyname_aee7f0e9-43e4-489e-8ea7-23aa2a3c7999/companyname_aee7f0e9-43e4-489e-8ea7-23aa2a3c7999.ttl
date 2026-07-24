@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/aee7f0e9-43e4-489e-8ea7-23aa2a3c7999> a sh:PropertyShape ;
+    rdfs:label "CompanyName" ;
+    rdfs:comment "Legal company name." ;
+    sh:datatype "xsd:string" .
+

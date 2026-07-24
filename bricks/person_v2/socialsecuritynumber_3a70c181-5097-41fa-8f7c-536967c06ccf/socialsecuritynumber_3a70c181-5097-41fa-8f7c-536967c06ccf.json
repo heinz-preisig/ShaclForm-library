@@ -1,0 +1,25 @@
+{
+  "brick_id": "3a70c181-5097-41fa-8f7c-536967c06ccf",
+  "name": "SocialSecurityNumber",
+  "description": "Social security or national insurance number.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "SocialSecurityNumber",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:50.683701",
+  "updated_at": "2026-07-24T15:59:50.683705",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/person#socialSecurityNumber"
+}

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/598aa8ff-d0ef-4145-aa3b-3f08ec39a157> a sh:PropertyShape ;
+    rdfs:label "PostalCode" ;
+    rdfs:comment "Postal or ZIP code." ;
+    sh:datatype "xsd:string" .
+

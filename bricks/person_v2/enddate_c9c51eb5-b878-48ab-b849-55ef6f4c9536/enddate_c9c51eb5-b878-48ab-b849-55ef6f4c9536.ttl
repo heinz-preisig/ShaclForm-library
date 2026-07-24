@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/c9c51eb5-b878-48ab-b849-55ef6f4c9536> a sh:PropertyShape ;
+    rdfs:label "EndDate" ;
+    rdfs:comment "End date of the role/position (optional)." ;
+    sh:datatype "xsd:date" .
+

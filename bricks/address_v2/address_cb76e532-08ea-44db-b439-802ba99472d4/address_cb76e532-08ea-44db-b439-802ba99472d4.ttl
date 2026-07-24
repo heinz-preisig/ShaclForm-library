@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/cb76e532-08ea-44db-b439-802ba99472d4> a sh:NodeShape ;
+    rdfs:label "Address" ;
+    rdfs:comment "A postal or physical address." .
+

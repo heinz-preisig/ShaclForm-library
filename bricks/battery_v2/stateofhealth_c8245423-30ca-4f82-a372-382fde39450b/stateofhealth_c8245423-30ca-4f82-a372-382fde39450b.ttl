@@ -1,8 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-
-<http://example.org/c8245423-30ca-4f82-a372-382fde39450b> a sh:PropertyShape ;
-    rdfs:label "StateOfHealth" ;
-    rdfs:comment "Current state of health as a percentage." ;
-    sh:datatype "xsd:decimal" .
-

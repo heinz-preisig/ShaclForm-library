@@ -1,0 +1,25 @@
+{
+  "brick_id": "5355184a-fcfc-4444-a9b5-dfa0a8dfad17",
+  "name": "Department",
+  "description": "Department or organisational unit.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "Department",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:50.685572",
+  "updated_at": "2026-07-24T15:59:50.685576",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/person#department"
+}

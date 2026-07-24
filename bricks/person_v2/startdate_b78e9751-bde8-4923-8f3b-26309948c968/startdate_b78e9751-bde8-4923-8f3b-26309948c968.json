@@ -1,0 +1,25 @@
+{
+  "brick_id": "b78e9751-bde8-4923-8f3b-26309948c968",
+  "name": "StartDate",
+  "description": "Start date of the role/position.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "StartDate",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:50.686065",
+  "updated_at": "2026-07-24T15:59:50.686069",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:date"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/person#startDate"
+}

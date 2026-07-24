@@ -1,0 +1,187 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://example.org/schema/0c01dfa9-8d41-40fa-960f-e9212624ff78/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Root Shape
+schema:Person a sh:NodeShape ;
+    sh:targetClass <https://example.org/person#Person> ;
+    rdfs:label "Person" ;
+    rdfs:comment "An individual person." ;
+    dcterms:source <http://example.org/brick/73d9dc31-2af8-41f0-8587-93c89d79c422/1.0.0/> ;
+    sh:property [
+        sh:path <https://example.org/person#identifier> ;
+        sh:name "Identifier"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#socialSecurityNumber> ;
+        sh:name "Social security number"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#birthDate> ;
+        sh:name "Birth date"@en ;
+        sh:datatype xsd:date ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+        dash:editor dash:DatePickerEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#nationality> ;
+        sh:name "Nationality"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 4 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#homeAddress> ;
+        sh:node schema:HomeAddress ;
+        sh:name "Home address"@en ;
+        sh:order 5 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#position> ;
+        sh:node schema:Position ;
+        sh:name "Position"@en ;
+        sh:order 6 ;
+        sh:maxCount 1 ;
+        dash:editor dash:DetailsEditor ;
+        dash:viewer dash:DetailsViewer ;
+    ] .
+
+# Component: ec6b137e-2f8e-42e6-8850-320659e58140 (depth 0)
+schema:HomeAddress a sh:NodeShape ;
+    sh:targetClass <https://example.org/address#Address> ;
+    rdfs:label "HomeAddress" ;
+    rdfs:comment "A postal or physical address." ;
+    dcterms:source <http://example.org/brick/cb76e532-08ea-44db-b439-802ba99472d4/1.0.0/> ;
+    sh:property [
+        sh:path <https://example.org/address#street> ;
+        sh:name "Street"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#city> ;
+        sh:name "City"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#postalCode> ;
+        sh:name "Postal code"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#region> ;
+        sh:name "Region"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 4 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#country> ;
+        sh:name "Country"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 5 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:order 5 .
+
+# Component: c9e49b7e-b58c-44cd-98d3-7687ed4ea98e (depth 0)
+schema:Position a sh:NodeShape ;
+    sh:targetClass <https://example.org/person#Position> ;
+    rdfs:label "Position" ;
+    rdfs:comment "A role or position held by a person." ;
+    dcterms:source <http://example.org/brick/1adff124-f165-409d-8a06-7e601bdd34e4/1.0.0/> ;
+    sh:property [
+        sh:path <https://example.org/person#roleName> ;
+        sh:name "Role name"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#department> ;
+        sh:name "Department"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#startDate> ;
+        sh:name "Start date"@en ;
+        sh:datatype xsd:date ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+        dash:editor dash:DatePickerEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/person#endDate> ;
+        sh:name "End date"@en ;
+        sh:datatype xsd:date ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 4 ;
+        dash:editor dash:DatePickerEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:order 6 .
+
+# Schema Metadata
+# Schema ID: 0c01dfa9-8d41-40fa-960f-e9212624ff78
+# Schema Name: PersonRecord
+# Description: Sample person schema with address and position components.
+# Created: 2026-07-24T15:59:50.689031
+# Updated: 2026-07-24T15:59:50.689127
+# Root Brick: 73d9dc31-2af8-41f0-8587-93c89d79c422
+# Component Bricks: 15
+# Components: 5450a89b-3cd4-49a8-b690-52b35f4e118e, 29872868-bcac-45b2-91cb-0138af8ce8b9, 21d5728f-fcf1-4254-a4a1-cb4b94f1c28f, 92958903-e0e8-4b7f-8739-fb24ab92d186, ec6b137e-2f8e-42e6-8850-320659e58140, 4ef1b3c0-8e6e-4444-ba68-f97f4178d5d0, fe71ce4f-cae0-4c90-82e7-7c67f9798e4a, 823faf53-b324-47d3-9a22-f81b4557ea82, c4b66ebf-9831-4eb4-b712-7a9e7e73b16c, 53d9a3e7-c722-4b4c-91ea-78145dfef449, c9e49b7e-b58c-44cd-98d3-7687ed4ea98e, a85103f8-e0f2-4a61-a23c-22aa56cd62f2, ef7f1dc3-b805-4318-a859-56ebae801bad, 9e34f397-443c-4b05-8931-4657fe14bf77, f08513b2-c7ea-4923-9fcb-fbd01585b36a

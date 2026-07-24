@@ -1,8 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-
-<http://example.org/ecceb7f5-5108-43a1-9bc2-efeedafdfa0f> a sh:PropertyShape ;
-    rdfs:label "NominalVoltage" ;
-    rdfs:comment "Rated nominal voltage of the battery." ;
-    sh:datatype "xsd:decimal" .
-

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/5355184a-fcfc-4444-a9b5-dfa0a8dfad17> a sh:PropertyShape ;
+    rdfs:label "Department" ;
+    rdfs:comment "Department or organisational unit." ;
+    sh:datatype "xsd:string" .
+

@@ -1,0 +1,73 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://example.org/schema/cd769bdc-6548-4d81-8a25-7a21411e9dff/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Root Shape
+schema:Address a sh:NodeShape ;
+    sh:targetClass <https://example.org/address#Address> ;
+    rdfs:label "Address" ;
+    rdfs:comment "A postal or physical address." ;
+    dcterms:source <http://example.org/brick/cb76e532-08ea-44db-b439-802ba99472d4/1.0.0/> ;
+    sh:property [
+        sh:path <https://example.org/address#street> ;
+        sh:name "Street"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 1 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#city> ;
+        sh:name "City"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 2 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#postalCode> ;
+        sh:name "Postal code"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#region> ;
+        sh:name "Region"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:order 4 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path <https://example.org/address#country> ;
+        sh:name "Country"@en ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:order 5 ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# Schema Metadata
+# Schema ID: cd769bdc-6548-4d81-8a25-7a21411e9dff
+# Schema Name: Address
+# Description: Sample address schema.
+# Created: 2026-07-24T15:59:24.566568
+# Updated: 2026-07-24T15:59:24.566605
+# Root Brick: cb76e532-08ea-44db-b439-802ba99472d4
+# Component Bricks: 5
+# Components: afae66a4-3264-4468-a6bf-3c1333aa19a0, 38df9333-acb3-481e-97fb-bda3e7736f5e, bff111ce-976c-41db-8e55-24027ebe9c7b, 1de5c41a-135c-4429-a68e-5123b5473f82, 349b04fa-fa02-456c-8076-04c02cc9dd3d

@@ -1,0 +1,23 @@
+{
+  "brick_id": "73d9dc31-2af8-41f0-8587-93c89d79c422",
+  "name": "Person",
+  "description": "An individual person.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "https://example.org/person#Person",
+  "display_label": "",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:50.687497",
+  "updated_at": "2026-07-24T15:59:50.687500",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}

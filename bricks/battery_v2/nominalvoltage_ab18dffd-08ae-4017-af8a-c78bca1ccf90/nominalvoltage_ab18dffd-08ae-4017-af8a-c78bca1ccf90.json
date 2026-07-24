@@ -1,0 +1,27 @@
+{
+  "brick_id": "ab18dffd-08ae-4017-af8a-c78bca1ccf90",
+  "name": "NominalVoltage",
+  "description": "Rated nominal voltage of the battery.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "NominalVoltage",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:13.884889",
+  "updated_at": "2026-07-24T15:59:13.884895",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:decimal",
+    "semantic_property": "https://w3id.org/promo/property/macroscopic/V_113",
+    "default_unit": "http://qudt.org/vocab/unit/V"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/battery#nominalVoltage"
+}

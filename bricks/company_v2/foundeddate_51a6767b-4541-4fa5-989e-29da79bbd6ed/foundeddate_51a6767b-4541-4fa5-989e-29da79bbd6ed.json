@@ -1,0 +1,25 @@
+{
+  "brick_id": "51a6767b-4541-4fa5-989e-29da79bbd6ed",
+  "name": "FoundedDate",
+  "description": "Date the company was founded.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "FoundedDate",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:37.643795",
+  "updated_at": "2026-07-24T15:59:37.643799",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:date"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/company#foundedDate"
+}

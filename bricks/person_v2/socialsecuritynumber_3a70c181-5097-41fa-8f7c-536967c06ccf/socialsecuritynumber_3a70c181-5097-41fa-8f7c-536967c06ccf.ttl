@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/3a70c181-5097-41fa-8f7c-536967c06ccf> a sh:PropertyShape ;
+    rdfs:label "SocialSecurityNumber" ;
+    rdfs:comment "Social security or national insurance number." ;
+    sh:datatype "xsd:string" .
+

@@ -1,0 +1,23 @@
+{
+  "brick_id": "5196dfff-abde-41d3-b7ce-a098d2994b1a",
+  "name": "Company",
+  "description": "A registered company or organisation.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "https://example.org/company#Company",
+  "display_label": "",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:37.644301",
+  "updated_at": "2026-07-24T15:59:37.644305",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}

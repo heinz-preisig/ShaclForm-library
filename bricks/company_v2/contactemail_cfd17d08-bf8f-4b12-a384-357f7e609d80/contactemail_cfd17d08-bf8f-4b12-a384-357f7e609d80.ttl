@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/cfd17d08-bf8f-4b12-a384-357f7e609d80> a sh:PropertyShape ;
+    rdfs:label "ContactEmail" ;
+    rdfs:comment "Primary contact email address." ;
+    sh:datatype "xsd:string" .
+

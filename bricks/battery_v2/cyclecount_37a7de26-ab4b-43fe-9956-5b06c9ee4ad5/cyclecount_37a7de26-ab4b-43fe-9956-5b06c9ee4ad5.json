@@ -1,0 +1,25 @@
+{
+  "brick_id": "37a7de26-ab4b-43fe-9956-5b06c9ee4ad5",
+  "name": "CycleCount",
+  "description": "Number of completed charge/discharge cycles.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "CycleCount",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:13.888751",
+  "updated_at": "2026-07-24T15:59:13.888754",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:integer"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/battery#cycleCount"
+}

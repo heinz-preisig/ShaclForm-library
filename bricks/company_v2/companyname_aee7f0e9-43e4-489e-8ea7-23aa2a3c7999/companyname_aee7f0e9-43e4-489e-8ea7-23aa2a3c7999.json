@@ -1,0 +1,25 @@
+{
+  "brick_id": "aee7f0e9-43e4-489e-8ea7-23aa2a3c7999",
+  "name": "CompanyName",
+  "description": "Legal company name.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "CompanyName",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:37.642264",
+  "updated_at": "2026-07-24T15:59:37.642282",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/company#companyName"
+}

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/2d0d2800-e6d5-4eb7-ae31-3db1503ff108> a sh:PropertyShape ;
+    rdfs:label "RoleName" ;
+    rdfs:comment "Name of the role or position." ;
+    sh:datatype "xsd:string" .
+

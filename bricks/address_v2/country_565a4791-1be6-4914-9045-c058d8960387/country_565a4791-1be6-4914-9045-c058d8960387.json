@@ -1,0 +1,25 @@
+{
+  "brick_id": "565a4791-1be6-4914-9045-c058d8960387",
+  "name": "Country",
+  "description": "Country name or ISO country code.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "Country",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:24.565700",
+  "updated_at": "2026-07-24T15:59:24.565704",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/address#country"
+}

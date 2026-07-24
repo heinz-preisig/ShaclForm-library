@@ -1,0 +1,23 @@
+{
+  "brick_id": "1adff124-f165-409d-8a06-7e601bdd34e4",
+  "name": "Position",
+  "description": "A role or position held by a person.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "https://example.org/person#Position",
+  "display_label": "",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:50.687038",
+  "updated_at": "2026-07-24T15:59:50.687043",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}

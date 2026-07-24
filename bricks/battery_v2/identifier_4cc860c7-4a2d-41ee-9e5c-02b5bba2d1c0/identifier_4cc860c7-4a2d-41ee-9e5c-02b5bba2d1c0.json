@@ -1,0 +1,25 @@
+{
+  "brick_id": "4cc860c7-4a2d-41ee-9e5c-02b5bba2d1c0",
+  "name": "Identifier",
+  "description": "Unique product identifier (e.g. serial number).",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "Identifier",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:13.883633",
+  "updated_at": "2026-07-24T15:59:13.883642",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/battery#identifier"
+}

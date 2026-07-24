@@ -1,0 +1,26 @@
+{
+  "brick_id": "770b37c3-de95-40e7-8d87-e23c6dd44e1e",
+  "name": "RatedCapacity",
+  "description": "Rated capacity in ampere-hours.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "RatedCapacity",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:13.885420",
+  "updated_at": "2026-07-24T15:59:13.885424",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:decimal",
+    "default_unit": "http://qudt.org/vocab/unit/A_HR"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/battery#ratedCapacity"
+}

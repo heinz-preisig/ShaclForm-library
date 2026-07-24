@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/4fde7b54-1ac7-4c06-836f-3ecddf63590c> a sh:PropertyShape ;
+    rdfs:label "FoundedDate" ;
+    rdfs:comment "Date the company was founded." ;
+    sh:datatype "xsd:date" .
+

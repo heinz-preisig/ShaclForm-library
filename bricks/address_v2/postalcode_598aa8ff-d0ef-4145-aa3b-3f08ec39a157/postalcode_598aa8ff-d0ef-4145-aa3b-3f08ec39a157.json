@@ -1,0 +1,25 @@
+{
+  "brick_id": "598aa8ff-d0ef-4145-aa3b-3f08ec39a157",
+  "name": "PostalCode",
+  "description": "Postal or ZIP code.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "PostalCode",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:24.564787",
+  "updated_at": "2026-07-24T15:59:24.564791",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/address#postalCode"
+}

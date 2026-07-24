@@ -1,0 +1,25 @@
+{
+  "brick_id": "8d091278-4be5-49cc-8a70-02fb1ab7bc20",
+  "name": "Region",
+  "description": "State, province, or region.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "Region",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:24.565252",
+  "updated_at": "2026-07-24T15:59:24.565256",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/address#region"
+}

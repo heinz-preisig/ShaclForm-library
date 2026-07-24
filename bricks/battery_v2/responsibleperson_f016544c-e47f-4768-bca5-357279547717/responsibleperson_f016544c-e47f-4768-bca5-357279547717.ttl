@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/f016544c-e47f-4768-bca5-357279547717> a sh:PropertyShape ;
+    rdfs:label "ResponsiblePerson" ;
+    rdfs:comment "Person or organisation responsible for the battery information." ;
+    sh:datatype "xsd:string" .
+

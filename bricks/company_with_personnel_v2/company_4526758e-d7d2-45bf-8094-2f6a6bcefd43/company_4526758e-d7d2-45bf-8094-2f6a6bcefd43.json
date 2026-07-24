@@ -1,0 +1,23 @@
+{
+  "brick_id": "4526758e-d7d2-45bf-8094-2f6a6bcefd43",
+  "name": "Company",
+  "description": "A registered company or organisation with personnel.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "https://example.org/companyWithPersonnel#Company",
+  "display_label": "",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T16:00:05.347567",
+  "updated_at": "2026-07-24T16:00:05.347571",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "NodeShape",
+  "properties": {},
+  "constraints": [],
+  "targets": [],
+  "property_path": ""
+}

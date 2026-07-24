@@ -1,0 +1,25 @@
+{
+  "brick_id": "9706eeba-50f5-4142-89ab-558f810a7bf8",
+  "name": "BirthDate",
+  "description": "Date of birth.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "BirthDate",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:50.684186",
+  "updated_at": "2026-07-24T15:59:50.684190",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:date"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/person#birthDate"
+}

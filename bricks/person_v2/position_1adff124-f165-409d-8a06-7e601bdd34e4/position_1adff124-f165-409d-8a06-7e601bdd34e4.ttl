@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/1adff124-f165-409d-8a06-7e601bdd34e4> a sh:NodeShape ;
+    rdfs:label "Position" ;
+    rdfs:comment "A role or position held by a person." .
+

@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/4526758e-d7d2-45bf-8094-2f6a6bcefd43> a sh:NodeShape ;
+    rdfs:label "Company" ;
+    rdfs:comment "A registered company or organisation with personnel." .
+

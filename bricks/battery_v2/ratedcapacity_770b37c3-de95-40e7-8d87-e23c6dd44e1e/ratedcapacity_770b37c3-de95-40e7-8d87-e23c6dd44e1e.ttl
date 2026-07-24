@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/770b37c3-de95-40e7-8d87-e23c6dd44e1e> a sh:PropertyShape ;
+    rdfs:label "RatedCapacity" ;
+    rdfs:comment "Rated capacity in ampere-hours." ;
+    sh:datatype "xsd:decimal" .
+

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/d3450d51-037c-4e21-827a-3c11d485508c> a sh:PropertyShape ;
+    rdfs:label "City" ;
+    rdfs:comment "City or municipality." ;
+    sh:datatype "xsd:string" .
+

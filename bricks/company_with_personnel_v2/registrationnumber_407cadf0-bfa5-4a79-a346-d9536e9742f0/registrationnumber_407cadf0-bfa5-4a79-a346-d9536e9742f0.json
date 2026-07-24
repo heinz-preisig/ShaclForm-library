@@ -1,0 +1,25 @@
+{
+  "brick_id": "407cadf0-bfa5-4a79-a346-d9536e9742f0",
+  "name": "RegistrationNumber",
+  "description": "Official business registration number.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "RegistrationNumber",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T16:00:05.346652",
+  "updated_at": "2026-07-24T16:00:05.346656",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/companyWithPersonnel#registrationNumber"
+}

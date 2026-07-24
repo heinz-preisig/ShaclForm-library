@@ -1,0 +1,25 @@
+{
+  "brick_id": "cfd17d08-bf8f-4b12-a384-357f7e609d80",
+  "name": "ContactEmail",
+  "description": "Primary contact email address.",
+  "template_type": "custom",
+  "namespace": "ex",
+  "target_class": "",
+  "display_label": "ContactEmail",
+  "leaf_properties": [],
+  "xone_alternatives": [],
+  "tags": [],
+  "created_at": "2026-07-24T15:59:37.643339",
+  "updated_at": "2026-07-24T15:59:37.643343",
+  "metadata": {},
+  "version": "1.0.0",
+  "status": "published",
+  "version_history": [],
+  "object_type": "PropertyShape",
+  "properties": {
+    "datatype": "xsd:string"
+  },
+  "constraints": [],
+  "targets": [],
+  "property_path": "https://example.org/company#contactEmail"
+}

@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/9706eeba-50f5-4142-89ab-558f810a7bf8> a sh:PropertyShape ;
+    rdfs:label "BirthDate" ;
+    rdfs:comment "Date of birth." ;
+    sh:datatype "xsd:date" .
+

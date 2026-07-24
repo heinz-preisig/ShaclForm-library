@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/0a1d6531-e427-427e-af58-c910bda28246> a sh:PropertyShape ;
+    rdfs:label "PersonIdentifier" ;
+    rdfs:comment "Unique person identifier (e.g. employee ID)." ;
+    sh:datatype "xsd:string" .
+
