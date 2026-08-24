@@ -1,7 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-
-<http://example.org/b1000012-ba77-4000-8000-000000000012> a sh:NodeShape ;
-    rdfs:label "Max Operating Temperature" ;
-    rdfs:comment "Maximum operating temperature measurement with QUDT unit. Triggers the unit_dropdown for temperature units (°C, °F, K) via the enrichment engine." .
-

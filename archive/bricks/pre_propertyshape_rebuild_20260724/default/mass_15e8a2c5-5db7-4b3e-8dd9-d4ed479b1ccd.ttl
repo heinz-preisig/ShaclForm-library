@@ -1,6 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-
-<http://example.org/15e8a2c5-5db7-4b3e-8dd9-d4ed479b1ccd> a sh:NodeShape ;
-    rdfs:label "Mass" .
-

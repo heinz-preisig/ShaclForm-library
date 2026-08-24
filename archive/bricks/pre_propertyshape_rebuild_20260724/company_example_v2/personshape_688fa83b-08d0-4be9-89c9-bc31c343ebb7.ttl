@@ -1,7 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-
-<http://example.org/688fa83b-08d0-4be9-89c9-bc31c343ebb7> a sh:NodeShape ;
-    rdfs:label "PersonShape" ;
-    rdfs:comment "A person (product manager etc.)" .
-
